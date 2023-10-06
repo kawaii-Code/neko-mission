@@ -2,7 +2,7 @@
 
 **NEKO : : MISSION** - игра в жанре *Tower Defense* с видом от первого лица.
 
-![demo](https://github.com/kawaii-Code/neko-mission/assets/108984073/ef8f69ac-d913-4b7b-946e-7819df99e280)
+![demo](Miscellaneous/demo.gif)
 
 ---
 
