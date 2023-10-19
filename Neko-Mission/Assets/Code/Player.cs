@@ -1,44 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameObject Camera;
+    public float RotationSpeedHor = 5.0f;
+    public float RotationSpeedVer = 5.0f;
+    public float minVer = 45.0f;
+    public float maxVer = 45.0f;
     public float MovingSpeed;
-    public float RotationSpeed;
     public float JumpSpeed;
-    public float Gravity;
-    private float _verticalVelocity;
+    private float _maxGroundDist = 0.6f;
     private Rigidbody _rigidbody;
-    // Start is called before the first frame update
+    private Transform _groundCheckObj;
+    private bool _isGrounded;
+    private float _rotationX =0;
+    private Camera _camera;
+    
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _groundCheckObj = GameObject.FindGameObjectWithTag("GroundCheck").transform;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-       Vector3 move = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
-       //if (move.magnitude>0.1f)
-       //{
-           // Quaternion rotation = Quaternion.LookRotation(move);
-           // rotation.x =0;
-           // rotation.z =0;
-            //transform.rotation = Quaternion.Lerp(transform.rotation,rotation,RotationSpeed*Time.deltaTime);
-        // }
-       _rigidbody.velocity=move*MovingSpeed;
-       //bool hasJump = Input.GetKeyDown(KeyCode.Space);
-       //_verticalVelocity +=Gravity*Time.deltaTime;
-       //if (hasJump)
-       //{
-            //Vector3 position = transform.position;
-            //position.y+=JumpSpeed*Time.deltaTime;
-            //transform.position = position;
-      // }
-       //Vector3 position = transform.position;
-       //position.y+=_verticalVelocity*Time.deltaTime;
-       //transform.position = position;
+        //Механика передвижения.
+        float deltaHor = Input.GetAxis("Horizontal")*MovingSpeed;
+        float deltaVer = Input.GetAxis("Vertical")*MovingSpeed;
+       Vector3 newpositionvec = transform.forward*deltaVer*MovingSpeed*Time.deltaTime;
+       Vector3 newpositionhor = transform.right* deltaHor*MovingSpeed*Time.deltaTime;
+        _rigidbody.MovePosition(transform.position+newpositionvec+newpositionhor);
+        //Механика прыжка.
+       _isGrounded = Physics.Raycast(_groundCheckObj.transform.position,Vector3.down,_maxGroundDist);
+       bool hasJump = Input.GetKeyDown(KeyCode.Space);
+       if (hasJump && _isGrounded)
+       {
+            _rigidbody.AddForce(Vector3.up * 100 * JumpSpeed);
+       }
+       else if (!_isGrounded)
+       {
+            _rigidbody.AddForce(Vector3.down * 100);
+       }
 
+        //Вид от 1-го лица.
+        _rotationX -=Input.GetAxis("Mouse Y") * RotationSpeedVer;
+        _rotationX = Mathf.Clamp(_rotationX,minVer,maxVer);
+        float delta = Input.GetAxis("Mouse X") * RotationSpeedHor;
+        float _rotationY = transform.localEulerAngles.y + delta;
+        transform.localEulerAngles = new Vector3(_rotationX,_rotationY,0);
     }
 }
