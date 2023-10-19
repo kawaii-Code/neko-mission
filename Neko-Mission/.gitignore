@@ -20,6 +20,7 @@
 /[Aa]ssets/Plugins/Editor/JetBrains*
 
 # Visual Studio cache directory
+.idea/
 .vs/
 
 # Gradle cache directory
