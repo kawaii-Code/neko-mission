@@ -12,13 +12,9 @@ public class Spawner : MonoBehaviour
     {
         if (!_towerIsBuilt)
         {
-            Instantiate(Tower, transform.position + Vector3.up * 3.0f, Quaternion.identity);
+            Instantiate(Tower, transform.position + Vector3.up * Tower.transform.localScale.y / 2, Quaternion.identity);
             _towerIsBuilt = true;
         }
     }
 
-    void Update()
-    {
-
-    }
 }
