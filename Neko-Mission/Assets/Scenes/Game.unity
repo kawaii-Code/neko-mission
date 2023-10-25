@@ -639,6 +639,7 @@ MonoBehaviour:
   maxVer: 35
   MovingSpeed: 6
   JumpSpeed: 80
+  AddBalanceTime: 1
 --- !u!65 &950856961
 BoxCollider:
   m_ObjectHideFlags: 0

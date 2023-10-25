@@ -111,4 +111,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tower: {fileID: 4483622635151482353, guid: 4dbf18318dd660546b1c17408f33add4, type: 3}
-  SpawnPoint: {fileID: 1544506469096584279}
+  TowerPrice: 10
