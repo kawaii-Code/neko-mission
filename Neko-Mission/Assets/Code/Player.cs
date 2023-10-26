@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -8,8 +5,8 @@ public class Player : MonoBehaviour
     public GameObject Camera;
     public float RotationSpeedHor = 5.0f;
     public float RotationSpeedVer = 5.0f;
-    public float minVer = 45.0f;
-    public float maxVer = 45.0f;
+    public float MinVer = 45.0f;
+    public float MaxVer = 45.0f;
     public float MovingSpeed;
     public float JumpSpeed;
     private float _maxGroundDist = 0.6f;
@@ -50,7 +47,7 @@ public class Player : MonoBehaviour
 
         //Вид от 1-го лица.
         _rotationX -=Input.GetAxis("Mouse Y") * RotationSpeedVer;
-        _rotationX = Mathf.Clamp(_rotationX,minVer,maxVer);
+        _rotationX = Mathf.Clamp(_rotationX,MinVer,MaxVer);
         float delta = Input.GetAxis("Mouse X") * RotationSpeedHor;
         float _rotationY = transform.localEulerAngles.y + delta;
         transform.localEulerAngles = new Vector3(_rotationX,_rotationY,0);

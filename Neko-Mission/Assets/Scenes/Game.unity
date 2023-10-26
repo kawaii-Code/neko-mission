@@ -633,10 +633,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 963194225}
-  RotationSpeedHor: 10
-  RotationSpeedVer: 10
-  minVer: -50
-  maxVer: 35
+  RotationSpeedHor: 1
+  RotationSpeedVer: 1
+  MinVer: -45
+  MaxVer: 45
   MovingSpeed: 6
   JumpSpeed: 80
 --- !u!65 &950856961
