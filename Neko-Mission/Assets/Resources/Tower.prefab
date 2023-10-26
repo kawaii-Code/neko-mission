@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4483622635151482354}
   - component: {fileID: 4483622635151482355}
   - component: {fileID: 4483622635151482352}
+  - component: {fileID: 8830754695924420651}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -97,3 +98,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8830754695924420651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483622635151482353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3dc791a53a41d4fb7304a00e4d7ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 0}
+  FireRange: 2
+  FireRate: 0
+  Damage: 0
