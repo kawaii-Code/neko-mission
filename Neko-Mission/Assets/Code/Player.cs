@@ -1,3 +1,4 @@
+using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -28,22 +29,22 @@ public class Player : MonoBehaviour
     void Update()
     {
         //Механика передвижения.
-        float deltaHor = Input.GetAxis("Horizontal")*MovingSpeed;
-        float deltaVer = Input.GetAxis("Vertical")*MovingSpeed;
-       Vector3 newpositionvec = transform.forward*deltaVer*MovingSpeed*Time.deltaTime;
-       Vector3 newpositionhor = transform.right* deltaHor*MovingSpeed*Time.deltaTime;
-        _rigidbody.MovePosition(transform.position+newpositionvec+newpositionhor);
+        float deltaHor = Input.GetAxis("Horizontal") * MovingSpeed;
+        float deltaVer = Input.GetAxis("Vertical") * MovingSpeed;
+        Vector3 newpositionvec = transform.forward * deltaVer * MovingSpeed * Time.deltaTime;
+        Vector3 newpositionhor = transform.right * deltaHor * MovingSpeed * Time.deltaTime;
+        _rigidbody.MovePosition(transform.position + newpositionvec + newpositionhor);
         //Механика прыжка.
-       _isGrounded = Physics.Raycast(_groundCheckObj.transform.position,Vector3.down,_maxGroundDist);
-       bool hasJump = Input.GetKeyDown(KeyCode.Space);
-       if (hasJump && _isGrounded)
-       {
-            _rigidbody.AddForce(Vector3.up * 100 * JumpSpeed);
-       }
-       else if (!_isGrounded)
-       {
-            _rigidbody.AddForce(Vector3.down * 100);
-       }
+        _isGrounded = Physics.Raycast(_groundCheckObj.transform.position,Vector3.down,_maxGroundDist);
+        bool hasJump = Input.GetKeyDown(KeyCode.Space);// очень грустно без возможности распрыжки или хотя бы возможности прыгать по зажатому пробелу
+        if (hasJump && _isGrounded)
+        {
+             _rigidbody.AddForce(Vector3.up * 100 * JumpSpeed);
+        }
+        else if (!_isGrounded)
+        {
+            _rigidbody.AddForce(Vector3.down * 70);
+        }
 
         //Вид от 1-го лица.
         _rotationX -=Input.GetAxis("Mouse Y") * RotationSpeedVer;
