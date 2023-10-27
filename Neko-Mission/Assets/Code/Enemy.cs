@@ -24,10 +24,10 @@ public class Enemy : MonoBehaviour
     {
         _health = MaxHealth;
         
-        //навигатор 👉👈
+        //навигатор 👉🗺👈
         _route = new LinkedList<Vector3>(GameObject.FindGameObjectsWithTag("WayPointerBase").OrderByDescending(x => x.name)
             .Select(x => x.transform.position)); // для маршрута важен порядок точек.
-                                                 // TODO сделать сортировку не по имени, а по нормальному индексу точки в маршуте(🤡)
+                                                 // TODO сделать сортировку получше, по нормальному индексу точки в маршуте(🤡)
         Target = _route.First;
         _agent = GetComponent<NavMeshAgent>();
         _agent.SetDestination(Target.Value);
