@@ -111,4 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tower: {fileID: 4483622635151482353, guid: 4dbf18318dd660546b1c17408f33add4, type: 3}
+<<<<<<< Updated upstream
+=======
+  Pl: {fileID: 1346676424725303411, guid: bfc0527fd068abc4e93e71331ebf1bd8, type: 3}
+>>>>>>> Stashed changes
   TowerPrice: 10
