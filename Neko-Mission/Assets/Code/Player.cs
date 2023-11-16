@@ -10,8 +10,8 @@ public class Player : MonoBehaviour
     public float MovingSpeed;
     public float JumpSpeed;
     public LayerMask GroundMask;
+    public float MaxGroundDist = 0.6f;
     
-    private float _maxGroundDist = 0.6f;
     private Rigidbody _rigidbody;
     private Transform _groundCheckObj;
     private bool _isGrounded;
@@ -35,9 +35,12 @@ public class Player : MonoBehaviour
         float deltaVer = Input.GetAxis("Vertical") * MovingSpeed;
         Vector3 newpositionvec = transform.forward * (deltaVer * MovingSpeed * Time.deltaTime);
         Vector3 newpositionhor = transform.right * (deltaHor * MovingSpeed * Time.deltaTime);
-        _rigidbody.MovePosition(transform.position + newpositionvec + newpositionhor);
+
+        _rigidbody.velocity = newpositionhor + newpositionvec + new Vector3(0f, _rigidbody.velocity.y);
+        //_rigidbody.AddForce(newpositionvec + newpositionhor, ForceMode.Force);
+        //_rigidbody.MovePosition(transform.position + newpositionvec + newpositionhor);
         //Механика прыжка.
-        _isGrounded = Physics.Raycast(_groundCheckObj.transform.position, Vector3.down, _maxGroundDist);
+        _isGrounded = Physics.Raycast(_groundCheckObj.transform.position, Vector3.down, MaxGroundDist);
         bool hasJump = Input.GetKeyDown(KeyCode.Space);
         if (hasJump && _isGrounded)
         {
