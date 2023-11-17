@@ -12,6 +12,8 @@ public class Bullet : MonoBehaviour
     private Enemy _actionTarget;
     void Update()
     {
+        if (!Target) Destroy(this.gameObject); // Если другая башня убила врага, а пуля осталась 
+        
         transform.rotation = Quaternion.LookRotation(Target.transform.position - transform.position);
         transform.position = Vector3.Lerp(transform.position, Target.transform.position, Speed * Time.deltaTime);
     }
