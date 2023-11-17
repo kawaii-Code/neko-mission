@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1544506469096584284}
   - component: {fileID: 1544506469096584275}
   - component: {fileID: 1544506469096584274}
+  - component: {fileID: 1544506469096584273}
   - component: {fileID: 1544506469096584272}
-  - component: {fileID: 5173310504798073488}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -85,6 +85,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1544506469096584273
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544506469096584279}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 100, z: 1}
+  m_Center: {x: 0, y: 50, z: 0}
 --- !u!114 &1544506469096584272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,16 +111,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tower: {fileID: 4483622635151482353, guid: 4dbf18318dd660546b1c17408f33add4, type: 3}
---- !u!65 &5173310504798073488
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544506469096584279}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 100, z: 1}
-  m_Center: {x: 0, y: 50, z: 0}
+  Pl: {fileID: 1346676424725303411, guid: bfc0527fd068abc4e93e71331ebf1bd8, type: 3}
+  TowerPrice: 10

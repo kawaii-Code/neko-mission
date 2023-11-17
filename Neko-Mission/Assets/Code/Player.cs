@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public float JumpSpeed;
     public LayerMask GroundMask;
     public float MaxGroundDist = 0.6f;
+    public int CurrentBalance = 0;
+    public float AddBalanceTime;
     
     private Rigidbody _rigidbody;
     private Transform _groundCheckObj;
@@ -18,7 +20,7 @@ public class Player : MonoBehaviour
     private float _rotationX = 0;
     private float _rotationY = 0;
     private Camera _camera;
-
+    
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -26,6 +28,12 @@ public class Player : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        CurrentBalance = 0;
+        if (AddBalanceTime > 0)
+        {
+            InvokeRepeating("AddBalance", AddBalanceTime, AddBalanceTime);
+        }
     }
 
     void Update()
@@ -59,5 +67,11 @@ public class Player : MonoBehaviour
         
         Camera.transform.rotation = Quaternion.Euler(_rotationX, _rotationY, 0);
         transform.rotation = Quaternion.Euler(0, _rotationY, 0);
+    }
+
+    //Добавление денег 
+    private void AddBalance()
+    {
+        CurrentBalance++;
     }
 }
