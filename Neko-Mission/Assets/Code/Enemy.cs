@@ -1,21 +1,17 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.UI;
 using UnityEngine;
-using UnityEngine.UIElements;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public float EnemySpeed; // не пригодилось
+    public float Speed;
     public int MaxHealth = 100;
     private int _health;
 
     private NavMeshAgent _agent;
     // private Rigidbody _rigidbody; //возможно для оптимизации следует отказаться от этого и всё переделать 😘 - так и вышло🤓
-    private LinkedListNode<Vector3> Target;
+    private LinkedListNode<Vector3> _target;
 
     // private bool _targetReached;
     private LinkedList<Vector3> _route;
@@ -29,13 +25,10 @@ public class Enemy : MonoBehaviour
             .Select(x => x.transform.position)); // для маршрута важен порядок точек - это можно попробовать исправить
         // TODO сделать сортировку получше, по нормальному индексу точки в маршуте(🤡)
         
-        foreach (var pt in _route.ToList())
-        {
-            print(pt);
-        }
-        Target = _route.First;
+        _target = _route.First;
         _agent = GetComponent<NavMeshAgent>();
-        _agent.SetDestination(Target.Value);
+        _agent.SetDestination(_target.Value);
+        _agent.speed = Speed;
     }
 
     private void Update()
@@ -51,17 +44,17 @@ public class Enemy : MonoBehaviour
     {
         if (_agent.remainingDistance <= _agent.stoppingDistance) //он говорит инвертировать выражение, чтобы уменьшить гнездование, помогите
         {
-            if (Target.Next != null)
+            if (_target.Next != null)
             {
-                Target = Target.Next;
-                _agent.SetDestination(Target.Value);
+                _target = _target.Next;
+                _agent.SetDestination(_target.Value);
             }
         }
     }
 
     // Получение урона
-    public void TakeDamage(int Damage) {
-        _health -= Damage;
+    public void TakeDamage(int damage) {
+        _health -= damage;
 
         if (_health <= 0){
             Destroy(this.gameObject);
