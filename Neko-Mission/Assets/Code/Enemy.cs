@@ -12,8 +12,6 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent _agent;
     // private Rigidbody _rigidbody; //возможно для оптимизации следует отказаться от этого и всё переделать 😘 - так и вышло🤓
     private LinkedListNode<Vector3> _target;
-
-    // private bool _targetReached;
     private LinkedList<Vector3> _route;
 
     void Start()

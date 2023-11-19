@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PausedMenu : MonoBehaviour
 {
-    [SerializeField] KeyCode keyMenuPaused;
-    public GameObject Pause_menu;
+    [SerializeField] KeyCode _keyMenuPaused;
+    public GameObject Pause_Menu;
     private bool _paused = false;
+    
     void Start()
     {
-        Pause_menu.SetActive(false);
+        Pause_Menu.SetActive(false);
     }
 
     void Update()
@@ -19,20 +18,20 @@ public class PausedMenu : MonoBehaviour
 
     void ActiveMenu()
     {
-        if(Input.GetKeyDown(keyMenuPaused))
+        if(Input.GetKeyDown(_keyMenuPaused))
         {
             _paused = !_paused;
         }
 
         if(_paused)
         {
-            Pause_menu.SetActive(true);
+            Pause_Menu.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0f;
         }
         else 
         {
-            Pause_menu.SetActive(false);
+            Pause_Menu.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1f;
         }

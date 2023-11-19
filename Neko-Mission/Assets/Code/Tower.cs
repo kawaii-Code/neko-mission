@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -63,7 +61,7 @@ public class Tower : MonoBehaviour
     {
         if (other)
         {
-            if (!_nearEnemy.Contains(other.gameObject) && other.tag == "Enemy")
+            if (!_nearEnemy.Contains(other.gameObject) && other.CompareTag("Enemy"))
             {
                 _nearEnemy.Add(other.gameObject);
             }
@@ -73,26 +71,26 @@ public class Tower : MonoBehaviour
     // Получение ближайшего врага в области
     GameObject GetClosestEnemy(GameObject[] objects)
     {
-        GameObject BestTarget = null;
-        float ClosestDistance = float.MaxValue;
+        GameObject bestTarget = null;
+        float closestDistance = float.MaxValue;
         Vector3 currentPosition = transform.position;
 
-        foreach (GameObject CurrentObject in objects)
+        foreach (GameObject currentObject in objects)
         {
-            if (CurrentObject)
+            if (currentObject)
             {
-                Vector3 DifferenceToTarget = CurrentObject.transform.position - currentPosition;
-                float DistanceToTarget = DifferenceToTarget.sqrMagnitude;
+                Vector3 differenceToTarget = currentObject.transform.position - currentPosition;
+                float distanceToTarget = differenceToTarget.sqrMagnitude;
 
-                if (DistanceToTarget < ClosestDistance)
+                if (distanceToTarget < closestDistance)
                 {
-                    ClosestDistance = DistanceToTarget;
-                    BestTarget = CurrentObject;
+                    closestDistance = distanceToTarget;
+                    bestTarget = currentObject;
                 }
             }
         }
 
-        return BestTarget;
+        return bestTarget;
     }
 
 }
