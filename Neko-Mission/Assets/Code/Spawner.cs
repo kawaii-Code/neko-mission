@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour
     {
         if (!_towerIsBuilt && Pl.CurrentBalance >= TowerPrice)
         {
-            Instantiate(Tower, transform.position + Vector3.up * Tower.transform.localScale.y / 2, Quaternion.identity);
+            Instantiate(Tower, transform.position + Vector3.up * Tower.transform.position.y, Quaternion.identity);
             Pl.CurrentBalance -= TowerPrice;
             _towerIsBuilt = true;
         }
