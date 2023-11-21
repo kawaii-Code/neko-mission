@@ -110,6 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17c0d72321356d43bcd998d415b4f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tower: {fileID: 4483622635151482353, guid: 4dbf18318dd660546b1c17408f33add4, type: 3}
+  Tower: {fileID: 272924644477402658, guid: c8880cdbc0dd36a45aa8f4434ffcbd33, type: 3}
   Pl: {fileID: 1346676424725303411, guid: bfc0527fd068abc4e93e71331ebf1bd8, type: 3}
   TowerPrice: 10
