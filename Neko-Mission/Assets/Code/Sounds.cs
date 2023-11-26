@@ -25,6 +25,12 @@ public class Sounds : MonoBehaviour
 
     public static void Play(string clipName)
     {
+        if (!_instance)
+        {
+            Debug.LogWarning("Невозможно проиграть звук. Начните игру с главному меню чтобы звуки появились.");
+            return;
+        }
+        
         if (_instance.Clips.TryGetValue(clipName, out AudioClip clip))
         {
             _instance.AudioSource.PlayOneShot(clip);
