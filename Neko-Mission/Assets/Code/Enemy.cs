@@ -55,7 +55,11 @@ public class Enemy : MonoBehaviour
         _health -= damage;
 
         if (_health <= 0){
-            Destroy(this.gameObject);
+            Sounds.Play("duck");
+            Destroy(gameObject);
+        }
+        else {
+            Sounds.Play("click2");
         }
     }
 

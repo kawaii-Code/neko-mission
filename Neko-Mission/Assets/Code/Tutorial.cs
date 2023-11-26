@@ -20,6 +20,7 @@ public class Tutorial : MonoBehaviour
 
     public void NextSlide()
     {
+        Sounds.Play("click3");
         if (_currentSlideIndex == TutorialSlides.Length - 1)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
@@ -35,6 +36,7 @@ public class Tutorial : MonoBehaviour
     {
         if (_currentSlideIndex > 0)
         {
+            Sounds.Play("click3");
             _currentSlideIndex--;
             UpdateSlide(); 
         }

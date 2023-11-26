@@ -5,11 +5,18 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
+        PlayClick();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
+    
     public void ExitGame()
     {
-        Debug.Log("Игра закрылась");
+        Sounds.Play("duck");
         Application.Quit();
+    }
+
+    public void PlayClick()
+    {
+        Sounds.Play("click3");
     }
 }

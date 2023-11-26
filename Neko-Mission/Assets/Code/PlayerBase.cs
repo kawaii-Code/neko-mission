@@ -25,6 +25,8 @@ public class PlayerBase : MonoBehaviour
 
     private void TakeDamage(int damage = 1)
     {
+        Sounds.Play("heartbeat");
+        
         _health -= damage;
         if (_health <= 0)
         {
