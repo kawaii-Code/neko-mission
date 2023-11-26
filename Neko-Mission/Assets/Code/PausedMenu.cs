@@ -21,30 +21,43 @@ public class PausedMenu : MonoBehaviour
         if(Input.GetKeyDown(_keyMenuPaused))
         {
             _paused = !_paused;
+            UpdatePause();
         }
+    }
 
+    public void MenuPausedContinue()
+    {
+        PlayClick();
+        _paused = false;
+        UpdatePause();
+    }
+
+    public void PlayClick()
+    {
+        Sounds.Play("click3");
+    }
+
+    private void UpdatePause()
+    {
         if(_paused)
         {
             Pause_Menu.SetActive(true);
+            Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0f;
         }
         else 
         {
             Pause_Menu.SetActive(false);
+            Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1f;
         }
     }
 
-    public void MenuPausedContinue()
-    {
-        _paused = false;
-    }
-
     public void MenuPausedExit()
     {
-        Debug.Log("Выход из игры");
+        PlayClick();
         Application.Quit();
     }
 }

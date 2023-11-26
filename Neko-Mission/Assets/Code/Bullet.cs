@@ -7,9 +7,14 @@ public class Bullet : MonoBehaviour
     public float Speed;
     
     private Enemy _actionTarget;
+    
     void Update()
     {
-        if (!Target) Destroy(this.gameObject); // Если другая башня убила врага, а пуля осталась 
+        if (!Target)
+        {
+            Destroy(gameObject); // Если другая башня убила врага, а пуля осталась 
+            return;
+        }
         
         transform.rotation = Quaternion.LookRotation(Target.transform.position - transform.position);
         transform.position = Vector3.Lerp(transform.position, Target.transform.position, Speed * Time.deltaTime);
