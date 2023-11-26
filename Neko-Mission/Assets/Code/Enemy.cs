@@ -68,7 +68,8 @@ public class Enemy : MonoBehaviour
         // При столкновение с игроком 
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            LoseMenu.Show();
+            //Destroy(other.gameObject);
         }
     }
 }
