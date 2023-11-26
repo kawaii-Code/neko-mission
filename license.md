@@ -16,3 +16,8 @@ https://www.freesoundslibrary.com/heartbeat-sound-effect/
 https://www.freesoundslibrary.com/bird-singing-in-city-park/
 https://www.freesoundslibrary.com/birds-noises/
 https://www.freesoundslibrary.com/duck-quack/
+
+### Картинки
+
+Картинка черепа, который обозначает где появляются враги:
+https://www.vecteezy.com/png/1193502-skull
