@@ -30,8 +30,7 @@ public class PlayerBase : MonoBehaviour
         _health -= damage;
         if (_health <= 0)
         {
-            // Что-то плохое с мышкой
-            SceneManager.LoadScene(0);
+            LoseMenu.Show();
         }
 
         View.Show(_health);

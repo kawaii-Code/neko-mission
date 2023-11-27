@@ -21,3 +21,7 @@ https://www.freesoundslibrary.com/duck-quack/
 
 Картинка черепа, который обозначает где появляются враги:
 https://www.vecteezy.com/png/1193502-skull
+
+### Шрифты
+
+https://old.fonts-online.ru/font/Comic-Relief-Bold

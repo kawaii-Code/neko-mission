@@ -2,14 +2,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameObject Camera;
-    public float RotationSpeedHor = 5.0f;
-    public float RotationSpeedVer = 5.0f;
-    public float MinVer = 45.0f;
-    public float MaxVer = 45.0f;
     public float MovingSpeed;
     public float JumpSpeed;
-    public LayerMask GroundMask;
     public float MaxGroundDist = 0.6f;
     public int CurrentBalance = 0;
     public float AddBalanceTime;
@@ -20,6 +14,10 @@ public class Player : MonoBehaviour
     private float _rotationX = 0;
     private float _rotationY = 0;
     private Camera _camera;
+    
+    private bool _hasJump;
+    private float _hasJumpTime = 0.5f;
+    private float _bufferTime = 0.5f;
     
     void Start()
     {
@@ -36,37 +34,52 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
+    {
+        if (!_hasJump)
+        {
+            _hasJump = Input.GetKeyDown(KeyCode.Space);
+        }
+        else
+        {
+            _hasJumpTime += Time.deltaTime;
+            if (_hasJumpTime > _bufferTime)
+            {
+                ResetJump();
+            }
+        }
+    }
+
+    void FixedUpdate()
     {
         //Механика передвижения.
         float deltaHor = Input.GetAxis("Horizontal") * MovingSpeed;
         float deltaVer = Input.GetAxis("Vertical") * MovingSpeed;
-        Vector3 newpositionvec = transform.forward * (deltaVer * MovingSpeed * Time.deltaTime);
-        Vector3 newpositionhor = transform.right * (deltaHor * MovingSpeed * Time.deltaTime);
+        Vector3 newpositionvec = transform.forward * (deltaVer * MovingSpeed * Time.fixedDeltaTime);
+        Vector3 newpositionhor = transform.right * (deltaHor * MovingSpeed * Time.fixedDeltaTime);
 
         _rigidbody.velocity = newpositionhor + newpositionvec + new Vector3(0f, _rigidbody.velocity.y);
-        //_rigidbody.AddForce(newpositionvec + newpositionhor, ForceMode.Force);
-        //_rigidbody.MovePosition(transform.position + newpositionvec + newpositionhor);
+        
         //Механика прыжка.
         _isGrounded = Physics.Raycast(_groundCheckObj.transform.position, Vector3.down, MaxGroundDist);
-        bool hasJump = Input.GetKeyDown(KeyCode.Space);
-        if (hasJump && _isGrounded)
+        if (_hasJump && _isGrounded)
         {
-            _rigidbody.AddForce(Vector3.up * (100 * JumpSpeed));
+            ResetJump();
+            Vector3 velocity = _rigidbody.velocity;
+            velocity.y = JumpSpeed;
+            _rigidbody.velocity = velocity;
+            //_rigidbody.AddForce(Vector3.up * (100 * JumpSpeed));
         }
         else if (!_isGrounded)
         {
             _rigidbody.AddForce(Vector3.down * 100);
         }
+    }
 
-        //Вид от 1-го лица.
-        _rotationX -= Input.GetAxis("Mouse Y") * RotationSpeedVer;
-        _rotationX = Mathf.Clamp(_rotationX, MinVer, MaxVer);
-        float delta = Input.GetAxis("Mouse X") * RotationSpeedHor;
-        _rotationY = transform.localEulerAngles.y + delta;
-        
-        Camera.transform.rotation = Quaternion.Euler(_rotationX, _rotationY, 0);
-        transform.rotation = Quaternion.Euler(0, _rotationY, 0);
+    private void ResetJump()
+    {
+        _hasJump = false;
+        _hasJumpTime = 0.0f;
     }
 
     //Добавление денег 
