@@ -53,12 +53,12 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         //Механика передвижения.
-        float deltaHor = Input.GetAxis("Horizontal") * MovingSpeed;
-        float deltaVer = Input.GetAxis("Vertical") * MovingSpeed;
-        Vector3 newpositionvec = transform.forward * (deltaVer * MovingSpeed * Time.fixedDeltaTime);
-        Vector3 newpositionhor = transform.right * (deltaHor * MovingSpeed * Time.fixedDeltaTime);
+        float deltaHor = Input.GetAxis("Horizontal");
+        float deltaVer = Input.GetAxis("Vertical");
 
-        _rigidbody.velocity = newpositionhor + newpositionvec + new Vector3(0f, _rigidbody.velocity.y);
+        Vector3 direction = transform.right * deltaHor + transform.forward * deltaVer;
+        
+        _rigidbody.velocity = direction.magnitude * MovingSpeed * direction.normalized + new Vector3(0f, _rigidbody.velocity.y);
         
         //Механика прыжка.
         _isGrounded = Physics.Raycast(_groundCheckObj.transform.position, Vector3.down, MaxGroundDist);
