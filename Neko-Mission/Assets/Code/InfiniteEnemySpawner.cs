@@ -21,7 +21,7 @@ public class InfiniteEnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        Spawn();
+        _currentSpawnInterval = SpawnInterval;
     }
 
     private void Update()

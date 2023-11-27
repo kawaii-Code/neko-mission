@@ -5,7 +5,7 @@ public class TowerSpawner : MonoBehaviour
     public GameObject Tower;
     public Player Pl;
     public int TowerPrice;
-    private bool _towerIsBuilt = false;
+    private bool _towerIsBuilt;
 
     public void OnMouseDown()
     {

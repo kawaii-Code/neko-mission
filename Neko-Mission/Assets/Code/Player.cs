@@ -5,19 +5,18 @@ public class Player : MonoBehaviour
     public float MovingSpeed;
     public float JumpSpeed;
     public float MaxGroundDist = 0.6f;
+    public float Gravity = 5f;
     public int CurrentBalance = 0;
     public float AddBalanceTime;
     
     private Rigidbody _rigidbody;
     private Transform _groundCheckObj;
     private bool _isGrounded;
-    private float _rotationX = 0;
-    private float _rotationY = 0;
     private Camera _camera;
     
     private bool _hasJump;
-    private float _hasJumpTime = 0.5f;
-    private float _bufferTime = 0.5f;
+    private float _hasJumpTime;
+    private float _jumpBufferTime = 0.5f;
     
     void Start()
     {
@@ -43,7 +42,7 @@ public class Player : MonoBehaviour
         else
         {
             _hasJumpTime += Time.deltaTime;
-            if (_hasJumpTime > _bufferTime)
+            if (_hasJumpTime > _jumpBufferTime)
             {
                 ResetJump();
             }
@@ -57,8 +56,12 @@ public class Player : MonoBehaviour
         float deltaVer = Input.GetAxis("Vertical");
 
         Vector3 direction = transform.right * deltaHor + transform.forward * deltaVer;
-        
-        _rigidbody.velocity = direction.magnitude * MovingSpeed * direction.normalized + new Vector3(0f, _rigidbody.velocity.y);
+        if (direction.magnitude > 1.0f)
+        {
+            direction.Normalize();
+        }
+
+        _rigidbody.velocity = direction.magnitude * MovingSpeed * direction + new Vector3(0f, _rigidbody.velocity.y);
         
         //Механика прыжка.
         _isGrounded = Physics.Raycast(_groundCheckObj.transform.position, Vector3.down, MaxGroundDist);
@@ -68,11 +71,12 @@ public class Player : MonoBehaviour
             Vector3 velocity = _rigidbody.velocity;
             velocity.y = JumpSpeed;
             _rigidbody.velocity = velocity;
-            //_rigidbody.AddForce(Vector3.up * (100 * JumpSpeed));
         }
         else if (!_isGrounded)
         {
-            _rigidbody.AddForce(Vector3.down * 100);
+            Vector3 velocity = _rigidbody.velocity;
+            velocity.y -= Gravity * Time.fixedDeltaTime;
+            _rigidbody.velocity = velocity;
         }
     }
 
