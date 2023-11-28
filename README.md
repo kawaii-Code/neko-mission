@@ -1,8 +1,8 @@
-![title](Resources/title.png)
+![title](Resources/transparent-title.png)
 
 **NEKO : : MISSION** - игра в жанре *Tower Defense* с видом от первого лица.
 
-![demo](Resources/demo.gif)
+![demo](Resources/zero-build-demo.gif)
 
 ---
 
