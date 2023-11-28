@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     public float JumpSpeed;
     public float MaxGroundDist = 0.6f;
     public float Gravity = 5f;
+    public int StartingBalance = 10;
     public int CurrentBalance = 0;
     public float AddBalanceTime;
     
@@ -26,7 +27,7 @@ public class Player : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        CurrentBalance = 0;
+        CurrentBalance = StartingBalance;
         if (AddBalanceTime > 0)
         {
             InvokeRepeating("AddBalance", AddBalanceTime, AddBalanceTime);

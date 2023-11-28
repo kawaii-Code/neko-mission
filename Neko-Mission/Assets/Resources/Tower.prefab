@@ -108,4 +108,4 @@ MonoBehaviour:
   FireRange: 5
   FireRate: 0.5
   BulletSpeed: 10
-  Damage: 10
+  Damage: 5
