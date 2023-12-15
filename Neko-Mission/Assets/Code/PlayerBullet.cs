@@ -4,7 +4,11 @@ public class PlayerBullet : MonoBehaviour
 {
     public float Speed;
     public int Damage;
-    
+
+    private void Start()
+    {
+        Destroy(gameObject, 5);
+    }
     private void Update()
     {
         transform.position += transform.forward * (Speed * Time.deltaTime);
@@ -17,5 +21,6 @@ public class PlayerBullet : MonoBehaviour
             enemy.TakeDamage(Damage);
             Destroy(gameObject);
         }
+
     }
 }
