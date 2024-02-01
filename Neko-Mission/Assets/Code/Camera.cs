@@ -1,7 +1,11 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Camera : MonoBehaviour
 {
+    public TMP_Text SensitivityValue;
+
     public float MinPitch = -60f;
     public float MaxPitch = 60f;
     
@@ -10,6 +14,12 @@ public class Camera : MonoBehaviour
 
     private float _pitch;
     private float _yaw;
+
+    public void ChangeSensitivity(Slider slider)
+    {
+        Sensitivity = Mathf.Lerp(0.0f, 10, slider.value);
+        SensitivityValue.text = $"{Sensitivity}";
+    }
     
     private void Update()
     {
