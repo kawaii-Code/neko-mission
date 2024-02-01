@@ -7,7 +7,6 @@ public static class AlignTiles
     public static void Align()
     {
          MeshFilter[] meshFilters = Object.FindObjectsOfType<MeshFilter>();
-         Debug.Log(meshFilters.Length);
 
          for (int i = 0; i < meshFilters.Length; i++)
          {

@@ -4,14 +4,14 @@ using UnityEngine.SceneManagement;
 public class PlayerBase : MonoBehaviour
 {
     public int MaxHealth = 5;
-    public PlayerHealthView View;
+    public HUD Hud;
 
     private int _health;
 
     private void Start()
     {
         _health = MaxHealth;
-        View.Show(_health);
+        Hud.ShowBaseHealth(_health);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,6 +33,6 @@ public class PlayerBase : MonoBehaviour
             LoseMenu.Show();
         }
 
-        View.Show(_health);
+        Hud.ShowBaseHealth(_health);
     }
 }
