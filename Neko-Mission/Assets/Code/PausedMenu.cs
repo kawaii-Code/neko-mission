@@ -3,6 +3,7 @@ using UnityEngine;
 public class PausedMenu : MonoBehaviour
 {
     [SerializeField] KeyCode _keyMenuPaused;
+    public Camera Camera;
     public GameObject Pause_Menu;
     public GameObject Settings_Menu;
     private bool _paused = false;
@@ -42,6 +43,7 @@ public class PausedMenu : MonoBehaviour
     {
         if(_paused)
         {
+            Camera.Paused = true;
             Pause_Menu.SetActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
@@ -49,6 +51,7 @@ public class PausedMenu : MonoBehaviour
         }
         else 
         {
+            Camera.Paused = false;
             Settings_Menu.SetActive(false);
             Pause_Menu.SetActive(false);
             Cursor.visible = false;

@@ -14832,6 +14832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _keyMenuPaused: 27
+  Camera: {fileID: 1740666837}
   Pause_Menu: {fileID: 515448353}
   Settings_Menu: {fileID: 1417274909}
 --- !u!4 &832161774
@@ -32085,6 +32086,7 @@ MonoBehaviour:
   MinPitch: -60
   MaxPitch: 60
   Player: {fileID: 460015288}
+  Paused: 0
 --- !u!1 &1741982380
 GameObject:
   m_ObjectHideFlags: 0

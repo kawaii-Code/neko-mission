@@ -5,12 +5,14 @@ public class Camera : MonoBehaviour
 {
     public float MinPitch = -60f;
     public float MaxPitch = 60f;
-    
+
     public Transform Player;
 
     private SettingValue<float> _sensitivity;
     private float _pitch;
     private float _yaw;
+
+    public bool Paused;
 
     private void Awake()
     {
@@ -19,6 +21,9 @@ public class Camera : MonoBehaviour
 
     private void Update()
     {
+        if (Paused)
+            return;
+
         Console.WriteLine(_sensitivity);
 
         float rotationX = Input.GetAxis("Mouse X");
