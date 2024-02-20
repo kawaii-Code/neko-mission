@@ -14,7 +14,7 @@ public class PlayerGun : MonoBehaviour
 
     private void Update()
     {
-        bool isShooting = Input.GetMouseButtonDown(1);
+        bool isShooting = Input.GetMouseButtonDown(0);
         
         if (isShooting && _timeSinceLastShot > ShootCooldown)
         {
