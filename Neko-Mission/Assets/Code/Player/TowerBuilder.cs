@@ -5,8 +5,13 @@ public class TowerBuilder : MonoBehaviour
     public LayerMask TowerSpawnerLayer;
     public float BuildDistance = 10f;
 
+    public bool Paused;
+
     private void Update()
     {
+        if (Paused)
+            return;
+        
         if (Input.GetMouseButtonDown(1))
         {
             Ray ray = UnityEngine.Camera.main.ScreenPointToRay(Input.mousePosition);

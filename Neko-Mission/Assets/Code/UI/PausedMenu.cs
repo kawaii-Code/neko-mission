@@ -3,7 +3,11 @@ using UnityEngine;
 public class PausedMenu : MonoBehaviour
 {
     [SerializeField] KeyCode _keyMenuPaused;
-    public Camera Camera;
+    
+    public PlayerCamera PlayerCamera;
+    public TowerBuilder TowerBuilder;
+    public PlayerGun PlayerGun;
+    
     public GameObject Pause_Menu;
     public GameObject Settings_Menu;
     private bool _paused = false;
@@ -43,7 +47,10 @@ public class PausedMenu : MonoBehaviour
     {
         if(_paused)
         {
-            Camera.Paused = true;
+            PlayerCamera.Paused = true;
+            TowerBuilder.Paused = true;
+            PlayerGun.Paused = true;
+            
             Pause_Menu.SetActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
@@ -51,7 +58,10 @@ public class PausedMenu : MonoBehaviour
         }
         else 
         {
-            Camera.Paused = false;
+            PlayerCamera.Paused = false;
+            TowerBuilder.Paused = false;
+            PlayerGun.Paused = false;
+            
             Settings_Menu.SetActive(false);
             Pause_Menu.SetActive(false);
             Cursor.visible = false;

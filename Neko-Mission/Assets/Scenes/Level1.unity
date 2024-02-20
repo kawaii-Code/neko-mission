@@ -6286,10 +6286,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726aca93044b4d64a476d8e208920fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 1740666837}
+  PlayerCamera: {fileID: 1740666839}
   FireRateBulletsPerSecond: 2
   BulletPrefab: {fileID: 6033251737547470505, guid: 139cb71988e67de4494ae2f4d03cf41e, type: 3}
   ShootPoint: {fileID: 323238850}
+  Paused: 0
 --- !u!1001 &341036011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7625,7 +7626,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -8346,6 +8347,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   BuildDistance: 10
+  Paused: 0
 --- !u!1001 &460990220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14898,7 +14900,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _keyMenuPaused: 27
-  Camera: {fileID: 1740666837}
+  PlayerCamera: {fileID: 1740666839}
+  TowerBuilder: {fileID: 460015289}
+  PlayerGun: {fileID: 323238851}
   Pause_Menu: {fileID: 515448353}
   Settings_Menu: {fileID: 1417274909}
 --- !u!4 &832161774

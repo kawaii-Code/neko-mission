@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class PlayerCamera : MonoBehaviour
 {
     public float MinPitch = -60f;
     public float MaxPitch = 60f;

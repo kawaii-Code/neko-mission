@@ -12,9 +12,11 @@ public class Tutorial : MonoBehaviour
     [TextArea]
     public string[] TutorialText;
 
-    public Button PreviousButton;
+    public GameObject BackToMenuButton;
+    public GameObject PreviousButton;
+    
     public GameObject NextButton;
-    public GameObject SpecialNextButton;
+    public GameObject PlayButton;
 
     private int _currentSlideIndex;
 
@@ -29,32 +31,20 @@ public class Tutorial : MonoBehaviour
     public void NextSlide()
     {
         Sounds.Play("click3");
-        
-        if (_currentSlideIndex == SlideCount - 2)
-        {
-            NextButton.SetActive(false);
-            SpecialNextButton.SetActive(true);
-        }
-
         _currentSlideIndex++;
         UpdateSlide();
     }
 
     public void PreviousSlide()
     {
-        if (_currentSlideIndex == SlideCount - 1)
-        {
-            NextButton.SetActive(true);
-            SpecialNextButton.SetActive(false);
-        }
-        
-        if (_currentSlideIndex > 0)
-        {
-            Sounds.Play("click3");
+        Sounds.Play("click3");
+        _currentSlideIndex--;
+        UpdateSlide(); 
+    }
 
-            _currentSlideIndex--;
-            UpdateSlide(); 
-        }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void StartGame()
@@ -64,8 +54,25 @@ public class Tutorial : MonoBehaviour
 
     private void UpdateSlide()
     {
-        PreviousButton.interactable = _currentSlideIndex != 0;
-
+        if (_currentSlideIndex == 0)
+        {
+            BackToMenuButton.SetActive(true);
+            PreviousButton.SetActive(false);
+        }
+        else if (_currentSlideIndex == SlideCount - 1)
+        {
+            NextButton.SetActive(false);
+            PlayButton.SetActive(true);
+        }
+        else
+        {
+            BackToMenuButton.SetActive(false);
+            PlayButton.SetActive(false);
+            
+            PreviousButton.SetActive(true);
+            NextButton.SetActive(true);
+        }
+        
         SlideView.sprite = TutorialSlides[_currentSlideIndex];
         TutorialComment.text = TutorialText[_currentSlideIndex];
     }
