@@ -1,33 +1,31 @@
-using TMPro;
+using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Camera : MonoBehaviour
 {
-    public TMP_Text SensitivityValue;
-
     public float MinPitch = -60f;
     public float MaxPitch = 60f;
     
-    public float Sensitivity = 1f;
     public Transform Player;
 
+    private SettingValue<float> _sensitivity;
     private float _pitch;
     private float _yaw;
 
-    public void ChangeSensitivity(Slider slider)
+    private void Awake()
     {
-        Sensitivity = Mathf.Lerp(0.0f, 10, slider.value);
-        SensitivityValue.text = $"{Sensitivity}";
+        _sensitivity = Settings.CameraSensitivity;
     }
-    
+
     private void Update()
     {
+        Console.WriteLine(_sensitivity);
+
         float rotationX = Input.GetAxis("Mouse X");
         float rotationY = Input.GetAxis("Mouse Y");
 
-        _pitch = Mathf.Clamp(_pitch - Sensitivity * rotationY, MinPitch, MaxPitch);
-        _yaw += Sensitivity * rotationX;
+        _pitch = Mathf.Clamp(_pitch - _sensitivity * rotationY, MinPitch, MaxPitch);
+        _yaw += _sensitivity * rotationX;
 
         Vector3 playerRotation = Player.rotation.eulerAngles;
         playerRotation.y = _yaw;

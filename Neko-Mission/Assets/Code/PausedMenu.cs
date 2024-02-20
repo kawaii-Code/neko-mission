@@ -4,6 +4,7 @@ public class PausedMenu : MonoBehaviour
 {
     [SerializeField] KeyCode _keyMenuPaused;
     public GameObject Pause_Menu;
+    public GameObject Settings_Menu;
     private bool _paused = false;
     
     void Start()
@@ -48,6 +49,7 @@ public class PausedMenu : MonoBehaviour
         }
         else 
         {
+            Settings_Menu.SetActive(false);
             Pause_Menu.SetActive(false);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
