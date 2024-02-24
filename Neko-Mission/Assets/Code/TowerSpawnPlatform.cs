@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class TowerSpawner : MonoBehaviour
+public class TowerSpawnPlatform : MonoBehaviour
 {
     public GameObject Tower;
     public Player Pl;
     public int TowerPrice;
     private bool _towerIsBuilt;
 
-    public void OnMouseDown()
+    public void SpawnTower()
     {
         if (!_towerIsBuilt && Pl.CurrentBalance >= TowerPrice)
         {
@@ -22,7 +22,7 @@ public class TowerSpawner : MonoBehaviour
 
         if (!_towerIsBuilt && Pl.CurrentBalance < TowerPrice)
         {
-            Debug.Log("Недостаточно денег!");
+            Sounds.Play("error1");
         }
     }
 }

@@ -33,6 +33,7 @@ public class Sounds : MonoBehaviour
         
         if (_instance.Clips.TryGetValue(clipName, out AudioClip clip))
         {
+            _instance.AudioSource.volume = Settings.SoundVolume;
             _instance.AudioSource.PlayOneShot(clip);
         }
         else
