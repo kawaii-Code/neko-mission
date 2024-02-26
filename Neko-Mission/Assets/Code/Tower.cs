@@ -69,7 +69,7 @@ public class Tower : MonoBehaviour
     }
     
     // Получение ближайшего врага в области
-    GameObject GetClosestEnemy(GameObject[] objects)
+    GameObject  GetClosestEnemy(GameObject[] objects)
     {
         GameObject bestTarget = null;
         float closestDistance = float.MaxValue;

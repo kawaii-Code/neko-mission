@@ -111,5 +111,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tower: {fileID: 272924644477402658, guid: c8880cdbc0dd36a45aa8f4434ffcbd33, type: 3}
-  Pl: {fileID: 1346676424725303411, guid: bfc0527fd068abc4e93e71331ebf1bd8, type: 3}
+  Pl: {fileID: 184639146813526962, guid: 4f8b23b95ba026d4fa43b314999b5a34, type: 3}
   TowerPrice: 10

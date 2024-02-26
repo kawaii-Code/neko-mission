@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class BalanceBarScript : MonoBehaviour
 {
     public Player Pl;
-    public TextMeshProUGUI BalanceText;
+    public TextMeshProUGUI PlayerBalance;
 
     void Update()
     {
-        BalanceText.text = $"Баланс: {Pl.CurrentBalance}";
+        PlayerBalance.text = $"Баланс: {Pl.CurrentBalance}";
     }
 }

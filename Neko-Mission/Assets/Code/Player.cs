@@ -8,17 +8,19 @@ public class Player : MonoBehaviour
     public float Gravity = 5f;
     public int StartingBalance = 10;
     public int CurrentBalance = 0;
+    public int CurrentHealth = 100;
+    public int StartingHealth = 100;
     public float AddBalanceTime;
-    
+
     private Rigidbody _rigidbody;
     private Transform _groundCheckObj;
     private bool _isGrounded;
     private Camera _camera;
-    
+
     private bool _hasJump;
     private float _hasJumpTime;
     private float _jumpBufferTime = 0.5f;
-    
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -26,7 +28,7 @@ public class Player : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        CurrentHealth = StartingHealth;
         CurrentBalance = StartingBalance;
         if (AddBalanceTime > 0)
         {
@@ -36,6 +38,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(CurrentBalance);
         if (!_hasJump)
         {
             _hasJump = Input.GetKeyDown(KeyCode.Space);
@@ -63,7 +66,7 @@ public class Player : MonoBehaviour
         }
 
         _rigidbody.velocity = direction.magnitude * MovingSpeed * direction + new Vector3(0f, _rigidbody.velocity.y);
-        
+
         //Механика прыжка.
         _isGrounded = Physics.Raycast(_groundCheckObj.transform.position, Vector3.down, MaxGroundDist);
         if (_hasJump && _isGrounded)

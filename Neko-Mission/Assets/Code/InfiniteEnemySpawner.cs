@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class InfiniteEnemySpawner : MonoBehaviour
 {
+    public Transform Pl;
     public Transform SpawnPoint;
     public Enemy EnemyPrefab;
-    
+
     public float SpawnIntervalMin = 3.0f;
     public float SpawnIntervalMax = 0.5f;
 
@@ -31,14 +32,18 @@ public class InfiniteEnemySpawner : MonoBehaviour
             Spawn();
             _timeSinceLastSpawn = 0.0f;
         }
-        
+
         _timeSinceLastSpawn += Time.deltaTime;
         _timer += Time.deltaTime;
     }
 
     private void Spawn()
     {
-        Instantiate(EnemyPrefab, SpawnPoint.position, Quaternion.identity, transform);
+        var enemy = Instantiate(EnemyPrefab, SpawnPoint.position, Quaternion.identity, transform);
+        if (enemy.TryGetComponent<ShootingEnemy>(out var shootingEnemy))
+        {
+            shootingEnemy.player = Pl;
+        }
         _currentSpawnInterval = SpawnInterval;
     }
 }

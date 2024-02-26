@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public int MaxHealth = 100;
     private int _health;
 
+
     private NavMeshAgent _agent;
     // private Rigidbody _rigidbody; //возможно для оптимизации следует отказаться от этого и всё переделать 😘 - так и вышло🤓
     private LinkedListNode<Vector3> _target;
@@ -17,12 +18,12 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         _health = MaxHealth;
-        
+
         //навигатор 👉🗺👈
         _route = new LinkedList<Vector3>(GameObject.FindGameObjectsWithTag("WayPointerBase").OrderByDescending(x => x.name)
             .Select(x => x.transform.position)); // для маршрута важен порядок точек - это можно попробовать исправить
-        // TODO сделать сортировку получше, по нормальному индексу точки в маршуте(🤡)
-        
+                                                 // TODO сделать сортировку получше, по нормальному индексу точки в маршуте(🤡)
+
         _target = _route.First;
         _agent = GetComponent<NavMeshAgent>();
         _agent.SetDestination(_target.Value);
@@ -33,10 +34,10 @@ public class Enemy : MonoBehaviour
     {
         Move();
     }
-    
-    
+
+
     // TODO FIX -> по неведомой мне сейчас причине, некоторые враги начинают со второй точки в маршруте😠
-    
+
     //движение по маршруту (поездка по мешкартам займет 20 минут)
     public void Move()
     {
@@ -51,14 +52,17 @@ public class Enemy : MonoBehaviour
     }
 
     // Получение урона
-    public void TakeDamage(int damage) {
+    public void TakeDamage(int damage)
+    {
         _health -= damage;
 
-        if (_health <= 0){
+        if (_health <= 0)
+        {
             Sounds.Play("duck");
             Destroy(gameObject);
         }
-        else {
+        else
+        {
             Sounds.Play("click2");
         }
     }
@@ -68,7 +72,9 @@ public class Enemy : MonoBehaviour
         // При столкновение с игроком 
         if (other.gameObject.CompareTag("Player"))
         {
+            var Pl = other.gameObject.GetComponent<Player>();
             LoseMenu.Show();
+            Pl.CurrentHealth = Pl.StartingHealth;
             //Destroy(other.gameObject);
         }
     }
