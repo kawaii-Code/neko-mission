@@ -1,20 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicTower : MonoBehaviour
-{
-    public GameObject BulletPrefab;
-    public float FireRange;
-    public float FireRate;
-    public float BulletSpeed;
-    public int Damage;
-    
-    // Лист врагов в области
-    private List<GameObject> _nearEnemy = new List<GameObject>();
-    private float _timer;
-    private Vector3 _towerSize;
-    private MeshRenderer _renderer;
-    
+public class BasicTower : Tower
+{   
     private void Start()
     {
         // Создание триггера ( коллайдера )
@@ -27,6 +15,9 @@ public class BasicTower : MonoBehaviour
         // Сохранение размеров башни
         _renderer = GetComponent<MeshRenderer>();
         _towerSize = _renderer.bounds.size;
+
+        _genPos = this.transform.position;
+        _genPos.y += 0.5f * _towerSize.y;
     }
 
     private void Update()
@@ -34,15 +25,13 @@ public class BasicTower : MonoBehaviour
         // Таймер
         if (_timer > FireRate)
         {
-            Vector3 genPos = this.transform.position;
-            genPos.y += 0.5f * _towerSize.y;
             
             // ближайший враг
             var target = GetClosestEnemy(_nearEnemy.ToArray());
             
             if (target) // без этого куча ошибок
             {
-                var bullet = Instantiate(BulletPrefab, genPos, Quaternion.LookRotation(target.transform.position - transform.position));
+                var bullet = Instantiate(BulletPrefab, _genPos, Quaternion.LookRotation(target.transform.position - transform.position));
                 var componentBullet = bullet.GetComponent<Bullet>();
                 
                 // установка параметров пули
@@ -67,30 +56,4 @@ public class BasicTower : MonoBehaviour
             }
         }
     }
-    
-    // Получение ближайшего врага в области
-    GameObject GetClosestEnemy(GameObject[] objects)
-    {
-        GameObject bestTarget = null;
-        float closestDistance = float.MaxValue;
-        Vector3 currentPosition = transform.position;
-
-        foreach (GameObject currentObject in objects)
-        {
-            if (currentObject)
-            {
-                Vector3 differenceToTarget = currentObject.transform.position - currentPosition;
-                float distanceToTarget = differenceToTarget.sqrMagnitude;
-
-                if (distanceToTarget < closestDistance)
-                {
-                    closestDistance = distanceToTarget;
-                    bestTarget = currentObject;
-                }
-            }
-        }
-
-        return bestTarget;
-    }
-
 }

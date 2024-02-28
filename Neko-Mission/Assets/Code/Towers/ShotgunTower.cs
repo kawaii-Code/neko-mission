@@ -4,23 +4,13 @@ using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Unity.Services.Analytics;
 
-public class ShotgunTower : MonoBehaviour
+public class ShotgunTower : Tower
 {
-    public GameObject BulletPrefab;
     public int BulletCount;
     public float MaxSpreadAngel; // максимальный разброс от врага
-    public float FireRange;
-    public float FireRate;
-    public float BulletSpeed;
-    public int Damage;
-    
-    // Лист врагов в области
-    private List<GameObject> _nearEnemy = new List<GameObject>();
-    private float _timer;
-    private Vector3 _towerSize;
-    private MeshRenderer _renderer;
-    
+
     private void Start()
     {
         // Создание триггера ( коллайдера )
@@ -33,6 +23,9 @@ public class ShotgunTower : MonoBehaviour
         // Сохранение размеров башни
         _renderer = GetComponent<MeshRenderer>();
         _towerSize = _renderer.bounds.size;
+
+        _genPos = this.transform.position;
+        _genPos.y += 0.5f * _towerSize.y;
     }
 
     private void Update()
@@ -40,9 +33,6 @@ public class ShotgunTower : MonoBehaviour
         // Таймер
         if (_timer > FireRate)
         {
-            Vector3 genPos = this.transform.position;
-            genPos.y += 0.5f * _towerSize.y;
-            
             // ближайший враг
             var target = GetClosestEnemy(_nearEnemy.ToArray());
             
@@ -50,13 +40,13 @@ public class ShotgunTower : MonoBehaviour
             {
                 Vector3 TargetPos = target.transform.position;
 
-                float Radius = (float)Math.Round(Mathf.Tan(MaxSpreadAngel * Mathf.Deg2Rad) * Mathf.Sqrt(Mathf.Pow(TargetPos.x - genPos.x, 2) + Mathf.Pow(TargetPos.y - genPos.y, 2) + Mathf.Pow(TargetPos.z - genPos.z, 2)),2);
+                float Radius = (float)Math.Round(Mathf.Tan(MaxSpreadAngel * Mathf.Deg2Rad) * Mathf.Sqrt(Mathf.Pow(TargetPos.x - _genPos.x, 2) + Mathf.Pow(TargetPos.y - _genPos.y, 2) + Mathf.Pow(TargetPos.z - _genPos.z, 2)),2);
 
                 for (int i = 0; i < BulletCount; i++){
 
                     Vector3 SpreadTarget = TargetPos + UnityEngine.Random.insideUnitSphere * Radius;
 
-                    var bullet = Instantiate(BulletPrefab, genPos, Quaternion.LookRotation(SpreadTarget - transform.position));
+                    var bullet = Instantiate(BulletPrefab, _genPos, Quaternion.LookRotation(SpreadTarget - transform.position));
                     var componentBullet = bullet.GetComponent<Bullet>();          
 
                     componentBullet.Damage = Damage;
@@ -81,30 +71,4 @@ public class ShotgunTower : MonoBehaviour
             }
         }
     }
-    
-    // Получение ближайшего врага в области
-    GameObject GetClosestEnemy(GameObject[] objects)
-    {
-        GameObject bestTarget = null;
-        float closestDistance = float.MaxValue;
-        Vector3 currentPosition = transform.position;
-
-        foreach (GameObject currentObject in objects)
-        {
-            if (currentObject)
-            {
-                Vector3 differenceToTarget = currentObject.transform.position - currentPosition;
-                float distanceToTarget = differenceToTarget.sqrMagnitude;
-
-                if (distanceToTarget < closestDistance)
-                {
-                    closestDistance = distanceToTarget;
-                    bestTarget = currentObject;
-                }
-            }
-        }
-
-        return bestTarget;
-    }
-
 }

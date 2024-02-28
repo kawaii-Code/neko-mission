@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour
     
     void Update()
     {
-        if (_time > 4) Destroy(this.gameObject);
+        if (_time > 3) Destroy(this.gameObject);
         if (TypeMove) {
             if (!Target)
             {
