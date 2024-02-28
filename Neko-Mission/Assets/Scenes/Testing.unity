@@ -939,7 +939,7 @@ MonoBehaviour:
   BulletCount: 20
   MaxSpreadAngel: 20
   FireRange: 3
-  FireRate: 4
+  FireRate: 2
   BulletSpeed: 5
   Damage: 20
 --- !u!1001 &1095486628
@@ -1377,6 +1377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1083386556398125937, guid: c8880cdbc0dd36a45aa8f4434ffcbd33, type: 3}
+    - {fileID: 2985809612087610131, guid: c8880cdbc0dd36a45aa8f4434ffcbd33, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c8880cdbc0dd36a45aa8f4434ffcbd33, type: 3}
 --- !u!1001 &2107309238
 PrefabInstance:
