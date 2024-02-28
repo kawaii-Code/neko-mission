@@ -1,9 +1,15 @@
+using System.Security.AccessControl;
+using System.IO;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class Tower : MonoBehaviour
+public class ShotgunTower : MonoBehaviour
 {
     public GameObject BulletPrefab;
+    public int BulletCount;
+    public float MaxSpreadAngel; // максимальный разброс от врага
     public float FireRange;
     public float FireRate;
     public float BulletSpeed;
@@ -42,13 +48,21 @@ public class Tower : MonoBehaviour
             
             if (target) // без этого куча ошибок
             {
-                var bullet = Instantiate(BulletPrefab, genPos, Quaternion.LookRotation(target.transform.position - transform.position));
-                var componentBullet = bullet.GetComponent<Bullet>();
-                
-                // установка параметров пули
-                componentBullet.Damage = Damage;
-                componentBullet.Speed = BulletSpeed;
-                componentBullet.Target = target;
+                Vector3 TargetPos = target.transform.position;
+
+                float Radius = (float)Math.Round(Mathf.Tan(MaxSpreadAngel * Mathf.Deg2Rad) * Mathf.Sqrt(Mathf.Pow(TargetPos.x - genPos.x, 2) + Mathf.Pow(TargetPos.y - genPos.y, 2) + Mathf.Pow(TargetPos.z - genPos.z, 2)),2);
+
+                for (int i = 0; i < BulletCount; i++){
+
+                    Vector3 SpreadTarget = TargetPos + UnityEngine.Random.insideUnitSphere * Radius;
+
+                    var bullet = Instantiate(BulletPrefab, genPos, Quaternion.LookRotation(SpreadTarget - transform.position));
+                    var componentBullet = bullet.GetComponent<Bullet>();          
+
+                    componentBullet.Damage = Damage;
+                    componentBullet.Speed = BulletSpeed;
+                    componentBullet.TargetPos = SpreadTarget;
+                }
             }
             _nearEnemy = new List<GameObject>();
             _timer = 0.0f;

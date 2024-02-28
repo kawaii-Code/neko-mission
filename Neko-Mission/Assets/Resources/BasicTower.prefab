@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 613139533536830616}
   - component: {fileID: 4552458339828181821}
   - component: {fileID: 1786068629304500215}
-  - component: {fileID: 1083386556398125937}
+  - component: {fileID: 2985809612087610131}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: BasicTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1083386556398125937
+--- !u!114 &2985809612087610131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,8 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3dc791a53a41d4fb7304a00e4d7ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 434645869036977831, guid: 5c10a74cb707a8245919076137c29272, type: 3}
-  FireRange: 5
-  FireRate: 0.5
-  BulletSpeed: 10
-  Damage: 5
+  BulletPrefab: {fileID: 0}
+  FireRange: 0
+  FireRate: 0
+  BulletSpeed: 0
+  Damage: 0
