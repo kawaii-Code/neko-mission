@@ -4,23 +4,26 @@ public class TowerSpawnPlatform : MonoBehaviour
 {
     public GameObject Tower;
     public Player Pl;
-    public int TowerPrice;
+
+    public int _TowerPrice;
     private bool _towerIsBuilt;
 
     public void SpawnTower()
     {
-        if (!_towerIsBuilt && Pl.CurrentBalance >= TowerPrice)
+        _TowerPrice = Tower.GetComponent<Tower>().Price;
+
+        if (!_towerIsBuilt && Pl.CurrentBalance >= _TowerPrice)
         {
             Sounds.Play("click1");
             GameObject tower = Instantiate(Tower, transform.position + Vector3.up * Tower.transform.position.y, Quaternion.identity);
             tower.transform.Rotate(Vector3.up, transform.eulerAngles.y + 90f);
             GetComponent<MeshRenderer>().enabled = false;
             
-            Pl.CurrentBalance -= TowerPrice;
+            Pl.CurrentBalance -= _TowerPrice;
             _towerIsBuilt = true;
         }
 
-        if (!_towerIsBuilt && Pl.CurrentBalance < TowerPrice)
+        if (!_towerIsBuilt && Pl.CurrentBalance < _TowerPrice)
         {
             Sounds.Play("error1");
         }
