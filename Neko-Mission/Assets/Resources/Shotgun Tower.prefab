@@ -109,6 +109,11 @@ MonoBehaviour:
   FireRate: 2
   BulletSpeed: 5
   Damage: 10
-  Price: 10
+  Price: 20
+  _nearEnemy: []
+  _timer: 0
+  _towerSize: {x: 0, y: 0, z: 0}
+  _renderer: {fileID: 0}
+  _genPos: {x: 0, y: 0, z: 0}
   BulletCount: 20
   MaxSpreadAngel: 20
