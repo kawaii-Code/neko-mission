@@ -15,7 +15,6 @@ public class EnemyBullet : MonoBehaviour
             // Debug.Log("Collided with Player");
             Pl.CurrentHealth -= 10;
             Destroy(this.gameObject);
-            Debug.Log(Pl.CurrentHealth);
             if (Pl.CurrentHealth <= 0)
             {
                 LoseMenu.Show();

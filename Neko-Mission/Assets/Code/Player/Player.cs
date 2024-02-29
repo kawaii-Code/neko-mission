@@ -15,8 +15,8 @@ public class Player : MonoBehaviour
     private Rigidbody _rigidbody;
     private Transform _groundCheckObj;
     private bool _isGrounded;
-    private Camera _camera;
-
+    private PlayerCamera _playerCamera;
+    
     private bool _hasJump;
     private float _hasJumpTime;
     private float _jumpBufferTime = 0.5f;
@@ -38,7 +38,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(CurrentBalance);
         if (!_hasJump)
         {
             _hasJump = Input.GetKeyDown(KeyCode.Space);

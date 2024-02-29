@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public Player Player;
     public Transform SpawnPoint;
     public HUD Hud;
 
@@ -114,6 +115,10 @@ public class WaveSpawner : MonoBehaviour
 
     private void Spawn(GameObject enemy)
     {
-        Instantiate(enemy, SpawnPoint.position, Quaternion.identity, transform);
+        GameObject spawnedEnemy = Instantiate(enemy, SpawnPoint.position, Quaternion.identity, transform);
+        if (spawnedEnemy.TryGetComponent<ShootingEnemy>(out var shootingEnemy))
+        {
+            shootingEnemy.player = Player.transform;
+        }
     }
 }

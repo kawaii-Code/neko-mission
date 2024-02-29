@@ -35,7 +35,7 @@ public class ShootingEnemy : MonoBehaviour
     void Shoot()
     {
         GameObject bul = Instantiate(enemyBullet, transform.position + Vector3.up * 2.0f, Quaternion.identity);
-        bul.GetComponent<Rigidbody>().velocity = (player.position - bul.transform.position).normalized * 50f;
+        bul.GetComponent<Rigidbody>().velocity = (player.position - bul.transform.position).normalized * 25f;
         Destroy(bul, 1);
     }
 

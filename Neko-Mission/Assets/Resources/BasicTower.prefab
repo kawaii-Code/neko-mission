@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 613139533536830616}
   - component: {fileID: 4552458339828181821}
   - component: {fileID: 1786068629304500215}
-  - component: {fileID: 1083386556398125937}
+  - component: {fileID: 2985809612087610131}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: BasicTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1083386556398125937
+--- !u!114 &2985809612087610131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,3 +109,4 @@ MonoBehaviour:
   FireRate: 0.5
   BulletSpeed: 10
   Damage: 5
+  Price: 10

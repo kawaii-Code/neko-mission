@@ -115,7 +115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 5
   MaxHealth: 5
-  Pl: {fileID: 0}
 --- !u!54 &5864558011457094745
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -166,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce8b176bec86624fbc2a575e62fe3f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 184639146813526974, guid: 4f8b23b95ba026d4fa43b314999b5a34, type: 3}
+  player: {fileID: 0}
   enemyBullet: {fileID: 4738898269086944266, guid: 4fadaef2882490e4384a697505a10bb0, type: 3}
   shootRange: 10
   shootInterval: 1
