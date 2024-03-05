@@ -5,6 +5,8 @@ public class Player : MonoBehaviour
     public float MovingSpeed;
     public float JumpSpeed;
     public float MaxGroundDist = 0.6f;
+    public float WaterDamageCooldown = 0.5f;
+    
     public float Gravity = 5f;
     public int StartingBalance = 10;
     public int CurrentBalance = 0;
@@ -23,6 +25,8 @@ public class Player : MonoBehaviour
     private bool _hasJump;
     private float _hasJumpTime;
     private float _jumpBufferTime = 0.5f;
+    private float _waterDamageCooldownCurrent;
+    private bool _inWater;
 
     void Start()
     {
@@ -78,6 +82,11 @@ public class Player : MonoBehaviour
         {
             _velocity.y -= Gravity * Time.deltaTime;
         }
+
+        if (_inWater)
+        {
+            GetDamageFromWater();
+        }
     }
 
     private void ResetJump()
@@ -92,18 +101,32 @@ public class Player : MonoBehaviour
         CurrentBalance++;
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void GetDamageFromWater()
     {
-        if(other.gameObject.tag == "Water")
+        if (_waterDamageCooldownCurrent > WaterDamageCooldown)
         {
-            Sounds.Play("heartbeat");
-
             CurrentHealth -= DmgWater;
-
             if(CurrentHealth <=0)
             {
+                Sounds.Play("heartbeat");
                 LoseMenu.Show();
             }
+            _waterDamageCooldownCurrent = 0.0f;
+        }
+
+        _waterDamageCooldownCurrent += Time.deltaTime;
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.gameObject.tag == "Water")
+        {
+            _inWater = true;
+        }
+        else
+        {
+            _inWater = false;
+            _waterDamageCooldownCurrent = 0.0f;
         }
     }
 }
