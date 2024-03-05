@@ -13,10 +13,12 @@ public class Player : MonoBehaviour
     public int DmgWater = 20;
     public float AddBalanceTime;
 
-    private Rigidbody _rigidbody;
+    private CharacterController _controller;
     private Transform _groundCheckObj;
     private bool _isGrounded;
     private PlayerCamera _playerCamera;
+
+    private Vector3 _velocity;
     
     private bool _hasJump;
     private float _hasJumpTime;
@@ -24,7 +26,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        _controller = GetComponent<CharacterController>();
         _groundCheckObj = GameObject.FindGameObjectWithTag("GroundCheck").transform;
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -39,48 +41,42 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (!_hasJump)
-        {
-            _hasJump = Input.GetKeyDown(KeyCode.Space);
-        }
-        else
-        {
-            _hasJumpTime += Time.deltaTime;
-            if (_hasJumpTime > _jumpBufferTime)
-            {
-                ResetJump();
-            }
-        }
-    }
-
-    void FixedUpdate()
-    {
-        //Механика передвижения.
         float deltaHor = Input.GetAxis("Horizontal");
         float deltaVer = Input.GetAxis("Vertical");
-
+        
         Vector3 direction = transform.right * deltaHor + transform.forward * deltaVer;
         if (direction.magnitude > 1.0f)
         {
             direction.Normalize();
         }
 
-        _rigidbody.velocity = direction.magnitude * MovingSpeed * direction + new Vector3(0f, _rigidbody.velocity.y);
+        _velocity = direction * (direction.magnitude * MovingSpeed) + Vector3.up * _velocity.y;
+        _controller.Move(_velocity * Time.deltaTime);
 
         //Механика прыжка.
         _isGrounded = Physics.Raycast(_groundCheckObj.transform.position, Vector3.down, MaxGroundDist);
-        if (_hasJump && _isGrounded)
+        if (_hasJump)
         {
-            ResetJump();
-            Vector3 velocity = _rigidbody.velocity;
-            velocity.y = JumpSpeed;
-            _rigidbody.velocity = velocity;
+            if (_isGrounded)
+            {
+                ResetJump();
+                _velocity.y = JumpSpeed;
+            }
+
+            _hasJumpTime += Time.deltaTime;
+            if (_hasJumpTime > _jumpBufferTime)
+            {
+                ResetJump();
+            }
         }
-        else if (!_isGrounded)
+        else
         {
-            Vector3 velocity = _rigidbody.velocity;
-            velocity.y -= Gravity * Time.fixedDeltaTime;
-            _rigidbody.velocity = velocity;
+            _hasJump = Input.GetKeyDown(KeyCode.Space);
+        }
+
+        if (!_isGrounded)
+        {
+            _velocity.y -= Gravity * Time.deltaTime;
         }
     }
 

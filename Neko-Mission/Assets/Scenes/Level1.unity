@@ -8436,8 +8436,8 @@ GameObject:
   - component: {fileID: 460015288}
   - component: {fileID: 460015287}
   - component: {fileID: 460015286}
-  - component: {fileID: 460015285}
   - component: {fileID: 460015284}
+  - component: {fileID: 460015290}
   - component: {fileID: 460015283}
   - component: {fileID: 460015289}
   m_Layer: 2
@@ -8456,7 +8456,7 @@ BoxCollider:
   m_GameObject: {fileID: 460015282}
   m_Material: {fileID: 13400000, guid: 504102e0de1bbe74e990c686cb922db7, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.21, y: 1, z: 1.15}
   m_Center: {x: 0, y: 0, z: 0}
@@ -8482,22 +8482,6 @@ MonoBehaviour:
   StartingHealth: 100
   DmgWater: 20
   AddBalanceTime: 2.1
---- !u!54 &460015285
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460015282}
-  serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 112
-  m_CollisionDetection: 1
 --- !u!23 &460015286
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8588,6 +8572,24 @@ MonoBehaviour:
   TowerPrefab2: {fileID: 272924644477402658, guid: 0526dbac2ea0d604f805d70c9d478b53, type: 3}
   Select_Menu: {fileID: 1144445511}
   PlayerCamera: {fileID: 1740666839}
+--- !u!143 &460015290
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460015282}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5000002
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &460990220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33855,7 +33857,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
