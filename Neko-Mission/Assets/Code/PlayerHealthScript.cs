@@ -8,6 +8,6 @@ public class PlayerHealthScript : MonoBehaviour
     public TextMeshProUGUI HealthText;
     void Update()
     {
-        HealthText.text = $"Здоровье: {Pl.CurrentHealth}";
+        HealthText.text = $"{Pl.CurrentHealth}";
     }
 }
