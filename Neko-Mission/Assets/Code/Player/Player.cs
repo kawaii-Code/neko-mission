@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public int CurrentBalance = 0;
     public int CurrentHealth = 100;
     public int StartingHealth = 100;
+    public int DmgWater = 20;
     public float AddBalanceTime;
 
     private Rigidbody _rigidbody;
@@ -93,5 +94,20 @@ public class Player : MonoBehaviour
     private void AddBalance()
     {
         CurrentBalance++;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "Water")
+        {
+            Sounds.Play("heartbeat");
+
+            CurrentHealth -= DmgWater;
+
+            if(CurrentHealth <=0)
+            {
+                LoseMenu.Show();
+            }
+        }
     }
 }
