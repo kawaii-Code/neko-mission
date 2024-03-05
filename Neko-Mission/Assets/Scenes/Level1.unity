@@ -8251,7 +8251,6 @@ GameObject:
   - component: {fileID: 460015286}
   - component: {fileID: 460015284}
   - component: {fileID: 460015290}
-  - component: {fileID: 460015283}
   - component: {fileID: 460015289}
   m_Layer: 2
   m_Name: Player
@@ -8260,19 +8259,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &460015283
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460015282}
-  m_Material: {fileID: 13400000, guid: 504102e0de1bbe74e990c686cb922db7, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.21, y: 1, z: 1.15}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &460015284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8288,6 +8274,7 @@ MonoBehaviour:
   MovingSpeed: 8
   JumpSpeed: 5
   MaxGroundDist: 0.3
+  WaterDamageCooldown: 0.5
   Gravity: 15
   StartingBalance: 9
   CurrentBalance: 0
@@ -9068,6 +9055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 1740666837}
   UpCAmera: {fileID: 951919971}
+  Crosshair: {fileID: 1117934234}
 --- !u!4 &504521564
 Transform:
   m_ObjectHideFlags: 0
