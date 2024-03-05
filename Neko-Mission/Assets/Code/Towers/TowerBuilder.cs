@@ -16,6 +16,8 @@ public class TowerBuilder : MonoBehaviour
 
     public PlayerCamera PlayerCamera;
 
+    private bool _buildMenuShown;
+
     void Start()
     {
         Select_Menu.SetActive(false);
@@ -25,10 +27,16 @@ public class TowerBuilder : MonoBehaviour
     {
         if (Paused)
             return;
-        
+
         if (Input.GetMouseButtonDown(1))
         {
-            Ray ray = UnityEngine.Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (_buildMenuShown)
+            {
+                DisableBuildMenu();
+                return;
+            }
+            
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hitInfo, float.MaxValue, TowerSpawnerLayer))
             {
                 if (hitInfo.distance > BuildDistance)
@@ -37,11 +45,8 @@ public class TowerBuilder : MonoBehaviour
                     return;
                 }
                 _LastHitInfo = hitInfo;
-
-                PlayerCamera.Paused = true;
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
-                Select_Menu.SetActive(true);
+                
+                EnableBuildMenu();
             }
         }
     }
@@ -54,9 +59,7 @@ public class TowerBuilder : MonoBehaviour
 
         spawnPlatform.SpawnTower();
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Select_Menu.SetActive(false);
-        PlayerCamera.Paused = false;
+        DisableBuildMenu();
     }
 
     public void Tower2()
@@ -67,8 +70,24 @@ public class TowerBuilder : MonoBehaviour
 
         spawnPlatform.SpawnTower();
 
+        DisableBuildMenu();
+    }
+
+    public void EnableBuildMenu()
+    {
+        PlayerCamera.Paused = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Select_Menu.SetActive(true);
+        _buildMenuShown = true;
+    }
+
+    public void DisableBuildMenu()
+    {
+        _buildMenuShown = false;
+        PlayerCamera.Paused = false;
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Select_Menu.SetActive(false);
-        PlayerCamera.Paused = false;
     }
 }

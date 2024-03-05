@@ -4,16 +4,15 @@ public class PausedMenu : MonoBehaviour
 {
     [SerializeField] KeyCode _keyMenuPaused;
 
-    
     public PlayerCamera PlayerCamera;
     public TowerBuilder TowerBuilder;
     public PlayerGun PlayerGun;
-    
 
     public GameObject Pause_Menu;
     public GameObject Settings_Menu;
     private bool _paused = false;
     public Camera MainCamera;
+
     void Start()
     {
         Pause_Menu.SetActive(false);
@@ -49,48 +48,46 @@ public class PausedMenu : MonoBehaviour
     {
         if(_paused && !MainCamera.enabled)
         {
-            PlayerCamera.Paused = true;
-            TowerBuilder.Paused = true;
-            PlayerGun.Paused = true;
-            
-            Pause_Menu.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            Time.timeScale = 0f;
+            Pause();
         }
         else if(!_paused && !MainCamera.enabled)
         {
-            PlayerCamera.Paused = false;
-            TowerBuilder.Paused = false;
-            PlayerGun.Paused = false;
-
-            Pause_Menu.SetActive(false);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            Resume();
         }
         else if(_paused)
         {
-            PlayerCamera.Paused = true;
-            TowerBuilder.Paused = true;
-            PlayerGun.Paused = true;
-            
-            Pause_Menu.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            Time.timeScale = 0f;
+            Pause();
         }
         else
         {
-            PlayerCamera.Paused = false;
-            TowerBuilder.Paused = false;
-            PlayerGun.Paused = false;
-            
-            Settings_Menu.SetActive(false);
-            Pause_Menu.SetActive(false);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            Time.timeScale = 1f;
+            Resume();
         }
+    }
+
+    public void Pause()
+    {
+        TowerBuilder.DisableBuildMenu();
+        TowerBuilder.Paused = true;
+        PlayerGun.Paused = true;
+        PlayerCamera.Paused = true;
+            
+        Pause_Menu.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0f;
+    }
+
+    public void Resume()
+    {
+        PlayerCamera.Paused = false;
+        TowerBuilder.Paused = false;
+        PlayerGun.Paused = false;
+            
+        Settings_Menu.SetActive(false);
+        Pause_Menu.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1f;
     }
 
     public void MenuPausedExit()
