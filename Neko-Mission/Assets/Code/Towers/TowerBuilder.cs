@@ -8,6 +8,7 @@ public class TowerBuilder : MonoBehaviour
 
     public bool Paused;
 
+    public GameObject Crosshair;
     public GameObject TowerPrefab1;
     public GameObject TowerPrefab2;
     public GameObject Select_Menu;
@@ -75,6 +76,7 @@ public class TowerBuilder : MonoBehaviour
 
     public void EnableBuildMenu()
     {
+        Crosshair.SetActive(false);
         PlayerCamera.Paused = true;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -84,6 +86,7 @@ public class TowerBuilder : MonoBehaviour
 
     public void DisableBuildMenu()
     {
+        Crosshair.SetActive(true);
         _buildMenuShown = false;
         PlayerCamera.Paused = false;
         Cursor.visible = false;

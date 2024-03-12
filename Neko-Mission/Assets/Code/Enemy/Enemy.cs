@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class Enemy : MonoBehaviour
     // private Rigidbody _rigidbody; //возможно для оптимизации следует отказаться от этого и всё переделать 😘 - так и вышло🤓
     private LinkedListNode<Vector3> _target;
     private LinkedList<Vector3> _route;
+
+    public event Action<Enemy> Dead; 
 
     void Start()
     {
@@ -59,6 +62,7 @@ public class Enemy : MonoBehaviour
         if (_health <= 0)
         {
             Sounds.Play("duck");
+            Dead?.Invoke(this);
             Destroy(gameObject);
         }
         else

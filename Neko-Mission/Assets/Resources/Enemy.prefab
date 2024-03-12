@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  MaxHealth: 100
+  MaxHealth: 1
 --- !u!54 &1225918891088731692
 Rigidbody:
   m_ObjectHideFlags: 0
