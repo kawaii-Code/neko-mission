@@ -7,6 +7,7 @@ TagManager:
   - GroundCheck
   - Enemy
   - WayPointerBase
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - Player
+  - TowerSpawners
   - 
   - 
   - 
