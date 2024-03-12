@@ -122,7 +122,6 @@ public class WaveSpawner : MonoBehaviour
         enemy.Dead -= OnEnemyDead;
         _enemies.Remove(enemy);
 
-        Debug.Log(_enemies.Count);
         if (_enemies.Count == 0 && _currentWaveIndex >= Waves.Length)
         {
             PausedMenu.Pause();
