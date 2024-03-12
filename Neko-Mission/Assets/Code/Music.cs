@@ -6,6 +6,7 @@ public class Music : MonoBehaviour
 
     private void Start()
     {
+        MusicSource.volume = Settings.MusicVolume;
         MusicSource.loop = true;
         MusicSource.Play();
     }
