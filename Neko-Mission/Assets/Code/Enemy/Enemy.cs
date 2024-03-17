@@ -38,7 +38,6 @@ public class Enemy : MonoBehaviour
         Move();
     }
 
-
     // TODO FIX -> по неведомой мне сейчас причине, некоторые враги начинают со второй точки в маршруте😠
     //движение по маршруту (поездка по мешкартам займет 20 минут)
     // движение по маршруту (поездка по мешкартам займет 20 минут)
@@ -54,6 +53,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void Die()
+    {
+        Dead?.Invoke(this);
+        Destroy(gameObject);
+    }
+
     // Получение урона
     public void TakeDamage(int damage)
     {
@@ -62,8 +67,7 @@ public class Enemy : MonoBehaviour
         if (_health <= 0)
         {
             Sounds.Play("duck");
-            Dead?.Invoke(this);
-            Destroy(gameObject);
+            Die();
         }
         else
         {
