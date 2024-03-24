@@ -201,6 +201,7 @@ MonoBehaviour:
   TowerPrefab1: {fileID: 272924644477402658, guid: c8880cdbc0dd36a45aa8f4434ffcbd33, type: 3}
   TowerPrefab2: {fileID: 272924644477402658, guid: 0526dbac2ea0d604f805d70c9d478b53, type: 3}
   Select_Menu: {fileID: 0}
+  Gun: {fileID: 7105758165485409737}
   PlayerCamera: {fileID: 0}
 --- !u!1 &7105758165852130034
 GameObject:

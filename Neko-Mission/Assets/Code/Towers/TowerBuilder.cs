@@ -15,6 +15,7 @@ public class TowerBuilder : MonoBehaviour
 
     public RaycastHit _LastHitInfo;
 
+    public PlayerGun Gun;
     public PlayerCamera PlayerCamera;
 
     private bool _buildMenuShown;
@@ -78,6 +79,7 @@ public class TowerBuilder : MonoBehaviour
     {
         Crosshair.SetActive(false);
         PlayerCamera.Paused = true;
+        Gun.Paused = true;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Select_Menu.SetActive(true);
@@ -89,6 +91,7 @@ public class TowerBuilder : MonoBehaviour
         Crosshair.SetActive(true);
         _buildMenuShown = false;
         PlayerCamera.Paused = false;
+        Gun.Paused = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Select_Menu.SetActive(false);
