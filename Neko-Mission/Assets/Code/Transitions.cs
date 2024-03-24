@@ -3,18 +3,36 @@ using UnityEngine.SceneManagement;
 
 public class Transitions : MonoBehaviour
 {
-    public PausedMenu Menu;
+    public void Level1()
+    {
+        Sounds.PlayClick();
+        SceneManager.LoadScene("Level1");
+    }
+    
+    public void Level2()
+    {
+        Sounds.PlayClick();
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void LevelSelection()
+    {
+        Sounds.PlayClick();
+        SceneManager.LoadScene("LevelSelection");
+    }
 
     public void NextLevel()
     {
+        Sounds.PlayClick();
         Resume();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void BackToMenu()
     {
+        Sounds.PlayClick();
         Resume();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
 
     private void Resume()

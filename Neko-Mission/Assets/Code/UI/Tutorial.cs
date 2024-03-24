@@ -30,26 +30,16 @@ public class Tutorial : MonoBehaviour
 
     public void NextSlide()
     {
-        Sounds.Play("click3");
+        Sounds.PlayClick();
         _currentSlideIndex++;
         UpdateSlide();
     }
 
     public void PreviousSlide()
     {
-        Sounds.Play("click3");
+        Sounds.PlayClick();
         _currentSlideIndex--;
         UpdateSlide(); 
-    }
-
-    public void BackToMenu()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-    }
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void UpdateSlide()

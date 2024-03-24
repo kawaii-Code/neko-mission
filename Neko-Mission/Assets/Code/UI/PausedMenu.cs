@@ -28,6 +28,7 @@ public class PausedMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(_keyMenuPaused))
         {
+            Sounds.PlayClick();
             _paused = !_paused;
             UpdatePause();
         }
@@ -35,14 +36,9 @@ public class PausedMenu : MonoBehaviour
 
     public void MenuPausedContinue()
     {
-        PlayClick();
+        Sounds.PlayClick();
         _paused = false;
         UpdatePause();
-    }
-
-    public void PlayClick()
-    {
-        Sounds.Play("click3");
     }
 
     private void UpdatePause()
@@ -96,7 +92,7 @@ public class PausedMenu : MonoBehaviour
 
     public void MenuPausedExit()
     {
-        PlayClick();
+        Sounds.PlayClick();
         Application.Quit();
     }
 }
