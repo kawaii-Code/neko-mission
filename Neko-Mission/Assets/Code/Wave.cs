@@ -8,5 +8,7 @@ public class Wave : ScriptableObject
     public float[] Cooldowns;
     public float DefaultCooldown; // Все 0 в Cooldowns будут заменены на это значение.
 
+    public float RestTimeBeforeThisWave;
+
     public int Length => Enemies.Length;
 }

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -8,24 +7,23 @@ public class WaveSpawner : MonoBehaviour
     public GameObject TransitionScreen;
     public Player Player;
     public Transform SpawnPoint;
+    public WaveInfoWidget WaveInfoWidget;
     public HUD Hud;
 
     public Wave[] Waves;
     private int _currentWaveIndex;
-
-    private int _enemyIndex;
-    private float _currentCooldown;
-    private float _timeSinceLastSpawn;
+    private int _nextEnemyInWaveIndex;
+    private Wave CurrentWave => Waves[_currentWaveIndex];
+    
+    private bool _isResting;
+    private float _restTime;
+    private float _enemySpawnCooldown;
 
     private bool _disabled;
-    private bool _showWarning;
-    private List<Enemy> _enemies;
-
-    public Wave CurrentWave => Waves[_currentWaveIndex];
+    private int _enemiesRemaining;
 
     private void Start()
     {
-        _enemies = new List<Enemy>();
         foreach (Wave wave in Waves)
         {
             for (int i = 0; i < wave.Length; i++)
@@ -45,7 +43,8 @@ public class WaveSpawner : MonoBehaviour
             }
         }
 
-        Hud.ShowNextWaveWarning(1);
+        _isResting = true;
+        _restTime = Waves[0].RestTimeBeforeThisWave;
     }
 
     private void OnDestroy()
@@ -76,56 +75,72 @@ public class WaveSpawner : MonoBehaviour
         {
             return;
         }
-        
-        if (_timeSinceLastSpawn > _currentCooldown)
+
+        if (_isResting)
         {
-            if (_showWarning)
+            WaveInfoWidget.ShowRemainingRestTime(_restTime);
+            
+            if (_restTime <= 0.0f)
             {
-                Hud.ShowNextWaveWarning(_currentWaveIndex + 1);
-                _showWarning = false;
+                StartNextWave();
+                _restTime = 0.0f;
+                _isResting = false;
             }
 
-            GameObject enemy = CurrentWave.Enemies[_enemyIndex];
-            float cooldown = CurrentWave.Cooldowns[_enemyIndex];
-
-            Spawn(enemy);
-            _currentCooldown = cooldown;
-            _timeSinceLastSpawn = 0.0f;
-
-            _enemyIndex++;
-            if (_enemyIndex >= CurrentWave.Length)
-            {
-                NextWave();
-            }
-        }
-
-        _timeSinceLastSpawn += Time.deltaTime;
-    }
-
-    private void NextWave()
-    {
-        _currentWaveIndex++;
-        _enemyIndex = 0;
-
-        if (_currentWaveIndex >= Waves.Length)
-        {
-            _disabled = true;
+            _restTime -= Time.deltaTime;
         }
         else
         {
-            _showWarning = true;
+            if (_nextEnemyInWaveIndex < CurrentWave.Enemies.Length && _enemySpawnCooldown < 0.0f)
+            {
+                GameObject enemy = CurrentWave.Enemies[_nextEnemyInWaveIndex];
+                float cooldown = CurrentWave.Cooldowns[_nextEnemyInWaveIndex];
+
+                Spawn(enemy);
+
+                _enemySpawnCooldown = cooldown;
+                _nextEnemyInWaveIndex++;
+            }
+
+            _enemySpawnCooldown -= Time.deltaTime;
         }
+    }
+
+    private void StartNextWave()
+    {
+        _nextEnemyInWaveIndex = 0;
+        _enemiesRemaining = CurrentWave.Enemies.Length;
+        WaveInfoWidget.ShowRemainingEnemies(_enemiesRemaining, CurrentWave.Length);
+
+        _enemySpawnCooldown = 0.0f;
+        Hud.ShowNextWaveWarning(_currentWaveIndex);
+    }
+
+    private void EndWave()
+    {
+        _currentWaveIndex++;
+        Debug.Log($"Ending wave: {_currentWaveIndex}");
+        if (_currentWaveIndex == Waves.Length)
+        {
+            _disabled = true;
+            PausedMenu.Pause();
+            TransitionScreen.SetActive(true);
+            return;
+        }
+
+        _isResting = true;
+        _restTime = Waves[_currentWaveIndex].RestTimeBeforeThisWave;
     }
 
     private void OnEnemyDead(Enemy enemy)
     {
         enemy.Dead -= OnEnemyDead;
-        _enemies.Remove(enemy);
+        _enemiesRemaining--;
+        WaveInfoWidget.ShowRemainingEnemies(_enemiesRemaining, CurrentWave.Length);
 
-        if (_enemies.Count == 0 && _currentWaveIndex >= Waves.Length)
+        if (_enemiesRemaining == 0)
         {
-            PausedMenu.Pause();
-            TransitionScreen.SetActive(true);
+            EndWave();
         }
     }
 
@@ -138,7 +153,6 @@ public class WaveSpawner : MonoBehaviour
         }
 
         Enemy e = spawnedEnemy.GetComponent<Enemy>();
-        _enemies.Add(e);
         e.Dead += OnEnemyDead;
     }
 }

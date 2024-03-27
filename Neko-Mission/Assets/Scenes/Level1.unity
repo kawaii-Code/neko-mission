@@ -19758,6 +19758,7 @@ MonoBehaviour:
   TransitionScreen: {fileID: 1034307162}
   Player: {fileID: 460015284}
   SpawnPoint: {fileID: 127482208}
+  WaveInfoWidget: {fileID: 829151655393542182}
   Hud: {fileID: 129292345}
   Waves:
   - {fileID: 11400000, guid: 8e3e1cde3422df704a2047e9b0650cd4, type: 2}
@@ -43179,16 +43180,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 829151655733681239, guid: 758d4a0f86fcba44a8819dc49d5df894, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 829151655867619915, guid: 758d4a0f86fcba44a8819dc49d5df894, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 829151656490472124, guid: 758d4a0f86fcba44a8819dc49d5df894, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 829151656600029664, guid: 758d4a0f86fcba44a8819dc49d5df894, type: 3}
       propertyPath: Pl
       value: 
       objectReference: {fileID: 460015284}
+    - target: {fileID: 829151656600029665, guid: 758d4a0f86fcba44a8819dc49d5df894, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3182082507815203325, guid: 758d4a0f86fcba44a8819dc49d5df894, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4733698813582451875, guid: 758d4a0f86fcba44a8819dc49d5df894, type: 3}
       propertyPath: Pl
       value: 
       objectReference: {fileID: 460015284}
+    - target: {fileID: 7716763000119404726, guid: 758d4a0f86fcba44a8819dc49d5df894, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758d4a0f86fcba44a8819dc49d5df894, type: 3}
+--- !u!114 &829151655393542182 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1266439041218758134, guid: 758d4a0f86fcba44a8819dc49d5df894, type: 3}
+  m_PrefabInstance: {fileID: 829151655393542181}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815c0267d7b8429398a4f97ba29588f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1168003208307696776
 PrefabInstance:
   m_ObjectHideFlags: 0

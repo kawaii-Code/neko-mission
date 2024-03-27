@@ -16,3 +16,4 @@ MonoBehaviour:
   DefaultEnemy: {fileID: 0}
   Cooldowns: []
   DefaultCooldown: 0
+  RestTimeBeforeThisWave: 3
