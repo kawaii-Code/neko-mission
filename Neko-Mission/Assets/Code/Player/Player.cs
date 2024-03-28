@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float BunnyHopAcceleration;
     public float MaxGroundDist = 0.6f;
     public float WaterDamageCooldown = 0.5f;
+    public int MaxHopAccelerationCount = 3;
     
     public float Gravity = 5f;
     public int StartingBalance = 10;
@@ -25,8 +26,10 @@ public class Player : MonoBehaviour
 
     private Vector3 _velocity;
     
-    private bool _hasJump; // выдвигаю петицию: переименовать хотя бы на _hasJumped / _inJump
-    private float _hasJumpTime; // аналогично - _inJumpTime
+    private bool _isInJump;
+    private float _inJumpTime;
+    private bool _needHopAcceleration = false;
+    private int _hopAccelerationCount = 0;
     private float _jumpBufferTime = 0.5f;
     private float _waterDamageCooldownCurrent;
     private bool _inWater;
@@ -63,32 +66,51 @@ public class Player : MonoBehaviour
 
         //Механика прыжка.
         _isGrounded = Physics.Raycast(_groundCheckObj.transform.position, Vector3.down, MaxGroundDist);
-        if (_hasJump)
+        if (_isInJump)
         {
             if (_isGrounded)
             {
                 ResetJump();
                 _velocity.y = JumpSpeed;
-                if (Input.GetKeyUp(KeyCode.Space))
+                if (_needHopAcceleration)
                 {
-                    Debug.Log("ahaaaaaaaaahahahahahahahhahahahahahahahah funny-bunny!");
-                    _speedAccelerationModifier *= BunnyHopAcceleration;
+                    if (_hopAccelerationCount < MaxHopAccelerationCount)
+                    {
+                        _speedAccelerationModifier *= BunnyHopAcceleration;
+                        ++_hopAccelerationCount;
+                        //Debug.Log("Acceleratin...");
+                    }
+                    _needHopAcceleration = false;
                 }
                 else
                 {
                     _speedAccelerationModifier = 1;
+                    _hopAccelerationCount = 0;
+                    //Debug.Log("Downspace");
                 }
             }
 
-            _hasJumpTime += Time.deltaTime;
-            if (_hasJumpTime > _jumpBufferTime)
+            _inJumpTime += Time.deltaTime;
+            if (_inJumpTime > _jumpBufferTime)
             {
                 ResetJump();
             }
         }
         else
         {
-            _hasJump = Input.GetKeyDown(KeyCode.Space);
+            _isInJump = Input.GetKeyDown(KeyCode.Space);
+            if (!_isGrounded)
+            {
+                //Debug.Log("funny hope!" + _speedAccelerationModifier.ToString());
+                _needHopAcceleration = true;
+            }
+            else
+            {
+                _needHopAcceleration = false;
+                _hopAccelerationCount = 0;
+                _speedAccelerationModifier = 1;
+            }
+            
         }
 
         if (!_isGrounded)
@@ -104,8 +126,8 @@ public class Player : MonoBehaviour
 
     private void ResetJump()
     {
-        _hasJump = false;
-        _hasJumpTime = 0.0f;
+        _isInJump = false;
+        _inJumpTime = 0.0f;
     }
 
     //Добавление денег 
