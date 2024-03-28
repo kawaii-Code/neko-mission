@@ -1,9 +1,12 @@
+using System;
+using System.IO;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public float MovingSpeed;
     public float JumpSpeed;
+    public float BunnyHopAcceleration;
     public float MaxGroundDist = 0.6f;
     public float WaterDamageCooldown = 0.5f;
     
@@ -22,11 +25,12 @@ public class Player : MonoBehaviour
 
     private Vector3 _velocity;
     
-    private bool _hasJump;
-    private float _hasJumpTime;
+    private bool _hasJump; // выдвигаю петицию: переименовать хотя бы на _hasJumped / _inJump
+    private float _hasJumpTime; // аналогично - _inJumpTime
     private float _jumpBufferTime = 0.5f;
     private float _waterDamageCooldownCurrent;
     private bool _inWater;
+    private float _speedAccelerationModifier = 1;
 
     void Start()
     {
@@ -54,7 +58,7 @@ public class Player : MonoBehaviour
             direction.Normalize();
         }
 
-        _velocity = direction * (direction.magnitude * MovingSpeed) + Vector3.up * _velocity.y;
+        _velocity = direction * (direction.magnitude * MovingSpeed * _speedAccelerationModifier) + Vector3.up * _velocity.y;
         _controller.Move(_velocity * Time.deltaTime);
 
         //Механика прыжка.
@@ -65,6 +69,15 @@ public class Player : MonoBehaviour
             {
                 ResetJump();
                 _velocity.y = JumpSpeed;
+                if (Input.GetKeyUp(KeyCode.Space))
+                {
+                    Debug.Log("ahaaaaaaaaahahahahahahahhahahahahahahahah funny-bunny!");
+                    _speedAccelerationModifier *= BunnyHopAcceleration;
+                }
+                else
+                {
+                    _speedAccelerationModifier = 1;
+                }
             }
 
             _hasJumpTime += Time.deltaTime;
