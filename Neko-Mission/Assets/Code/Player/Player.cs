@@ -76,6 +76,11 @@ public class Player : MonoBehaviour
                     _inWater = true;
                     _waterDamageCooldownCurrent = WaterDamageCooldown;
                 }
+                else if (_inWater && !Physics.CheckSphere(transform.position, 0.8f, WaterLayer))
+                {
+                    _inWater = false;
+                    _waterDamageCooldownCurrent = 0.0f;
+                }
 
                 ResetJump();
                 _velocity.y = JumpSpeed;
@@ -85,7 +90,6 @@ public class Player : MonoBehaviour
                     {
                         _speedAccelerationModifier *= BunnyHopAcceleration;
                         ++_hopAccelerationCount;
-                        //Debug.Log("Acceleratin...");
                     }
                     _needHopAcceleration = false;
                 }
@@ -93,7 +97,6 @@ public class Player : MonoBehaviour
                 {
                     _speedAccelerationModifier = 1;
                     _hopAccelerationCount = 0;
-                    //Debug.Log("Downspace");
                 }
             }
 
@@ -108,7 +111,6 @@ public class Player : MonoBehaviour
             _isInJump = Input.GetKeyDown(KeyCode.Space);
             if (!_isGrounded)
             {
-                //Debug.Log("funny hope!" + _speedAccelerationModifier.ToString());
                 _needHopAcceleration = true;
             }
             else
@@ -117,7 +119,6 @@ public class Player : MonoBehaviour
                 _hopAccelerationCount = 0;
                 _speedAccelerationModifier = 1;
             }
-            
         }
 
         if (!_isGrounded)

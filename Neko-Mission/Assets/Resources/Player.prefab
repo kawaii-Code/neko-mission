@@ -153,8 +153,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovingSpeed: 8
   JumpSpeed: 5
+  BunnyHopAcceleration: 1.25
   MaxGroundDist: 0.3
   WaterDamageCooldown: 1
+  MaxHopAccelerationCount: 3
   Gravity: 15
   StartingBalance: 9
   CurrentBalance: 0
