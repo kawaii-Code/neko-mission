@@ -152,6 +152,9 @@ public class WaveSpawner : MonoBehaviour
             shootingEnemy.player = Player.transform;
         }
 
+        LookAtPlayer lookAtPlayer = spawnedEnemy.GetComponentInChildren<LookAtPlayer>();
+        lookAtPlayer.Player = Player;
+
         Enemy e = spawnedEnemy.GetComponent<Enemy>();
         e.Dead += OnEnemyDead;
     }
