@@ -53,4 +53,9 @@ public class SettingsUI : MonoBehaviour
         MusicVolumeValueLabel.text = $"{(int)(100 * Settings.MusicVolume)}";
         SoundVolumeValueLabel.text = $"{(int)(100 * Settings.SoundVolume)}";
     }
+
+    public void PlayClick()
+    {
+        Sounds.PlayClick();
+    }
 }

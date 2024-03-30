@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class Enemy : MonoBehaviour
     // private Rigidbody _rigidbody; //возможно для оптимизации следует отказаться от этого и всё переделать 😘 - так и вышло🤓
     private LinkedListNode<Vector3> _target;
     private LinkedList<Vector3> _route;
+
+    public event Action<Enemy> Dead; 
 
     void Start()
     {
@@ -35,7 +38,6 @@ public class Enemy : MonoBehaviour
         Move();
     }
 
-
     // TODO FIX -> по неведомой мне сейчас причине, некоторые враги начинают со второй точки в маршруте😠
     //движение по маршруту (поездка по мешкартам займет 20 минут)
     // движение по маршруту (поездка по мешкартам займет 20 минут)
@@ -51,6 +53,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void Die()
+    {
+        Dead?.Invoke(this);
+        Destroy(gameObject);
+    }
+
     // Получение урона
     public void TakeDamage(int damage)
     {
@@ -59,7 +67,7 @@ public class Enemy : MonoBehaviour
         if (_health <= 0)
         {
             Sounds.Play("duck");
-            Destroy(gameObject);
+            Die();
         }
         else
         {

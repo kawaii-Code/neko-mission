@@ -4,6 +4,7 @@ public class PausedMenu : MonoBehaviour
 {
     [SerializeField] KeyCode _keyMenuPaused;
 
+    public GameObject Crosshair;
     public PlayerCamera PlayerCamera;
     public TowerBuilder TowerBuilder;
     public PlayerGun PlayerGun;
@@ -27,6 +28,7 @@ public class PausedMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(_keyMenuPaused))
         {
+            Sounds.PlayClick();
             _paused = !_paused;
             UpdatePause();
         }
@@ -34,14 +36,8 @@ public class PausedMenu : MonoBehaviour
 
     public void MenuPausedContinue()
     {
-        PlayClick();
         _paused = false;
         UpdatePause();
-    }
-
-    public void PlayClick()
-    {
-        Sounds.Play("click3");
     }
 
     private void UpdatePause()
@@ -49,6 +45,7 @@ public class PausedMenu : MonoBehaviour
         if(_paused && !MainCamera.enabled)
         {
             Pause();
+            Pause_Menu.SetActive(true);
         }
         else if(!_paused && !MainCamera.enabled)
         {
@@ -57,6 +54,7 @@ public class PausedMenu : MonoBehaviour
         else if(_paused)
         {
             Pause();
+            Pause_Menu.SetActive(true);
         }
         else
         {
@@ -70,8 +68,8 @@ public class PausedMenu : MonoBehaviour
         TowerBuilder.Paused = true;
         PlayerGun.Paused = true;
         PlayerCamera.Paused = true;
+        Crosshair.SetActive(false);
             
-        Pause_Menu.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0f;
@@ -82,9 +80,10 @@ public class PausedMenu : MonoBehaviour
         PlayerCamera.Paused = false;
         TowerBuilder.Paused = false;
         PlayerGun.Paused = false;
+        Crosshair.SetActive(true);
             
-        Settings_Menu.SetActive(false);
         Pause_Menu.SetActive(false);
+        Settings_Menu.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
@@ -92,7 +91,6 @@ public class PausedMenu : MonoBehaviour
 
     public void MenuPausedExit()
     {
-        PlayClick();
         Application.Quit();
     }
 }

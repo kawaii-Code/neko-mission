@@ -105,16 +105,23 @@ public class Player : MonoBehaviour
     {
         if (_waterDamageCooldownCurrent > WaterDamageCooldown)
         {
-            CurrentHealth -= DmgWater;
-            if(CurrentHealth <=0)
-            {
-                Sounds.Play("heartbeat");
-                LoseMenu.Show();
-            }
+            TakeDamage(DmgWater);
             _waterDamageCooldownCurrent = 0.0f;
         }
 
         _waterDamageCooldownCurrent += Time.deltaTime;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        Sounds.Play("cat-quick-meow");
+        CurrentHealth -= damage;
+        
+        if(CurrentHealth <=0)
+        {
+            Sounds.Play("heartbeat");
+            LoseMenu.Show();
+        }
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)

@@ -19,7 +19,7 @@ public class PlayerBase : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             TakeDamage();
-            Destroy(other.gameObject);
+            other.GetComponent<Enemy>().Die();
         }
     }
 

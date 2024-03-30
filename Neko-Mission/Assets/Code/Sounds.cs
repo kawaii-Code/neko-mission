@@ -41,4 +41,9 @@ public class Sounds : MonoBehaviour
             Debug.LogError($"Звук '{clipName}' не найден!");
         }
     }
+
+    public static void PlayClick()
+    {
+        Play("click3");
+    }
 }

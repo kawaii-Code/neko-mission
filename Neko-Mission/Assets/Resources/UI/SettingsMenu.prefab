@@ -1860,8 +1860,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 5217242600801017319}
+        m_TargetAssemblyTypeName: SettingsUI, Assembly-CSharp
         m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
