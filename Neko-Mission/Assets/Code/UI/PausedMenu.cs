@@ -31,6 +31,12 @@ public class PausedMenu : MonoBehaviour
             Sounds.PlayClick();
             _paused = !_paused;
             UpdatePause();
+            if (!_paused)
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                Debug.Log("Hiding cursor");
+            }
         }
     }
 

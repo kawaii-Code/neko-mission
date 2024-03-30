@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 public class LoseMenu : MonoBehaviour
 {
     public GameObject Menu;
-    public TMP_Text SurvivedText;
-
-    private float _timeSurvived;
 
     private static LoseMenu _instance;
 
@@ -25,7 +22,6 @@ public class LoseMenu : MonoBehaviour
         _instance.Menu.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        _instance.SurvivedText.text = $"Ты продержался {(int)_instance._timeSurvived} секунд";
         Time.timeScale = 0.0f;
     }
 
@@ -36,10 +32,5 @@ public class LoseMenu : MonoBehaviour
         Cursor.visible = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1.0f;
-    }
-
-    private void Update()
-    {
-        _timeSurvived += Time.deltaTime;
     }
 }

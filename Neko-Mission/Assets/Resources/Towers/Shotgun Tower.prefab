@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 613139533536830616}
   - component: {fileID: 4552458339828181821}
   - component: {fileID: 1786068629304500215}
-  - component: {fileID: 2985809612087610131}
+  - component: {fileID: 4890001703091662304}
   m_Layer: 0
-  m_Name: BasicTower
+  m_Name: Shotgun Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2985809612087610131
+--- !u!114 &4890001703091662304
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,12 +101,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 272924644477402658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a3dc791a53a41d4fb7304a00e4d7ef1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8566c572e9685e64a92951ab176a709f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 434645869036977831, guid: 5c10a74cb707a8245919076137c29272, type: 3}
   FireRange: 5
-  FireRate: 0.5
-  BulletSpeed: 10
+  FireRate: 2
+  BulletSpeed: 5
   Damage: 5
-  Price: 10
+  Price: 15
+  _nearEnemy: []
+  _timer: 0
+  _towerSize: {x: 0, y: 0, z: 0}
+  _renderer: {fileID: 0}
+  _genPos: {x: 0, y: 0, z: 0}
+  BulletCount: 20
+  MaxSpreadAngel: 20

@@ -21,6 +21,7 @@ public class TowerSpawnPlatform : MonoBehaviour
             
             Pl.CurrentBalance -= _TowerPrice;
             _towerIsBuilt = true;
+            gameObject.SetActive(false);
         }
 
         if (!_towerIsBuilt && Pl.CurrentBalance < _TowerPrice)
