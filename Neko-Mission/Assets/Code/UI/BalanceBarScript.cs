@@ -11,6 +11,6 @@ public class BalanceBarScript : MonoBehaviour
 
     void Update()
     {
-        PlayerBalance.text = $"Баланс: {Pl.CurrentBalance}";
+        PlayerBalance.text = $"{Pl.CurrentBalance}";
     }
 }

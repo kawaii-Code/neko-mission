@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     public float Speed;
     public int MaxHealth = 100;
+    public Slider HealthBar;
     private int _health;
 
 
@@ -31,6 +33,7 @@ public class Enemy : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _agent.SetDestination(_target.Value);
         _agent.speed = Speed;
+        UpdateHealthbar();
     }
 
     private void Update()
@@ -63,6 +66,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _health -= damage;
+        UpdateHealthbar();
 
         if (_health <= 0)
         {
@@ -73,6 +77,11 @@ public class Enemy : MonoBehaviour
         {
             Sounds.Play("click2");
         }
+    }
+
+    private void UpdateHealthbar()
+    {
+        HealthBar.value = (float)_health / MaxHealth;
     }
 
     private void OnCollisionEnter(Collision other)

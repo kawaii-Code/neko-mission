@@ -154,7 +154,7 @@ MonoBehaviour:
   MovingSpeed: 8
   JumpSpeed: 5
   MaxGroundDist: 0.3
-  WaterDamageCooldown: 0.5
+  WaterDamageCooldown: 1
   Gravity: 15
   StartingBalance: 9
   CurrentBalance: 0
@@ -162,6 +162,9 @@ MonoBehaviour:
   StartingHealth: 100
   DmgWater: 20
   AddBalanceTime: 2.1
+  WaterLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!143 &7105758165621909680
 CharacterController:
   m_ObjectHideFlags: 0

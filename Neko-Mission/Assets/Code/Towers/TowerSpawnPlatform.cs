@@ -16,11 +16,12 @@ public class TowerSpawnPlatform : MonoBehaviour
         {
             Sounds.Play("click1");
             GameObject tower = Instantiate(Tower, transform.position + Vector3.up * Tower.transform.position.y, Quaternion.identity);
-            tower.transform.Rotate(Vector3.up, transform.eulerAngles.y + 90f);
+            tower.transform.Rotate(Vector3.up, transform.eulerAngles.y);
             GetComponent<MeshRenderer>().enabled = false;
             
             Pl.CurrentBalance -= _TowerPrice;
             _towerIsBuilt = true;
+            gameObject.SetActive(false);
         }
 
         if (!_towerIsBuilt && Pl.CurrentBalance < _TowerPrice)

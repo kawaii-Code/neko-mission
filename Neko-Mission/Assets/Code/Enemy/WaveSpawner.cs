@@ -13,7 +13,10 @@ public class WaveSpawner : MonoBehaviour
     public Wave[] Waves;
     private int _currentWaveIndex;
     private int _nextEnemyInWaveIndex;
-    private Wave CurrentWave => Waves[_currentWaveIndex];
+    private int _maxEnemies;
+    private Wave CurrentWave => _crutch ? Waves[^1] : Waves[_currentWaveIndex];
+
+    private float _waveDuration;
     
     private bool _isResting;
     private float _restTime;
@@ -21,6 +24,9 @@ public class WaveSpawner : MonoBehaviour
 
     private bool _disabled;
     private int _enemiesRemaining;
+
+    // Это официально худшее из всего, что я когда-либо писал 😀
+    private bool _crutch;
 
     private void Start()
     {
@@ -101,33 +107,70 @@ public class WaveSpawner : MonoBehaviour
                 _enemySpawnCooldown = cooldown;
                 _nextEnemyInWaveIndex++;
             }
+            
+            if (_waveDuration <= 0.0f)
+            {
+                EndWave();
+            }
 
             _enemySpawnCooldown -= Time.deltaTime;
+            _waveDuration -= Time.deltaTime;
+
+            if (_crutch)
+            {
+                WaveInfoWidget.ShowRemainingWaveTime(0);
+            }
+            else
+            {
+                WaveInfoWidget.ShowRemainingWaveTime(_waveDuration);
+            }
         }
     }
 
     private void StartNextWave()
     {
         _nextEnemyInWaveIndex = 0;
-        _enemiesRemaining = CurrentWave.Enemies.Length;
-        WaveInfoWidget.ShowRemainingEnemies(_enemiesRemaining, CurrentWave.Length);
+        _maxEnemies = _enemiesRemaining + CurrentWave.Length;
+        _enemiesRemaining += CurrentWave.Enemies.Length;
+        _waveDuration = CurrentWave.Duration;
+
+        WaveInfoWidget.ShowRemainingEnemies(_enemiesRemaining, _maxEnemies);
+        WaveInfoWidget.ShowRemainingWaveTime(_waveDuration);
 
         _enemySpawnCooldown = 0.0f;
-        Hud.ShowNextWaveWarning(_currentWaveIndex);
+        Hud.ShowNextWaveWarning(_currentWaveIndex + 1);
+    }
+
+    private void EndWaveWhenAllEnemiesKilled()
+    {
+        EndWave();
     }
 
     private void EndWave()
     {
-        _currentWaveIndex++;
-        Debug.Log($"Ending wave: {_currentWaveIndex}");
-        if (_currentWaveIndex == Waves.Length)
+        if (_isResting)
+            return;
+
+        if (!_crutch)
+            _currentWaveIndex++;
+
+        if (_crutch || _currentWaveIndex == Waves.Length)
         {
-            _disabled = true;
-            PausedMenu.Pause();
-            TransitionScreen.SetActive(true);
+            if (_enemiesRemaining == 0)
+            {
+                _disabled = true;
+                PausedMenu.Pause();
+                TransitionScreen.SetActive(true);
+            }
+            else
+            {
+                _currentWaveIndex--;
+                _crutch = true;
+            }
+
             return;
         }
-
+        
         _isResting = true;
         _restTime = Waves[_currentWaveIndex].RestTimeBeforeThisWave;
     }
@@ -136,11 +179,11 @@ public class WaveSpawner : MonoBehaviour
     {
         enemy.Dead -= OnEnemyDead;
         _enemiesRemaining--;
-        WaveInfoWidget.ShowRemainingEnemies(_enemiesRemaining, CurrentWave.Length);
+        WaveInfoWidget.ShowRemainingEnemies(_enemiesRemaining, _maxEnemies);
 
         if (_enemiesRemaining == 0)
         {
-            EndWave();
+            EndWaveWhenAllEnemiesKilled();
         }
     }
 
@@ -151,6 +194,9 @@ public class WaveSpawner : MonoBehaviour
         {
             shootingEnemy.player = Player.transform;
         }
+
+        LookAtPlayer lookAtPlayer = spawnedEnemy.GetComponentInChildren<LookAtPlayer>();
+        lookAtPlayer.Player = Player;
 
         Enemy e = spawnedEnemy.GetComponent<Enemy>();
         e.Dead += OnEnemyDead;
