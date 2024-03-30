@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public int StartingHealth = 100;
     public int DmgWater = 20;
     public float AddBalanceTime;
+    public LayerMask WaterLayer;
 
     private CharacterController _controller;
     private Transform _groundCheckObj;
@@ -63,6 +64,12 @@ public class Player : MonoBehaviour
         {
             if (_isGrounded)
             {
+                if (!_inWater && Physics.CheckSphere(transform.position, 0.8f, WaterLayer))
+                {
+                    _inWater = true;
+                    _waterDamageCooldownCurrent = WaterDamageCooldown;
+                }
+
                 ResetJump();
                 _velocity.y = JumpSpeed;
             }
@@ -126,8 +133,12 @@ public class Player : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(hit.gameObject.tag == "Water")
+        if(hit.gameObject.CompareTag("Water"))
         {
+            if (!_inWater)
+            {
+                _waterDamageCooldownCurrent = WaterDamageCooldown;
+            }
             _inWater = true;
         }
         else
