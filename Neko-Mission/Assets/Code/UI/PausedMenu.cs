@@ -36,7 +36,6 @@ public class PausedMenu : MonoBehaviour
 
     public void MenuPausedContinue()
     {
-        Sounds.PlayClick();
         _paused = false;
         UpdatePause();
     }
@@ -92,7 +91,6 @@ public class PausedMenu : MonoBehaviour
 
     public void MenuPausedExit()
     {
-        Sounds.PlayClick();
         Application.Quit();
     }
 }

@@ -113,7 +113,7 @@ public class WaveSpawner : MonoBehaviour
         WaveInfoWidget.ShowRemainingEnemies(_enemiesRemaining, CurrentWave.Length);
 
         _enemySpawnCooldown = 0.0f;
-        Hud.ShowNextWaveWarning(_currentWaveIndex);
+        Hud.ShowNextWaveWarning(_currentWaveIndex + 1);
     }
 
     private void EndWave()
