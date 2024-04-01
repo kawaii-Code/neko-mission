@@ -34,6 +34,7 @@ public class TowerBuilder : MonoBehaviour
             if (_buildMenuShown)
             {
                 DisableBuildMenu();
+                Sounds.PlayClose();
                 return;
             }
             
@@ -76,6 +77,7 @@ public class TowerBuilder : MonoBehaviour
 
     public void EnableBuildMenu()
     {
+        Sounds.PlayClick();
         Crosshair.SetActive(false);
         PlayerCamera.Paused = true;
         Gun.Paused = true;

@@ -23,6 +23,7 @@ public class PlayerGun : MonoBehaviour
         
         if (isShooting && _timeSinceLastShot > ShootCooldown)
         {
+            Sounds.Play("shoot");
             Shoot();
             _timeSinceLastShot = 0.0f;
         }
