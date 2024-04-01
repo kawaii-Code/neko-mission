@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7183149441472744460}
   m_Layer: 0
   m_Name: BasicTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 434645869036977831, guid: 5c10a74cb707a8245919076137c29272, type: 3}
-  FireRange: 5
+  FireRange: 6
   FireRate: 0.8
   BulletSpeed: 10
   Damage: 3

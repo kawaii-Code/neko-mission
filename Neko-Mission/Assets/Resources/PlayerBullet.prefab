@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6033251737547470511}
   - component: {fileID: 6033251737547470510}
   - component: {fileID: 6033251737547470505}
+  - component: {fileID: 6763945747239985824}
   m_Layer: 0
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -110,5 +111,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889746ebae30478899af927b34aa4064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 30
+  Speed: 60
   Damage: 1
+--- !u!54 &6763945747239985824
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033251737547470508}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

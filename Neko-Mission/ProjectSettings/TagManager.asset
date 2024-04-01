@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - WayPointerBase
   - Water
+  - TowerSpawnPoint
+  - Tower
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,7 @@ public class ShotgunTower : Tower
         // Создание триггера ( коллайдера )
         gameObject.AddComponent<SphereCollider>();
         var myCollider = GetComponent<SphereCollider>();
-        myCollider.center = new Vector3(0f,-0.5f,0f);
+        myCollider.center = new Vector3(0f,0.0f,0f);
         myCollider.radius = FireRange;
         myCollider.isTrigger = true;
         

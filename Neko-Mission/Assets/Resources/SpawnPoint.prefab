@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 262608486776493336}
   m_Layer: 8
   m_Name: SpawnPoint
-  m_TagString: Untagged
+  m_TagString: TowerSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
