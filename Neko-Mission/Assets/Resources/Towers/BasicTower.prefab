@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4552458339828181821}
   - component: {fileID: 1786068629304500215}
   - component: {fileID: 2985809612087610131}
+  - component: {fileID: 7183149441472744460}
   m_Layer: 0
   m_Name: BasicTower
   m_TagString: Untagged
@@ -115,3 +116,17 @@ MonoBehaviour:
   _towerSize: {x: 0, y: 0, z: 0}
   _renderer: {fileID: 0}
   _genPos: {x: 0, y: 0, z: 0}
+--- !u!136 &7183149441472744460
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272924644477402658}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.6770799
+  m_Height: 10
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.66365457, z: 0.010413229}
