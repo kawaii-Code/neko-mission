@@ -17,6 +17,13 @@ public class Transitions : MonoBehaviour
         SceneManager.LoadScene("Level2");
     }
 
+    public void Level3()
+    {
+        Sounds.PlayClick();
+        Sounds.PlayMenuMusic();
+        SceneManager.LoadScene("Level3");
+    }
+
     public void LevelSelection()
     {
         Sounds.PlayClick();
