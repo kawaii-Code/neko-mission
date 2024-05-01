@@ -9,15 +9,22 @@ public class ShootingEnemy : MonoBehaviour
     public float shootRange = 100f;
     public float shootInterval = 1f;
     public float shootTimer = 0f;
+
+    private Enemy _enemy;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        _enemy = GetComponent<Enemy>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_enemy.IsDead)
+        {
+            return;
+        }
         if (Vector3.Distance(transform.position, player.position) <= shootRange)
         {
             if (shootTimer <= 0f)
