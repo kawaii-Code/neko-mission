@@ -1,0 +1,36 @@
+﻿using UnityEngine;
+
+public class PlayerData : MonoBehaviour
+{
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
+
+    private void OnEnable()
+    {
+        Load();
+    }
+    
+    private void OnDisable()
+    {
+        Save();
+    }
+
+    private void Load()
+    {
+        if (!PlayerPrefs.HasKey("CameraSensitivity"))
+            return;
+        
+        Settings.CameraSensitivity.Value = PlayerPrefs.GetFloat("CameraSensitivity");
+        Settings.MusicVolume.Value = PlayerPrefs.GetFloat("MusicVolume");
+        Settings.SoundVolume.Value = PlayerPrefs.GetFloat("SoundVolume");
+    }
+
+    private void Save()
+    {
+        PlayerPrefs.SetFloat("CameraSensitivity", Settings.CameraSensitivity);
+        PlayerPrefs.SetFloat("MusicVolume", Settings.MusicVolume);
+        PlayerPrefs.SetFloat("SoundVolume", Settings.SoundVolume);
+    }
+}
