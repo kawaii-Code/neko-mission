@@ -6,9 +6,12 @@ public class ShotgunTower : Tower
 {
     public int BulletCount;
     public float MaxSpreadAngel; // максимальный разброс от врага
+    private float _baseFireRate;
+    private float _fireRateBonus = 20; // %
 
     private void Start()
     {
+        _baseFireRate = FireRate;
         // Создание триггера ( коллайдера )
         gameObject.AddComponent<SphereCollider>();
         var myCollider = GetComponent<SphereCollider>();
@@ -66,5 +69,17 @@ public class ShotgunTower : Tower
                 _nearEnemy.Add(other.gameObject);
             }
         }
+    }
+
+    public override void SpeedUpFireRate() {
+        FireRate -= _baseFireRate * (_fireRateBonus / 100);
+    }
+
+    public override void SlowdownFireRate() {
+        FireRate += _baseFireRate * (_fireRateBonus / 100);
+    }
+
+    public override bool HasBonusSpeed() {
+        return Math.Abs(_baseFireRate - FireRate) > 0.05;
     }
 }
