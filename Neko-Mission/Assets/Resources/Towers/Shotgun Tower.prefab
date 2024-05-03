@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 2733939921038382028, guid: 387ee6d42f7a643438029b2b40edb705, type: 3}
+  SpeedUpPrefab: {fileID: 6414317548138810788, guid: 71ec9814583dd7b47a015c93c773e27b, type: 3}
   FireRange: 12
   FireRate: 2
   BulletSpeed: 5

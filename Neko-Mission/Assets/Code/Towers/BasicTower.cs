@@ -6,6 +6,7 @@ public class BasicTower : Tower
 {   
     private float _baseFireRate;
     private float _fireRateBonus = 30; // %
+    private GameObject _booster;
 
     private void Start()
     {
@@ -89,12 +90,16 @@ public class BasicTower : Tower
 
     public override void SpeedUpFireRate() {
         FireRate -= _baseFireRate * (_fireRateBonus / 100);
+        var _speedUpGen = _genPos;
+        _speedUpGen.y += 4f;
+
+        _booster = Instantiate(SpeedUpPrefab, _speedUpGen, Quaternion.AngleAxis(90, new Vector3(0,0,0)));
     }
 
     public override void SlowdownFireRate() {
         FireRate += _baseFireRate * (_fireRateBonus / 100);
+        Destroy(_booster); 
     }
-
     public override bool HasBonusSpeed() {
         return Math.Abs(_baseFireRate - FireRate) > 0.05; // 1 час из-за 0.8 == 0.8 - false 😖
     }

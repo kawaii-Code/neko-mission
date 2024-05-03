@@ -4,6 +4,7 @@ using UnityEngine;
 public abstract class Tower : MonoBehaviour
 {
     public GameObject BulletPrefab;
+    public GameObject SpeedUpPrefab;
     public float FireRange;
     public float FireRate;
     public float BulletSpeed;
