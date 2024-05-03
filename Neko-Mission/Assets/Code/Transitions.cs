@@ -6,24 +6,28 @@ public class Transitions : MonoBehaviour
     public void Level1()
     {
         Sounds.PlayClick();
+        Sounds.PlayMenuMusic();
         SceneManager.LoadScene("Level1");
     }
     
     public void Level2()
     {
         Sounds.PlayClick();
+        Sounds.PlayMenuMusic();
         SceneManager.LoadScene("Level2");
     }
 
     public void LevelSelection()
     {
         Sounds.PlayClick();
+        Sounds.PlayMenuMusic();
         SceneManager.LoadScene("LevelSelection");
     }
 
     public void NextLevel()
     {
         Sounds.PlayClick();
+        Sounds.PlayMenuMusic();
         Resume();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -31,6 +35,7 @@ public class Transitions : MonoBehaviour
     public void BackToMenu()
     {
         Sounds.PlayClick();
+        Sounds.PlayMenuMusic();
         Resume();
         SceneManager.LoadScene("Menu");
     }

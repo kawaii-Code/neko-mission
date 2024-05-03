@@ -2,13 +2,12 @@
 
 public class Music : MonoBehaviour
 {
-    public AudioSource MusicSource;
+    public AudioSource MenuMusicSource;
+    public AudioSource BattleMusicSource;
 
     private void Start()
     {
-        MusicSource.volume = Settings.MusicVolume;
-        MusicSource.loop = true;
-        MusicSource.Play();
+        OnMusicVolumeChanged(Settings.MusicVolume);
     }
 
     private void OnEnable()
@@ -20,9 +19,34 @@ public class Music : MonoBehaviour
     {
         Settings.MusicVolume.Changed -= OnMusicVolumeChanged;
     }
+    
+    public void PlayBattleMusic()
+    {
+        if (BattleMusicSource.isPlaying)
+            return;
+        
+        BattleMusicSource.volume = Settings.MusicVolume;
+        BattleMusicSource.Play();
+        
+        MenuMusicSource.volume = 0.0f;
+        MenuMusicSource.Stop();
+    }
+    
+    public void PlayMenuMusic()
+    {
+        if (MenuMusicSource.isPlaying)
+            return;
+        
+        BattleMusicSource.volume = 0.0f;
+        BattleMusicSource.Stop();
+        
+        MenuMusicSource.volume = Settings.MusicVolume;
+        MenuMusicSource.Play();
+    }
 
     private void OnMusicVolumeChanged(float newValue)
     {
-        MusicSource.volume = newValue;
+        MenuMusicSource.volume = newValue;
+        BattleMusicSource.volume = newValue;
     }
 }

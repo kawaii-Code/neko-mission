@@ -90,9 +90,7 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             var Pl = other.gameObject.GetComponent<Player>();
-            LoseMenu.Show();
-            Pl.CurrentHealth = Pl.StartingHealth;
-            //Destroy(other.gameObject);
+            Pl.TakeDamage(25);
         }
     }
 }

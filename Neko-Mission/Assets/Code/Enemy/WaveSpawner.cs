@@ -129,6 +129,8 @@ public class WaveSpawner : MonoBehaviour
 
     private void StartNextWave()
     {
+        Sounds.PlayBattleMusic();
+
         _nextEnemyInWaveIndex = 0;
         _maxEnemies = _enemiesRemaining + CurrentWave.Length;
         _enemiesRemaining += CurrentWave.Enemies.Length;
@@ -141,31 +143,22 @@ public class WaveSpawner : MonoBehaviour
         Hud.ShowNextWaveWarning(_currentWaveIndex + 1);
     }
 
-    private void EndWaveWhenAllEnemiesKilled()
-    {
-        EndWave();
-    }
-
     private void EndWave()
     {
         if (_isResting)
             return;
 
-        if (!_crutch)
-            _currentWaveIndex++;
+        Sounds.PlayMenuMusic();
+        _currentWaveIndex++;
 
-        if (_crutch || _currentWaveIndex == Waves.Length)
+        if (_currentWaveIndex == Waves.Length)
         {
             if (_enemiesRemaining == 0)
             {
                 _disabled = true;
+                Sounds.Play("cat-purr");
                 PausedMenu.Pause();
                 TransitionScreen.SetActive(true);
-            }
-            else
-            {
-                _currentWaveIndex--;
-                _crutch = true;
             }
 
             return;
@@ -183,7 +176,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (_enemiesRemaining == 0)
         {
-            EndWaveWhenAllEnemiesKilled();
+            EndWave();
         }
     }
 

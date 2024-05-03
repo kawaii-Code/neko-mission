@@ -34,9 +34,10 @@ public class TowerBuilder : MonoBehaviour
             if (_buildMenuShown)
             {
                 DisableBuildMenu();
+                Sounds.PlayClose();
                 return;
             }
-            
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hitInfo, float.MaxValue, TowerSpawnerLayer))
             {
@@ -46,7 +47,7 @@ public class TowerBuilder : MonoBehaviour
                     return;
                 }
                 _LastHitInfo = hitInfo;
-                
+
                 EnableBuildMenu();
             }
         }
@@ -76,6 +77,7 @@ public class TowerBuilder : MonoBehaviour
 
     public void EnableBuildMenu()
     {
+        Sounds.PlayClick();
         Crosshair.SetActive(false);
         PlayerCamera.Paused = true;
         Gun.Paused = true;

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class Sounds : MonoBehaviour
 {
     public AudioSource AudioSource;
     public AudioClip[] AudioClips;
+    public Music Music;
 
     public Dictionary<string, AudioClip> Clips;
     
@@ -15,12 +17,15 @@ public class Sounds : MonoBehaviour
     {
         if (_instance != null && _instance != this)
         {
-            Destroy(_instance);
+            Destroy(gameObject);
+            return;
         }
 
         _instance = this;
         Clips = AudioClips.ToDictionary(c => c.name);
         DontDestroyOnLoad(this);
+        
+        PlayMenuMusic();
     }
 
     public static void Play(string clipName)
@@ -42,8 +47,23 @@ public class Sounds : MonoBehaviour
         }
     }
 
+    public static void PlayBattleMusic()
+    {
+        _instance.Music.PlayBattleMusic();
+    }
+    
+    public static void PlayMenuMusic()
+    {
+        _instance.Music.PlayMenuMusic();
+    }
+
     public static void PlayClick()
     {
-        Play("click3");
+        Play("cute-click");
+    }
+    
+    public static void PlayClose()
+    {
+        Play("close-click");
     }
 }

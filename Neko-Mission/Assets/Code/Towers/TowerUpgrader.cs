@@ -34,11 +34,11 @@ public class TowerUpgrader : MonoBehaviour
 
         if (Input.GetMouseButton(1))
         {
-            if (_upgradeMenuIsOpened || _towerIsBuiltMenuIsOpened)
-            {
-                Exit();
-                return;
-            }
+            // if (_upgradeMenuIsOpened || _towerIsBuiltMenuIsOpened)
+            // {
+            //     Exit();
+            //     return;
+            // }
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -87,8 +87,6 @@ public class TowerUpgrader : MonoBehaviour
 
     public void ReturnToTowerIsBuiltMenu()
     {
-        Debug.Log("!!!!");
-        _selectedTower.GetComponent<BasicTower>().FireRate -= 0.1f;
         Exit();
         OpenTowerIsBuiltMenu();
     }
@@ -110,6 +108,13 @@ public class TowerUpgrader : MonoBehaviour
             Debug.Log("new:" + _selectedTower.GetComponent<BasicTower>().Damage);
         }
     }
+
+    public void IncreaseFireRate()
+    {
+        Debug.Log("!!!!");
+        _selectedTower.GetComponent<BasicTower>().FireRate -= 0.1f;
+    }
+
 
     public void ChangeButtonColor()
     {
