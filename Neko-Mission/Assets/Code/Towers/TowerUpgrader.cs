@@ -13,6 +13,7 @@ public class TowerUpgrader : MonoBehaviour
     public Player Pl;
     public PlayerGun Gun;
     public Button IncreaseDamageButton;
+    public Button IncreaseFireRateButton;
     public LayerMask TowerLayer;
 
     private GameObject _selectedTower;
@@ -35,10 +36,10 @@ public class TowerUpgrader : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             // if (_upgradeMenuIsOpened || _towerIsBuiltMenuIsOpened)
-            // {
-            //     Exit();
-            //     return;
-            // }
+             //{
+               //  Exit();
+                 //return;
+             //}
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -56,6 +57,7 @@ public class TowerUpgrader : MonoBehaviour
     public void ActivateUpgradeMenu()
     {
         TowerIsBuiltMenu.SetActive(false);
+        _towerIsBuiltMenuIsOpened = false;
         UpgradeMenu.SetActive(true);
         _upgradeMenuIsOpened = true;
     }
@@ -71,6 +73,7 @@ public class TowerUpgrader : MonoBehaviour
         _towerIsBuiltMenuIsOpened = true;
     }
 
+
     public void Exit()
     {
         Crosshair.SetActive(true);
@@ -84,13 +87,14 @@ public class TowerUpgrader : MonoBehaviour
         UpgradeMenu.SetActive(false);
     }
 
-
+    
     public void ReturnToTowerIsBuiltMenu()
     {
         Exit();
         OpenTowerIsBuiltMenu();
     }
 
+    ///увеличение урона башни
     public void IncreaseDamage()
     {
         int balance = Pl.CurrentBalance;
@@ -109,24 +113,47 @@ public class TowerUpgrader : MonoBehaviour
         }
     }
 
+    ///увеличение скорости атаки башни
     public void IncreaseFireRate()
     {
-        Debug.Log("!!!!");
-        _selectedTower.GetComponent<BasicTower>().FireRate -= 0.1f;
+
+        TextMeshProUGUI child = IncreaseFireRateButton.GetComponentsInChildren<TextMeshProUGUI>().Where(x => char.IsDigit(x.text[0])).First();
+
+        int price = int.Parse(child.text);
+         if (Pl.CurrentBalance >= price)
+        {
+            Pl.CurrentBalance -= price;
+            child.text = (price + 20).ToString();       
+            Debug.Log($"{_selectedTower.GetComponent<BasicTower>().FireRate}=>{_selectedTower.GetComponent<BasicTower>().FireRate - 0.1f}");
+            _selectedTower.GetComponent<BasicTower>().FireRate -= 0.1f;
+        }
+        else
+        Debug.Log(":(");
+        
     }
 
-
+    ///изменение цвета кнопок, отвечающих за приобретение улчшения
     public void ChangeButtonColor()
     {
         int balance = Pl.CurrentBalance;
 
-        //дочерний элемент, отвечающий за стоимость
+        //кнопка для увеличения урона
         TextMeshProUGUI child = IncreaseDamageButton.GetComponentsInChildren<TextMeshProUGUI>().Where(x => char.IsDigit(x.text[0])).First();
         int price = int.Parse(child.text);
         if (Pl.CurrentBalance < price)
             IncreaseDamageButton.GetComponent<Image>().color = Color.red;
         else
             IncreaseDamageButton.GetComponent<Image>().color = Color.green;
+
+
+        // кнопка для увеличения скорости стрельбы башни
+        child = IncreaseFireRateButton.GetComponentsInChildren<TextMeshProUGUI>().Where(x => char.IsDigit(x.text[0])).First();
+        price = int.Parse(child.text);
+        if (Pl.CurrentBalance < price)
+            IncreaseFireRateButton.GetComponent<Image>().color = Color.red;
+        else
+            IncreaseFireRateButton.GetComponent<Image>().color = Color.green;
+
 
     }
 

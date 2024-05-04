@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20736,6 +20736,7 @@ MonoBehaviour:
   Pl: {fileID: 460015284}
   Gun: {fileID: 323238851}
   IncreaseDamageButton: {fileID: 1305128091}
+  IncreaseFireRateButton: {fileID: 1875219454}
   TowerLayer:
     serializedVersion: 2
     m_Bits: 1024
@@ -28542,6 +28543,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -47575,6 +47577,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6584e141fc54b9745b0c90ebede19d61, type: 2}
+    - target: {fileID: 7105758165621909694, guid: 35392adbc3cc99044853853fd2901776, type: 3}
+      propertyPath: StartingBalance
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35392adbc3cc99044853853fd2901776, type: 3}
 --- !u!1001 &7610260641043173768
