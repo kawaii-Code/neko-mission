@@ -9,6 +9,8 @@ public class ShotgunTower : Tower
 
     private void Start()
     {
+        IncreaseDamagePrice = 10;
+        IncreaseFireRatePrice = 20;
         // Создание триггера ( коллайдера )
         gameObject.AddComponent<SphereCollider>();
         var myCollider = GetComponent<SphereCollider>();

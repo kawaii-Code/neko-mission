@@ -9,7 +9,8 @@ public class Tower : MonoBehaviour
     public float BulletSpeed;
     public int Damage;
     public int Price;
-
+    public int IncreaseDamagePrice;
+    public int IncreaseFireRatePrice;
     // Лист врагов в области
     [HideInInspector]
     public List<GameObject> _nearEnemy = new List<GameObject>();
