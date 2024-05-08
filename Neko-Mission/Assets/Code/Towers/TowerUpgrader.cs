@@ -36,10 +36,10 @@ public class TowerUpgrader : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             // if (_upgradeMenuIsOpened || _towerIsBuiltMenuIsOpened)
-             //{
-               //  Exit();
-                 //return;
-             //}
+            //{
+            //  Exit();
+            //return;
+            //}
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, float.MaxValue, TowerLayer))
             {
@@ -52,7 +52,7 @@ public class TowerUpgrader : MonoBehaviour
     }
 
     public void ActivateUpgradeMenu()
-    {  
+    {
         TowerIsBuiltMenu.SetActive(false);
         _towerIsBuiltMenuIsOpened = false;
         UpgradeMenu.SetActive(true);
@@ -82,7 +82,7 @@ public class TowerUpgrader : MonoBehaviour
         _upgradeMenuIsOpened = false;
         UpgradeMenu.SetActive(false);
     }
-    
+
     public void ReturnToTowerIsBuiltMenu()
     {
         Exit();
@@ -97,15 +97,15 @@ public class TowerUpgrader : MonoBehaviour
         {
             Pl.CurrentBalance -= price;
             _selectedTower.GetComponent<Tower>().Damage += 10000;
-            _selectedTower.GetComponent<Tower>().IncreaseDamagePrice += 10; 
+            _selectedTower.GetComponent<Tower>().IncreaseDamagePrice += 10;
         }
     }
 
     ///увеличение скорости атаки башни
     public void IncreaseFireRate()
-    {    
+    {
         int price = _selectedTower.GetComponent<Tower>().IncreaseFireRatePrice;
-         if (Pl.CurrentBalance >= price)
+        if (Pl.CurrentBalance >= price)
         {
             Pl.CurrentBalance -= price;
             _selectedTower.GetComponent<Tower>().FireRate -= 0.1f;
@@ -115,7 +115,7 @@ public class TowerUpgrader : MonoBehaviour
 
     ///изменение цвета кнопок, отвечающих за приобретение улчшения
     public void ChangeButtonColor()
-    { 
+    {
         int balance = Pl.CurrentBalance;
         //кнопка для увеличения урона
         TextMeshProUGUI child = IncreaseDamageButton.GetComponentsInChildren<TextMeshProUGUI>().Where(x => char.IsDigit(x.text[0])).First();
