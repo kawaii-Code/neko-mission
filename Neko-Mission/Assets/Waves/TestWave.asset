@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemies:
   - {fileID: 0}
+  - {fileID: 5864558011457094751, guid: 0097034c9b3e4a44fbc75d21d117a098, type: 3}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5864558011457094751, guid: 0097034c9b3e4a44fbc75d21d117a098, type: 3}
   - {fileID: 0}
   DefaultEnemy: {fileID: 1225918891088731690, guid: c51ff34c790d41e43af32a18b53f59c2, type: 3}
   Cooldowns:

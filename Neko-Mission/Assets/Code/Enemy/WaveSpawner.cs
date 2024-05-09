@@ -149,10 +149,9 @@ public class WaveSpawner : MonoBehaviour
             return;
 
         Sounds.PlayMenuMusic();
-        if (!_crutch)
-            _currentWaveIndex++;
+        _currentWaveIndex++;
 
-        if (_crutch || _currentWaveIndex == Waves.Length)
+        if (_currentWaveIndex == Waves.Length)
         {
             if (_enemiesRemaining == 0)
             {
@@ -160,11 +159,6 @@ public class WaveSpawner : MonoBehaviour
                 Sounds.Play("cat-purr");
                 PausedMenu.Pause();
                 TransitionScreen.SetActive(true);
-            }
-            else
-            {
-                _currentWaveIndex--;
-                _crutch = true;
             }
 
             return;

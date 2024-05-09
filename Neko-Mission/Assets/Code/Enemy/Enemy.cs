@@ -10,9 +10,10 @@ public class Enemy : MonoBehaviour
     public float Speed;
     public int MaxHealth = 100;
     public Slider HealthBar;
+    public Animator Animator;
+
     private int _health;
-
-
+    public bool IsDead;
     private NavMeshAgent _agent;
     // private Rigidbody _rigidbody; //возможно для оптимизации следует отказаться от этого и всё переделать 😘 - так и вышло🤓
     private LinkedListNode<Vector3> _target;
@@ -38,6 +39,8 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if (IsDead)
+            return;
         Move();
     }
 
@@ -58,8 +61,15 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        IsDead = true;
+        Sounds.Play("bone-crush");
+        _agent.enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
+        GetComponent<Rigidbody>().Sleep();
+        GetComponentInChildren<Canvas>().enabled = false;
         Dead?.Invoke(this);
-        Destroy(gameObject);
+        Animator.Play("Death");
+        Destroy(gameObject, 5);
     }
 
     // Получение урона
@@ -70,7 +80,6 @@ public class Enemy : MonoBehaviour
 
         if (_health <= 0)
         {
-            Sounds.Play("duck");
             Die();
         }
         else
