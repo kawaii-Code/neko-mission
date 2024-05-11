@@ -6,6 +6,8 @@
 
 [Король](https://sketchfab.com/3d-models/red-king-7bedf8fcb753493c9d40e90cdd7812fa)
 
+[Враг Скелет](https://poly.pizza/m/yq5ATpujSt)
+
 ### Звуки
 
 Звуки UI, получения урона, постройки башни и пение птиц были взяты из [FreeSoundLibrary](https://www.freesoundslibrary.com)
