@@ -16,6 +16,8 @@ public class WaveSpawner : MonoBehaviour
     private int _maxEnemies;
     private Wave CurrentWave => _crutch ? Waves[^1] : Waves[_currentWaveIndex];
 
+    private bool WavesEnded => _currentWaveIndex >= Waves.Length;
+
     private float _waveDuration;
     
     private bool _isResting;
@@ -78,6 +80,11 @@ public class WaveSpawner : MonoBehaviour
     private void Update()
     {
         if (_disabled)
+        {
+            return;
+        }
+
+        if (WavesEnded)
         {
             return;
         }
@@ -151,7 +158,7 @@ public class WaveSpawner : MonoBehaviour
         Sounds.PlayMenuMusic();
         _currentWaveIndex++;
 
-        if (_currentWaveIndex == Waves.Length)
+        if (WavesEnded)
         {
             if (_enemiesRemaining == 0)
             {
@@ -159,13 +166,18 @@ public class WaveSpawner : MonoBehaviour
                 Sounds.Play("cat-purr");
                 PausedMenu.Pause();
                 TransitionScreen.SetActive(true);
+                PausedMenu.gameObject.SetActive(false);
             }
 
             return;
         }
         
         _isResting = true;
-        _restTime = Waves[_currentWaveIndex].RestTimeBeforeThisWave;
+
+        if (!WavesEnded)
+        {
+            _restTime = CurrentWave.RestTimeBeforeThisWave;
+        }
     }
 
     private void OnEnemyDead(Enemy enemy)
