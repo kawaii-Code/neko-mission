@@ -9614,10 +9614,6 @@ PrefabInstance:
       propertyPath: TowerSpeedUpMenu
       value: 
       objectReference: {fileID: 2063937308}
-    - target: {fileID: 7105758165621909683, guid: 35392adbc3cc99044853853fd2901776, type: 3}
-      propertyPath: TowerLayer.m_Bits
-      value: 1024
-      objectReference: {fileID: 0}
     - target: {fileID: 7105758165621909688, guid: 35392adbc3cc99044853853fd2901776, type: 3}
       propertyPath: m_Name
       value: Player

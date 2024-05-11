@@ -92,14 +92,4 @@ public class Enemy : MonoBehaviour
     {
         HealthBar.value = (float)_health / MaxHealth;
     }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        // При столкновение с игроком 
-        if (other.gameObject.CompareTag("Player"))
-        {
-            var Pl = other.gameObject.GetComponent<Player>();
-            Pl.TakeDamage(25);
-        }
-    }
 }

@@ -1662,7 +1662,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287087876}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 140.95378, y: 2.9627736, z: -76.13157}
+  m_LocalPosition: {x: 140.95378, y: 3, z: -76.13157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7492,10 +7492,6 @@ PrefabInstance:
       propertyPath: TowerSpeedUpMenu
       value: 
       objectReference: {fileID: 1577913158}
-    - target: {fileID: 7105758165621909683, guid: 35392adbc3cc99044853853fd2901776, type: 3}
-      propertyPath: TowerLayer.m_Bits
-      value: 1024
-      objectReference: {fileID: 0}
     - target: {fileID: 7105758165621909688, guid: 35392adbc3cc99044853853fd2901776, type: 3}
       propertyPath: m_Name
       value: Player
@@ -8910,7 +8906,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639916914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 118.7, y: 0, z: -74.15}
+  m_LocalPosition: {x: 118.7, y: 0.5, z: -74.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9215,7 +9211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692688768}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.34, z: -0.45}
+  m_LocalPosition: {x: 0, y: -1.5, z: -0.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14239,7 +14235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350812157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 135.2, y: 0, z: -76.9}
+  m_LocalPosition: {x: 133.7, y: 0.5, z: -76.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

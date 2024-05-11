@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1786068629304500215}
   - component: {fileID: 4890001703091662304}
   - component: {fileID: 8686462779047518836}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Shotgun Tower
   m_TagString: Tower
   m_Icon: {fileID: 0}

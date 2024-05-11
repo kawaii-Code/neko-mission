@@ -45,6 +45,4 @@ public class ShootingEnemy : MonoBehaviour
         bul.GetComponent<Rigidbody>().velocity = (player.position - bul.transform.position).normalized * 25f;
         Destroy(bul, 1);
     }
-
-
 }
