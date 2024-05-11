@@ -19,6 +19,8 @@ public class EnemyChaser : MonoBehaviour
     private LinkedListNode<Vector3> _target;
     private LinkedList<Vector3> _route;
 
+    const int ChaseWalkableAreaMask = 1 << 3;
+
     public event Action<EnemyChaser> Dead;
 
     public float ChaseDistance = 5f;
@@ -29,6 +31,8 @@ public class EnemyChaser : MonoBehaviour
     private Vector3 _playerLastPosition;
     private float _chaseTimer;
     private Vector3 _chaseStartPoint;
+    private Transform _player;
+
     void Start()
     {
         _health = MaxHealth;
@@ -38,6 +42,7 @@ public class EnemyChaser : MonoBehaviour
             .Select(x => x.transform.position)); // для маршрута важен порядок точек - это можно попробовать исправить
                                                  // TODO сделать сортировку получше, по нормальному индексу точки в маршуте(🤡)
 
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
         _target = _route.First;
         _agent = GetComponent<NavMeshAgent>();
         _agent.SetDestination(_target.Value);
@@ -50,19 +55,21 @@ public class EnemyChaser : MonoBehaviour
         if (IsDead)
             return;
         // Проверка дистанции до игрока
-        var playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+        var playerPosition = _player.position;
         var distanceToPlayer = Vector3.Distance(playerPosition, transform.position);
-        if (distanceToPlayer < ChaseDistance)
+        if (!_isChasing && distanceToPlayer < ChaseDistance)
         {
             _isChasing = true;
-        }
-        if (_isChasing)
-        {
             if (_chaseStartPoint == Vector3.zero)
             {
                 _chaseStartPoint = transform.position;
             }
-            ChasePlayer();
+        }
+
+        if (_isChasing)
+        {
+            _agent.areaMask |= ChaseWalkableAreaMask;
+            ChasePlayer(distanceToPlayer);
         }
         else
         {
@@ -72,41 +79,32 @@ public class EnemyChaser : MonoBehaviour
             }
             else
             {
+                _agent.areaMask &= ~ChaseWalkableAreaMask;
                 Move();
             }
-        }
-        if (distanceToPlayer < ChaseDistance && !_isChasing)
-        {
-            _isChasing = true;
         }
     }
     // возвращает на позицию с начала преследования
     private void ReturnToChaseStart()
     {
-        if (Vector3.Distance(transform.position, _chaseStartPoint) > 0.1f)
+        var distanceToStartPoint = Vector3.Distance(transform.position, _chaseStartPoint);
+        if (distanceToStartPoint > 0.5f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, _chaseStartPoint, Speed * Time.deltaTime);
-            transform.LookAt(_chaseStartPoint);
+            _agent.SetDestination(_chaseStartPoint);
         }
         else
         {
             _chaseStartPoint = Vector3.zero;
-            GetComponent<Rigidbody>().useGravity = false;
-            _agent.enabled = true;
             _agent.SetDestination(_target.Value);
         }
     }
-    private void ChasePlayer()
+    private void ChasePlayer(float distanceToPlayer)
     {
-        var playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-        var distanceToPlayer = Vector3.Distance(playerPosition, transform.position);
-        GetComponent<Rigidbody>().useGravity = true;
-        _agent.enabled = false;
+        var playerPosition = _player.position;
 
         if (distanceToPlayer < ChaseDistance)
         {
-            transform.position = Vector3.MoveTowards(transform.position, playerPosition, ChaseSpeed * Time.deltaTime);
-            transform.LookAt(new Vector3(playerPosition.x, transform.position.y, playerPosition.z));
+            _agent.SetDestination(playerPosition);
         }
         else if (distanceToPlayer >= ReturnDistance)
         {
@@ -118,8 +116,7 @@ public class EnemyChaser : MonoBehaviour
 
             if (_chaseTimer > 2f)
             {
-                transform.position = Vector3.MoveTowards(transform.position, playerPosition, ChaseSpeed * Time.deltaTime);
-                transform.LookAt(new Vector3(playerPosition.x, transform.position.y, playerPosition.z));
+                _agent.SetDestination(playerPosition);
                 _chaseTimer = 0f;
             }
             else
@@ -133,7 +130,6 @@ public class EnemyChaser : MonoBehaviour
     // движение по маршруту (поездка по мешкартам займет 20 минут)
     public void Move()
     {
-        _agent.enabled = true;
         if (_agent.remainingDistance <= _agent.stoppingDistance) //он говорит инвертировать выражение, чтобы уменьшить гнездование, помогите
         {
             if (_target.Next != null)
@@ -177,13 +173,8 @@ public class EnemyChaser : MonoBehaviour
         HealthBar.value = (float)_health / MaxHealth;
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnDrawGizmos()
     {
-        // При столкновение с игроком 
-        if (other.gameObject.CompareTag("Player"))
-        {
-            var Pl = other.gameObject.GetComponent<Player>();
-            Pl.TakeDamage(25);
-        }
+        Gizmos.DrawWireSphere(transform.position, ChaseDistance);
     }
 }
