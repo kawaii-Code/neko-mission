@@ -138,7 +138,6 @@ public class Player : MonoBehaviour
 
         if (Physics.CheckSphere(transform.position, 0.75f, EnemyLayer))
         {
-            Debug.Log("Man");
             TakeDamage(20);
         }
     }
@@ -183,10 +182,5 @@ public class Player : MonoBehaviour
         {
             _inWater = false;
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(transform.position, 0.75f);
     }
 }

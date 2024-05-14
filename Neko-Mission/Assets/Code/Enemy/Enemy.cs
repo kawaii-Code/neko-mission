@@ -181,6 +181,9 @@ public class Enemy : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, ChaseDistance);
+        if (IsChaser)
+        {
+            Gizmos.DrawWireSphere(transform.position, ChaseDistance);
+        }
     }
 }

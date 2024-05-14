@@ -76,7 +76,7 @@ public class ShotgunTower : Tower
     public override void SpeedUpFireRate() {
         FireRate -= _baseFireRate * (_fireRateBonus / 100);
         var _speedUpGen = _genPos;
-        _speedUpGen.y += 4f;
+        _speedUpGen.y += 2.25f;
 
         _booster = Instantiate(SpeedUpPrefab, _speedUpGen, Quaternion.AngleAxis(90, new Vector3(0,0,0)));
     }

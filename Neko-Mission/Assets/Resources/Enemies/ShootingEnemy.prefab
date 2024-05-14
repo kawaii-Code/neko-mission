@@ -431,8 +431,8 @@ Transform:
   m_GameObject: {fileID: 5864558011457094751}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.90000004, y: 0.90000004, z: 0.90000004}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6421249187190855418}
   - {fileID: 4507353195190415619}
@@ -470,6 +470,10 @@ MonoBehaviour:
   HealthBar: {fileID: 3479934657786355603}
   Animator: {fileID: 6034442795734228301}
   IsDead: 0
+  IsChaser: 0
+  ChaseDistance: 5
+  ReturnDistance: 10
+  ChaseSpeed: 3
 --- !u!54 &5864558011457094745
 Rigidbody:
   m_ObjectHideFlags: 0
