@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1225918891088731695}
   - component: {fileID: 1225918891088731688}
-  - component: {fileID: 1225918891088731691}
+  - component: {fileID: 7285152745497501667}
   - component: {fileID: 1225918891088731692}
   - component: {fileID: 7191467115598950110}
   m_Layer: 10
-  m_Name: Enemy
+  m_Name: EnemyChaser
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 1225918891088731690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.49, y: 0, z: 5.65}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5076447757968217354}
   - {fileID: 8871999968182855509}
@@ -48,9 +48,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.260256, z: 1}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0.13012822, z: 0}
---- !u!114 &1225918891088731691
+--- !u!114 &7285152745497501667
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,10 +63,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  MaxHealth: 5
+  MaxHealth: 12
   HealthBar: {fileID: 1703123196361475756}
   Animator: {fileID: 1194305483544711024}
   IsDead: 0
+  IsChaser: 1
+  ChaseDistance: 7
+  ReturnDistance: 10
+  ChaseSpeed: 3
 --- !u!54 &1225918891088731692
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -341,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.654902, g: 0.5568628, b: 0.47450984, a: 1}
+  m_Color: {r: 0.6117647, g: 0.53333336, b: 0.1254902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -602,6 +606,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -5818889320171079249, guid: e614e72d2e42aed429b475b65c91c667, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a8dbfb0299fd39e4b9e42d21e793d16a, type: 2}
     - target: {fileID: -5338778572421687474, guid: e614e72d2e42aed429b475b65c91c667, type: 3}
       propertyPath: m_Layer
       value: 10

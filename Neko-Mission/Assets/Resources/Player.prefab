@@ -164,6 +164,9 @@ MonoBehaviour:
   StartingHealth: 100
   DmgWater: 20
   AddBalanceTime: 2.1
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 1024
   WaterLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -202,7 +205,7 @@ MonoBehaviour:
     m_Bits: 256
   TowerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   BuildDistance: 10
   Paused: 0
   Crosshair: {fileID: 0}

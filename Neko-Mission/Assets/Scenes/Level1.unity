@@ -139,7 +139,7 @@ GameObject:
   m_Name: tree_1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2075190
@@ -698,7 +698,7 @@ GameObject:
   m_Name: tile (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &21940283
@@ -997,7 +997,7 @@ GameObject:
   m_Name: tile_slope (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &27871767
@@ -1096,7 +1096,7 @@ GameObject:
   m_Name: tree_1 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &37258897
@@ -2486,7 +2486,7 @@ GameObject:
   m_Name: tile (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &101751307
@@ -2737,8 +2737,16 @@ PrefabInstance:
       value: towerSquare_middleB(+) (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786538997817980154, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1786538997817980154, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2767,7 +2775,7 @@ GameObject:
   m_Name: tile_slope (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &115083119
@@ -3213,7 +3221,7 @@ GameObject:
   m_Name: tile_slope (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &131522275
@@ -3819,7 +3827,7 @@ GameObject:
   m_Name: tree_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &160556108
@@ -4073,6 +4081,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_Name
       value: detail_dirt (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4497,7 +4509,7 @@ GameObject:
   m_Name: tile_slope (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &235741848
@@ -5134,7 +5146,7 @@ GameObject:
   m_Name: tile (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &252876719
@@ -5233,7 +5245,7 @@ GameObject:
   m_Name: tile_slope (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &257096883
@@ -5577,7 +5589,7 @@ GameObject:
   m_Name: tile (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &283050719
@@ -5876,7 +5888,7 @@ GameObject:
   m_Name: tile_cornerOuter (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &286390349
@@ -6286,7 +6298,7 @@ GameObject:
   m_Name: tile (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &337014834
@@ -6385,7 +6397,7 @@ GameObject:
   m_Name: tile_slope (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &338481675
@@ -6684,7 +6696,7 @@ GameObject:
   m_Name: tile (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &341098906
@@ -7142,7 +7154,7 @@ GameObject:
   m_Name: tile (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &363907964
@@ -7341,7 +7353,7 @@ GameObject:
   m_Name: tile_slope (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &369665073
@@ -7522,7 +7534,7 @@ GameObject:
   m_Name: tile (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &371784977
@@ -7915,7 +7927,7 @@ GameObject:
   m_Name: tree_1 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &379844892
@@ -8115,7 +8127,7 @@ GameObject:
   m_Name: tree_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &381684889
@@ -8346,7 +8358,7 @@ GameObject:
   m_Name: tile_slope (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &398422243
@@ -8998,12 +9010,24 @@ PrefabInstance:
       value: towerSquare_middleA(+) 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1786538997817980154, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786538997817980154, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805572112429655363, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3805572112429655363, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9129,7 +9153,7 @@ GameObject:
   m_Name: tile_slope (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &447105170
@@ -9228,7 +9252,7 @@ GameObject:
   m_Name: tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &450796539
@@ -9554,7 +9578,7 @@ GameObject:
   m_Name: tree_1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &468748247
@@ -10131,7 +10155,7 @@ GameObject:
   m_Name: tile (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &482750393
@@ -10384,6 +10408,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_Name
       value: detail_dirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10661,7 +10689,7 @@ GameObject:
   m_Name: tile_cornerOuter (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &513660161
@@ -10816,6 +10844,10 @@ PrefabInstance:
       value: detail_rocksLarge (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -10852,7 +10884,7 @@ GameObject:
   m_Name: tile (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &523386561
@@ -11457,7 +11489,7 @@ GameObject:
   m_Name: tile (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &534219285
@@ -11988,7 +12020,7 @@ GameObject:
   m_Name: tile_slope (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &554280351
@@ -12992,7 +13024,7 @@ GameObject:
   m_Name: tile (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &583978157
@@ -13091,7 +13123,7 @@ GameObject:
   m_Name: tile (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &594145052
@@ -13721,7 +13753,7 @@ GameObject:
   m_Name: tile (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &632566659
@@ -14273,8 +14305,16 @@ PrefabInstance:
       value: towerSquare_middleB(+) (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786538997817980154, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1786538997817980154, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14903,7 +14943,7 @@ GameObject:
   m_Name: tile_cornerOuter (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &684225205
@@ -15002,7 +15042,7 @@ GameObject:
   m_Name: tree_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &690948099
@@ -15391,7 +15431,7 @@ GameObject:
   m_Name: tile (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &708697606
@@ -15857,7 +15897,7 @@ GameObject:
   m_Name: tile_slope (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &730101599
@@ -16821,7 +16861,7 @@ GameObject:
   m_Name: tile_slope (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &773202174
@@ -16920,7 +16960,7 @@ GameObject:
   m_Name: tile (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &774627459
@@ -17071,12 +17111,24 @@ PrefabInstance:
       value: towerSquare_middleA(+) 1 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1786538997817980154, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786538997817980154, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805572112429655363, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3805572112429655363, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17710,7 +17762,7 @@ GameObject:
   m_Name: tree_1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &815530020
@@ -17910,7 +17962,7 @@ GameObject:
   m_Name: tile_cornerOuter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &822358264
@@ -18061,7 +18113,7 @@ GameObject:
   m_Name: tile_cornerOuter (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &838084741
@@ -18297,7 +18349,7 @@ GameObject:
   m_Name: tile (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &872305356
@@ -18596,7 +18648,7 @@ GameObject:
   m_Name: tree_1 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &881162753
@@ -18696,7 +18748,7 @@ GameObject:
   m_Name: tile (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &886615085
@@ -19172,7 +19224,7 @@ GameObject:
   m_Name: tile_slope (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &936175770
@@ -19271,7 +19323,7 @@ GameObject:
   m_Name: tile_cornerOuter (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &949252376
@@ -19370,7 +19422,7 @@ GameObject:
   m_Name: tile (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &950230363
@@ -19650,7 +19702,7 @@ GameObject:
   m_Name: tile_slope (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &955346458
@@ -19949,7 +20001,7 @@ GameObject:
   m_Name: tile_slope (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &960661110
@@ -20630,7 +20682,7 @@ GameObject:
   m_Name: tile_slope (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &991883943
@@ -21015,7 +21067,7 @@ GameObject:
   m_Name: tile_slope (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1021784499
@@ -21976,12 +22028,24 @@ PrefabInstance:
       value: towerSquare_middleA(+) 1 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1786538997817980154, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786538997817980154, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805572112429655363, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3805572112429655363, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -22610,7 +22674,7 @@ GameObject:
   m_Name: tile_slope (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1089037748
@@ -22809,7 +22873,7 @@ GameObject:
   m_Name: tile_slope (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1099699763
@@ -23119,7 +23183,7 @@ GameObject:
   m_Name: tile_cornerOuter (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1120565811
@@ -23218,7 +23282,7 @@ GameObject:
   m_Name: tile_slope (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1124080132
@@ -23787,7 +23851,7 @@ GameObject:
   m_Name: tile (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1159587999
@@ -23986,7 +24050,7 @@ GameObject:
   m_Name: tile (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1164471152
@@ -24223,7 +24287,7 @@ GameObject:
   m_Name: tree_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1175292796
@@ -24323,7 +24387,7 @@ GameObject:
   m_Name: tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1182000039
@@ -24474,8 +24538,16 @@ PrefabInstance:
       value: towerSquare_middleB(+)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786538997817980154, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1786538997817980154, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -24504,7 +24576,7 @@ GameObject:
   m_Name: tile_slope (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1201248046
@@ -24603,7 +24675,7 @@ GameObject:
   m_Name: tree_1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1205043331
@@ -25003,7 +25075,7 @@ GameObject:
   m_Name: tile (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1231754943
@@ -25102,7 +25174,7 @@ GameObject:
   m_Name: tile_slope (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1241008886
@@ -25201,7 +25273,7 @@ GameObject:
   m_Name: tile (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1241769584
@@ -25500,7 +25572,7 @@ GameObject:
   m_Name: tile_slope (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1245665751
@@ -26089,7 +26161,7 @@ GameObject:
   m_Name: tile_slope (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1260938965
@@ -26452,7 +26524,7 @@ GameObject:
   m_Name: tile_slope (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1274357353
@@ -26751,7 +26823,7 @@ GameObject:
   m_Name: tree_1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1303337480
@@ -27051,7 +27123,7 @@ GameObject:
   m_Name: tree_1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1311887939
@@ -27248,7 +27320,7 @@ GameObject:
   m_Name: tree_1 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1319481351
@@ -27452,7 +27524,7 @@ GameObject:
   m_Name: tile (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1328998496
@@ -27551,7 +27623,7 @@ GameObject:
   m_Name: tile (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1331383661
@@ -28027,7 +28099,7 @@ GameObject:
   m_Name: tile_slope (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1345912189
@@ -28131,7 +28203,7 @@ GameObject:
   m_Name: tree_1 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1366267218
@@ -28231,7 +28303,7 @@ GameObject:
   m_Name: tile_slope (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1366755848
@@ -29311,7 +29383,7 @@ GameObject:
   m_Name: tile_slope (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1390259644
@@ -29555,7 +29627,7 @@ GameObject:
   m_Name: tile_slope (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1392841214
@@ -29759,7 +29831,7 @@ GameObject:
   m_Name: tree_1 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1401352654
@@ -30461,7 +30533,7 @@ GameObject:
   m_Name: tile_cornerOuter (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1427625075
@@ -30645,6 +30717,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_Name
       value: detail_rocksLarge
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -31052,7 +31128,7 @@ GameObject:
   m_Name: tile_slope (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1460412829
@@ -32063,7 +32139,7 @@ GameObject:
   m_Name: tree_2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1513063480
@@ -32162,7 +32238,7 @@ GameObject:
   m_Name: tile (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1524913355
@@ -32396,7 +32472,7 @@ GameObject:
   m_Name: tile_slope (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1532835304
@@ -32526,7 +32602,7 @@ GameObject:
   m_Name: tree_1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1536425253
@@ -32882,6 +32958,10 @@ PrefabInstance:
       value: detail_rocksLarge (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -33008,7 +33088,7 @@ GameObject:
   m_Name: tree_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1553803592
@@ -33338,7 +33418,7 @@ GameObject:
   m_Name: tile (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1558384661
@@ -33619,7 +33699,7 @@ GameObject:
   m_Name: tile_slope (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1568093230
@@ -33975,12 +34055,24 @@ PrefabInstance:
       value: towerSquare_middleA(+) 1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1786538997817980154, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786538997817980154, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805572112429655363, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3805572112429655363, guid: 18dfaa656384dfb468ff3034ca76c62e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -34794,7 +34886,7 @@ GameObject:
   m_Name: tile (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1639781447
@@ -35193,7 +35285,7 @@ GameObject:
   m_Name: tile_slope (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1654434264
@@ -35674,7 +35766,7 @@ GameObject:
   m_Name: tree_1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1675166665
@@ -36442,7 +36534,7 @@ GameObject:
   m_Name: tile_slope (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1716340781
@@ -36541,7 +36633,7 @@ GameObject:
   m_Name: tree_1 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1717841388
@@ -37088,7 +37180,7 @@ GameObject:
   m_Name: tile (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1735794856
@@ -37477,8 +37569,16 @@ PrefabInstance:
       value: towerSquare_middleB(+) (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786538997817980154, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1786538997817980154, guid: 3ed55c495e34a6a4d82bd0a70b8c8d71, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -37507,7 +37607,7 @@ GameObject:
   m_Name: tile (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1768947260
@@ -37706,7 +37806,7 @@ GameObject:
   m_Name: tree_2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1783776502
@@ -38140,7 +38240,7 @@ GameObject:
   m_Name: tile_slope (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1790688038
@@ -38293,6 +38393,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_Name
       value: detail_dirt (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -38621,7 +38725,7 @@ GameObject:
   m_Name: tile (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1823908757
@@ -39629,7 +39733,7 @@ GameObject:
   m_Name: tile_slope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1893171444
@@ -39994,7 +40098,7 @@ GameObject:
   m_Name: tree_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1908776672
@@ -40191,7 +40295,7 @@ GameObject:
   m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1915179756
@@ -40341,7 +40445,7 @@ GameObject:
   m_Name: tree_1 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1917806087
@@ -40441,7 +40545,7 @@ GameObject:
   m_Name: tile_slope (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1923592474
@@ -42097,7 +42201,7 @@ GameObject:
   m_Name: tile (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2010705705
@@ -42427,7 +42531,7 @@ GameObject:
   m_Name: tile_slope (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2032101596
@@ -42926,7 +43030,7 @@ GameObject:
   m_Name: tile_slope (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2045281796
@@ -43125,7 +43229,7 @@ GameObject:
   m_Name: tile (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2048334098
@@ -44009,7 +44113,7 @@ GameObject:
   m_Name: tree_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2058682592
@@ -44449,7 +44553,7 @@ GameObject:
   m_Name: tile (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2082612970
@@ -44948,7 +45052,7 @@ GameObject:
   m_Name: tile_slope (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2113895164
@@ -45288,7 +45392,7 @@ GameObject:
   m_Name: tile (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2127485618
@@ -45387,7 +45491,7 @@ GameObject:
   m_Name: tile (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2128780335
@@ -45981,10 +46085,6 @@ PrefabInstance:
       propertyPath: PlayerCamera
       value: 
       objectReference: {fileID: 1740666839}
-    - target: {fileID: 7105758165621909680, guid: 35392adbc3cc99044853853fd2901776, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7105758165621909682, guid: 35392adbc3cc99044853853fd2901776, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -46049,21 +46149,9 @@ PrefabInstance:
       propertyPath: TowerSpeedUpMenu
       value: 
       objectReference: {fileID: 1172198021}
-    - target: {fileID: 7105758165621909683, guid: 35392adbc3cc99044853853fd2901776, type: 3}
-      propertyPath: TowerLayer.m_Bits
-      value: 1024
-      objectReference: {fileID: 0}
     - target: {fileID: 7105758165621909688, guid: 35392adbc3cc99044853853fd2901776, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7105758165621909692, guid: 35392adbc3cc99044853853fd2901776, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6584e141fc54b9745b0c90ebede19d61, type: 2}
-    - target: {fileID: 7105758165621909694, guid: 35392adbc3cc99044853853fd2901776, type: 3}
-      propertyPath: StartingBalance
-      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35392adbc3cc99044853853fd2901776, type: 3}

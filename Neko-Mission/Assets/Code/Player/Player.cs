@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public int StartingHealth = 100;
     public int DmgWater = 20;
     public float AddBalanceTime;
+    public LayerMask EnemyLayer;
     public LayerMask WaterLayer;
 
     private CharacterController _controller;
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
     private float _waterDamageCooldownCurrent;
     private bool _inWater;
     private float _speedAccelerationModifier = 1;
+    private float _invisibilityTime;
 
     void Start()
     {
@@ -74,12 +76,10 @@ public class Player : MonoBehaviour
                 if (!_inWater && Physics.CheckSphere(transform.position, 0.8f, WaterLayer))
                 {
                     _inWater = true;
-                    _waterDamageCooldownCurrent = WaterDamageCooldown;
                 }
                 else if (_inWater && !Physics.CheckSphere(transform.position, 0.8f, WaterLayer))
                 {
                     _inWater = false;
-                    _waterDamageCooldownCurrent = 0.0f;
                 }
 
                 ResetJump();
@@ -128,7 +128,17 @@ public class Player : MonoBehaviour
 
         if (_inWater)
         {
-            GetDamageFromWater();
+            TakeDamage(20);
+        }
+
+        if (_invisibilityTime > 0)
+        {
+            _invisibilityTime -= Time.deltaTime;
+        }
+
+        if (Physics.CheckSphere(transform.position, 0.75f, EnemyLayer))
+        {
+            TakeDamage(20);
         }
     }
 
@@ -144,21 +154,16 @@ public class Player : MonoBehaviour
         CurrentBalance++;
     }
 
-    private void GetDamageFromWater()
-    {
-        if (_waterDamageCooldownCurrent > WaterDamageCooldown)
-        {
-            TakeDamage(DmgWater);
-            _waterDamageCooldownCurrent = 0.0f;
-        }
-
-        _waterDamageCooldownCurrent += Time.deltaTime;
-    }
-
     public void TakeDamage(int damage)
     {
+        if (_invisibilityTime > 0)
+        {
+            return;
+        }
+
         Sounds.Play("cat-quick-meow");
         CurrentHealth -= damage;
+        _invisibilityTime = 1.0f;
         
         if(CurrentHealth <=0)
         {
@@ -169,18 +174,13 @@ public class Player : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(hit.gameObject.CompareTag("Water"))
+        if (hit.gameObject.CompareTag("Water"))
         {
-            if (!_inWater)
-            {
-                _waterDamageCooldownCurrent = WaterDamageCooldown;
-            }
             _inWater = true;
         }
         else
         {
             _inWater = false;
-            _waterDamageCooldownCurrent = 0.0f;
         }
     }
 }
