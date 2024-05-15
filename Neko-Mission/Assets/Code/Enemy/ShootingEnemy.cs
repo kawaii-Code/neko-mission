@@ -39,5 +39,4 @@ public class ShootingEnemy : MonoBehaviour
         Destroy(bul, 1);
     }
 
-
 }

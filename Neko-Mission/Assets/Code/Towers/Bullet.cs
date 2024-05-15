@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,7 +8,8 @@ public class Bullet : MonoBehaviour
     public Vector3 TargetPos;
     public int Damage;
     public float Speed;
-    
+    public bool SlowdownIsActivated;
+
     private Enemy _actionTarget;
     private bool TypeMove = true; //  true - в обьект, false - в позицию
     private Vector3 _speed; // в позицию 
@@ -18,26 +20,30 @@ public class Bullet : MonoBehaviour
         _time = 0;
         if (!Target) TypeMove = false; // Определение тип 
 
-        if (!TypeMove) {
+        if (!TypeMove)
+        {
             _speed.x = TargetPos.x - transform.position.x;
             _speed.y = TargetPos.y - transform.position.y;
             _speed.z = TargetPos.z - transform.position.z;
         }
     }
-    
+
     void Update()
     {
         if (_time > 3) Destroy(this.gameObject);
-        if (TypeMove) {
+        if (TypeMove)
+        {
             if (!Target)
             {
                 Destroy(gameObject); // Если другая башня убила врага, а пуля осталась 
                 return;
             }
-            
+
             transform.rotation = Quaternion.LookRotation(Target.transform.position - transform.position);
             transform.position = Vector3.Lerp(transform.position, Target.transform.position, Speed * Time.deltaTime);
-        } else{
+        }
+        else
+        {
             transform.rotation = Quaternion.LookRotation(TargetPos - transform.position);
             transform.position += _speed * Speed * Time.deltaTime;
         }
@@ -47,6 +53,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other)
         {
             Destroy(this.gameObject);
@@ -55,7 +62,14 @@ public class Bullet : MonoBehaviour
             {
                 var damageEnemy = other.GetComponent<Enemy>();
                 damageEnemy.TakeDamage(Damage);
+
+                if (SlowdownIsActivated)
+                {
+                    damageEnemy.GetSlowedDown();
+                }
+
             }
         }
     }
+
 }

@@ -111,5 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
+  TargetPos: {x: 0, y: 0, z: 0}
   Damage: 0
   Speed: 0
+  SlowdownIsActivated: 0

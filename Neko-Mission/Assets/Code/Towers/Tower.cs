@@ -11,6 +11,7 @@ public class Tower : MonoBehaviour
     public int Price;
     public int IncreaseDamagePrice;
     public int IncreaseFireRatePrice;
+    public int AddSlowdownPrice;
     // Лист врагов в области
     [HideInInspector]
     public List<GameObject> _nearEnemy = new List<GameObject>();
@@ -23,7 +24,7 @@ public class Tower : MonoBehaviour
     [HideInInspector]
     public Vector3 _genPos;
     // Хочется сделать приватными но не будет наследования, а без него ругается 🤬🤬
-    
+
     // Получение ближайшего врага в области
     public GameObject GetClosestEnemy(GameObject[] objects)
     {

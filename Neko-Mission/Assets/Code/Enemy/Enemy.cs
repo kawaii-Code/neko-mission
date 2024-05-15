@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -18,7 +19,7 @@ public class Enemy : MonoBehaviour
     private LinkedListNode<Vector3> _target;
     private LinkedList<Vector3> _route;
 
-    public event Action<Enemy> Dead; 
+    public event Action<Enemy> Dead;
 
     void Start()
     {
@@ -77,6 +78,24 @@ public class Enemy : MonoBehaviour
         {
             Sounds.Play("click2");
         }
+    }
+
+    public IEnumerator ResetSpeed()
+    {
+        yield return new WaitForSeconds(3f);
+        _agent.speed = Speed;
+    }
+
+
+    public void GetSlowedDown()
+    {
+        StopAllCoroutines();
+
+        if (_health <= 0)
+            return;
+
+        _agent.speed = Speed - 4;
+        StartCoroutine("ResetSpeed");
     }
 
     private void UpdateHealthbar()
