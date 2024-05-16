@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower : MonoBehaviour
+public abstract class Tower : MonoBehaviour
 {
     public GameObject BulletPrefab;
+    public GameObject SpeedUpPrefab;
     public float FireRange;
     public float FireRate;
     public float BulletSpeed;
@@ -26,6 +27,7 @@ public class Tower : MonoBehaviour
     // Хочется сделать приватными но не будет наследования, а без него ругается 🤬🤬
 
     // Получение ближайшего врага в области
+
     public GameObject GetClosestEnemy(GameObject[] objects)
     {
         GameObject bestTarget = null;
@@ -49,4 +51,7 @@ public class Tower : MonoBehaviour
         return bestTarget;
     }
 
+    public abstract void SpeedUpFireRate();
+    public abstract void SlowdownFireRate();
+    public abstract bool HasBonusSpeed();
 }

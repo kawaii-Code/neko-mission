@@ -18,15 +18,15 @@ public class TowerUpgrader : MonoBehaviour
     public LayerMask TowerLayer;
     public float UpgradeDistance = 10f;
     public bool Paused;
-    private Tower _selectedTower;
-    private bool _upgradeMenuIsOpened;
+    public Tower SelectedTower;
+    public bool UpgradeMenuIsOpened;
     private bool _towerIsBuiltMenuIsOpened;
 
     void Start()
     {
         TowerIsBuiltMenu.SetActive(false);
         UpgradeMenu.SetActive(false);
-        _upgradeMenuIsOpened = false;
+        UpgradeMenuIsOpened = false;
         _towerIsBuiltMenuIsOpened = false;
     }
 
@@ -35,13 +35,14 @@ public class TowerUpgrader : MonoBehaviour
         if (Paused)
             return;
 
-        if (_upgradeMenuIsOpened)
+        if (UpgradeMenuIsOpened)
             ChangeButtonColor();
 
+        return;
         if (Input.GetMouseButtonDown(1))
         {
 
-            if (_upgradeMenuIsOpened || _towerIsBuiltMenuIsOpened)
+            if (UpgradeMenuIsOpened || _towerIsBuiltMenuIsOpened)
             {
                 Exit();
                 return;
@@ -55,10 +56,10 @@ public class TowerUpgrader : MonoBehaviour
                     return;
                 }
 
-                _selectedTower = hit.collider.gameObject.GetComponent<Tower>();
+                SelectedTower = hit.collider.gameObject.GetComponent<Tower>();
 
-                if (!_upgradeMenuIsOpened)
-                    OpenTowerIsBuiltMenu();
+                if (!UpgradeMenuIsOpened) ;
+                //OpenTowerIsBuiltMenu();
             }
         }
     }
@@ -69,7 +70,7 @@ public class TowerUpgrader : MonoBehaviour
         TowerIsBuiltMenu.SetActive(false);
         _towerIsBuiltMenuIsOpened = false;
         UpgradeMenu.SetActive(true);
-        _upgradeMenuIsOpened = true;
+        UpgradeMenuIsOpened = true;
     }
 
     public void OpenTowerIsBuiltMenu()
@@ -93,7 +94,7 @@ public class TowerUpgrader : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         _towerIsBuiltMenuIsOpened = false;
-        _upgradeMenuIsOpened = false;
+        UpgradeMenuIsOpened = false;
         UpgradeMenu.SetActive(false);
     }
 
@@ -112,13 +113,13 @@ public class TowerUpgrader : MonoBehaviour
     ///увеличение урона башни
     public void IncreaseDamage()
     {
-        int price = _selectedTower.IncreaseDamagePrice;
+        int price = SelectedTower.IncreaseDamagePrice;
         if (Pl.CurrentBalance >= price)
         {
             Sounds.Play("click1");
             Pl.CurrentBalance -= price;
-            _selectedTower.Damage += 1;
-            _selectedTower.IncreaseDamagePrice += 10;
+            SelectedTower.Damage += 1;
+            SelectedTower.IncreaseDamagePrice += 10;
         }
         else
             Sounds.Play("error1");
@@ -127,13 +128,13 @@ public class TowerUpgrader : MonoBehaviour
     ///увеличение скорости атаки башни
     public void IncreaseFireRate()
     {
-        int price = _selectedTower.IncreaseFireRatePrice;
+        int price = SelectedTower.IncreaseFireRatePrice;
         if (Pl.CurrentBalance >= price)
         {
             Sounds.Play("click1");
             Pl.CurrentBalance -= price;
-            _selectedTower.FireRate -= 0.1f;
-            _selectedTower.IncreaseFireRatePrice += 20;
+            SelectedTower.FireRate -= 0.1f;
+            SelectedTower.IncreaseFireRatePrice += 20;
         }
         else
             Sounds.Play("error1");
@@ -142,18 +143,18 @@ public class TowerUpgrader : MonoBehaviour
     ///замедление врагов
     public void AddSlowdown()
     {
-        bool isAlreadyAdded = _selectedTower.GetComponent<ShotgunTower>().BulletPrefab.GetComponent<Bullet>().SlowdownIsActivated;
+        bool isAlreadyAdded = SelectedTower.GetComponent<ShotgunTower>().BulletPrefab.GetComponent<Bullet>().SlowdownIsActivated;
         if (isAlreadyAdded)
         {
             Sounds.Play("error1");
             return;
         }
 
-        int price = _selectedTower.AddSlowdownPrice;
+        int price = SelectedTower.AddSlowdownPrice;
         if (Pl.CurrentBalance >= price)
         {
             Sounds.Play("click1");
-            _selectedTower.GetComponent<ShotgunTower>().BulletPrefab.GetComponent<Bullet>().SlowdownIsActivated = true;
+            SelectedTower.GetComponent<ShotgunTower>().BulletPrefab.GetComponent<Bullet>().SlowdownIsActivated = true;
             Pl.CurrentBalance -= price;
         }
         else
@@ -163,7 +164,7 @@ public class TowerUpgrader : MonoBehaviour
     ///изменение цвета кнопок, отвечающих за приобретение улчшения
     public void ChangeButtonColor()
     {
-        bool isShotgunTower = _selectedTower.name == "Shotgun Tower(Clone)";
+        bool isShotgunTower = SelectedTower.name == "Shotgun Tower(Clone)";
         if (isShotgunTower)
         {
             IncreaseDamageButton.SetActive(false);
@@ -178,7 +179,7 @@ public class TowerUpgrader : MonoBehaviour
 
         //кнопка для увеличения урона
         TextMeshProUGUI child = IncreaseDamageButton.GetComponentsInChildren<TextMeshProUGUI>().Where(x => char.IsDigit(x.text[0])).First();
-        child.text = _selectedTower.IncreaseDamagePrice.ToString();
+        child.text = SelectedTower.IncreaseDamagePrice.ToString();
         int price = int.Parse(child.text);
         if (Pl.CurrentBalance < price)
             IncreaseDamageButton.GetComponent<Image>().color = Color.red;
@@ -187,7 +188,7 @@ public class TowerUpgrader : MonoBehaviour
 
         // кнопка для увеличения скорости стрельбы башни
         child = IncreaseFireRateButton.GetComponentsInChildren<TextMeshProUGUI>().Where(x => char.IsDigit(x.text[0])).First();
-        child.text = _selectedTower.IncreaseFireRatePrice.ToString();
+        child.text = SelectedTower.IncreaseFireRatePrice.ToString();
         price = int.Parse(child.text);
         if (Pl.CurrentBalance < price)
             IncreaseFireRateButton.GetComponent<Image>().color = Color.red;
@@ -200,10 +201,10 @@ public class TowerUpgrader : MonoBehaviour
 
         //кнопка для добавления замедления врагов
         child = AddSlowdownButton.GetComponentsInChildren<TextMeshProUGUI>().Where(x => char.IsDigit(x.text[0])).First();
-        child.text = _selectedTower.GetComponent<ShotgunTower>().AddSlowdownPrice.ToString();
+        child.text = SelectedTower.GetComponent<ShotgunTower>().AddSlowdownPrice.ToString();
         price = int.Parse(child.text);
 
-        if (_selectedTower.GetComponent<ShotgunTower>().BulletPrefab.GetComponent<Bullet>().SlowdownIsActivated)
+        if (SelectedTower.GetComponent<ShotgunTower>().BulletPrefab.GetComponent<Bullet>().SlowdownIsActivated)
         {
             AddSlowdownButton.GetComponent<Image>().color = Color.gray;
             return;

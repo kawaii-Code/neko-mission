@@ -1,19 +1,25 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BasicTower : Tower
 {   
+    private float _baseFireRate;
+    private float _fireRateBonus = 30; // %
+    private GameObject _booster;
+
     private void Start()
     {
         IncreaseDamagePrice = 10;
         IncreaseFireRatePrice = 20;
+        _baseFireRate = FireRate;
         // Создание триггера ( коллайдера )
         gameObject.AddComponent<SphereCollider>();
         var myCollider = GetComponent<SphereCollider>();
         myCollider.center = new Vector3(0f,-0.5f,0f);
         myCollider.radius = FireRange;
         myCollider.isTrigger = true;
-        
+
         // Сохранение размеров башни
         _renderer = GetComponent<MeshRenderer>();
         _towerSize = _renderer.bounds.size;
@@ -27,15 +33,15 @@ public class BasicTower : Tower
         // Таймер
         if (_timer > FireRate)
         {
-            
+
             // ближайший враг
             var target = GetClosestEnemy(_nearEnemy.ToArray());
-            
+
             if (target) // без этого куча ошибок
             {
                 var bullet = Instantiate(BulletPrefab, _genPos, Quaternion.LookRotation(target.transform.position - transform.position));
                 var componentBullet = bullet.GetComponent<Bullet>();
-                
+
                 // установка параметров пули
                 componentBullet.Damage = Damage;
                 componentBullet.Speed = BulletSpeed;
@@ -58,9 +64,9 @@ public class BasicTower : Tower
             }
         }
     }
-    
+
     // Получение ближайшего врага в области
-    GameObject  GetClosestEnemy(GameObject[] objects)
+    GameObject GetClosestEnemy(GameObject[] objects)
     {
         GameObject bestTarget = null;
         float closestDistance = float.MaxValue;
@@ -82,5 +88,21 @@ public class BasicTower : Tower
         }
 
         return bestTarget;
+    }
+
+    public override void SpeedUpFireRate() {
+        FireRate -= _baseFireRate * (_fireRateBonus / 100);
+        var _speedUpGen = _genPos;
+        _speedUpGen.y += 3f;
+
+        _booster = Instantiate(SpeedUpPrefab, _speedUpGen, Quaternion.AngleAxis(90, new Vector3(0,0,0)));
+    }
+
+    public override void SlowdownFireRate() {
+        FireRate += _baseFireRate * (_fireRateBonus / 100);
+        Destroy(_booster); 
+    }
+    public override bool HasBonusSpeed() {
+        return Math.Abs(_baseFireRate - FireRate) > 0.05; // 1 час из-за 0.8 == 0.8 - false 😖
     }
 }

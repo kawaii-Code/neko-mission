@@ -1,14 +1,19 @@
 fileFormatVersion: 2
-guid: c9340cb8eab43ee418b51a4b29195e88
+guid: e241431185cc87f48a1383b34b40973e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sculpt1
+    second: {fileID: 2100000, guid: d12c4b0c4061e88418b7e0cad2a1a629, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

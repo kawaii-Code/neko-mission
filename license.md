@@ -1,6 +1,12 @@
-### Временные 3D модели для прототипирования:
+### 3D Модели
 
 [Kenney's Tower Defense Kit](https://www.kenney.nl/assets/tower-defense-kit)
+
+[Пекка](https://sketchfab.com/3d-models/pekka-865ef12fcce64e61b97b83b04794d07d)
+
+[Король](https://sketchfab.com/3d-models/red-king-7bedf8fcb753493c9d40e90cdd7812fa)
+
+[Враг Скелет](https://poly.pizza/m/yq5ATpujSt)
 
 ### Звуки
 
