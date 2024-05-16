@@ -13,6 +13,10 @@ public class ShotgunTower : Tower
 
     private void Start()
     {
+        IncreaseDamagePrice = 10;
+        IncreaseFireRatePrice = 20;
+        AddSlowdownPrice = 20;
+        BulletPrefab.GetComponent<Bullet>().SlowdownIsActivated = false;
         _baseFireRate = FireRate;
         // Создание триггера ( коллайдера )
         gameObject.AddComponent<SphereCollider>();
@@ -20,7 +24,7 @@ public class ShotgunTower : Tower
         myCollider.center = new Vector3(0f,0.0f,0f);
         myCollider.radius = FireRange;
         myCollider.isTrigger = true;
-        
+
         // Сохранение размеров башни
         _renderer = GetComponent<MeshRenderer>();
         _towerSize = _renderer.bounds.size;
@@ -31,24 +35,26 @@ public class ShotgunTower : Tower
 
     private void Update()
     {
+
         // Таймер
         if (_timer > FireRate)
         {
             // ближайший враг
             var target = GetClosestEnemy(_nearEnemy.ToArray());
-            
+
             if (target) // без этого куча ошибок
             {
                 Vector3 TargetPos = target.transform.position;
 
-                float Radius = (float)Math.Round(Mathf.Tan(MaxSpreadAngel * Mathf.Deg2Rad) * Mathf.Sqrt(Mathf.Pow(TargetPos.x - _genPos.x, 2) + Mathf.Pow(TargetPos.y - _genPos.y, 2) + Mathf.Pow(TargetPos.z - _genPos.z, 2)),2);
+                float Radius = (float)Math.Round(Mathf.Tan(MaxSpreadAngel * Mathf.Deg2Rad) * Mathf.Sqrt(Mathf.Pow(TargetPos.x - _genPos.x, 2) + Mathf.Pow(TargetPos.y - _genPos.y, 2) + Mathf.Pow(TargetPos.z - _genPos.z, 2)), 2);
 
-                for (int i = 0; i < BulletCount; i++){
+                for (int i = 0; i < BulletCount; i++)
+                {
 
                     Vector3 SpreadTarget = TargetPos + UnityEngine.Random.insideUnitSphere * Radius;
 
                     var bullet = Instantiate(BulletPrefab, _genPos, Quaternion.LookRotation(SpreadTarget - transform.position));
-                    var componentBullet = bullet.GetComponent<Bullet>();          
+                    var componentBullet = bullet.GetComponent<Bullet>();
 
                     componentBullet.Damage = Damage;
                     componentBullet.Speed = BulletSpeed;
@@ -76,7 +82,7 @@ public class ShotgunTower : Tower
     public override void SpeedUpFireRate() {
         FireRate -= _baseFireRate * (_fireRateBonus / 100);
         var _speedUpGen = _genPos;
-        _speedUpGen.y += 4f;
+        _speedUpGen.y += 2.25f;
 
         _booster = Instantiate(SpeedUpPrefab, _speedUpGen, Quaternion.AngleAxis(90, new Vector3(0,0,0)));
     }

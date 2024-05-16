@@ -7,6 +7,7 @@ public class PausedMenu : MonoBehaviour
     public GameObject Crosshair;
     public PlayerCamera PlayerCamera;
     public TowerBuilder TowerBuilder;
+    public TowerUpgrader TowerUpgrader;
     public PlayerGun PlayerGun;
 
     public GameObject Pause_Menu;
@@ -26,7 +27,7 @@ public class PausedMenu : MonoBehaviour
 
     void ActiveMenu()
     {
-        if(Input.GetKeyDown(_keyMenuPaused))
+        if (Input.GetKeyDown(_keyMenuPaused))
         {
             Sounds.PlayClick();
             _paused = !_paused;
@@ -47,16 +48,16 @@ public class PausedMenu : MonoBehaviour
 
     private void UpdatePause()
     {
-        if(_paused && !MainCamera.enabled)
+        if (_paused && !MainCamera.enabled)
         {
             Pause();
             Pause_Menu.SetActive(true);
         }
-        else if(!_paused && !MainCamera.enabled)
+        else if (!_paused && !MainCamera.enabled)
         {
             Resume();
         }
-        else if(_paused)
+        else if (_paused)
         {
             Pause();
             Pause_Menu.SetActive(true);
@@ -71,10 +72,14 @@ public class PausedMenu : MonoBehaviour
     {
         TowerBuilder.DisableBuildMenu();
         TowerBuilder.Paused = true;
+
+        TowerUpgrader.ExitWithoutSound();
+        TowerUpgrader.Paused = true;
+
         PlayerGun.Paused = true;
         PlayerCamera.Paused = true;
         Crosshair.SetActive(false);
-            
+
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0f;
@@ -84,9 +89,10 @@ public class PausedMenu : MonoBehaviour
     {
         PlayerCamera.Paused = false;
         TowerBuilder.Paused = false;
+        TowerUpgrader.Paused = false;
         PlayerGun.Paused = false;
         Crosshair.SetActive(true);
-            
+
         Pause_Menu.SetActive(false);
         Settings_Menu.SetActive(false);
         Cursor.visible = false;

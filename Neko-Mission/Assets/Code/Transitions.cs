@@ -53,4 +53,10 @@ public class Transitions : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 1f;
     }
+
+    private void Update()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
 }

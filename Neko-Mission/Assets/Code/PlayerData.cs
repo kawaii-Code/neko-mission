@@ -21,7 +21,7 @@ public class PlayerData : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("CameraSensitivity"))
             return;
-        
+
         Settings.CameraSensitivity.Value = PlayerPrefs.GetFloat("CameraSensitivity");
         Settings.MusicVolume.Value = PlayerPrefs.GetFloat("MusicVolume");
         Settings.SoundVolume.Value = PlayerPrefs.GetFloat("SoundVolume");

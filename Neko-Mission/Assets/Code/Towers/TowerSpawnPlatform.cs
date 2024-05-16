@@ -23,7 +23,7 @@ public class TowerSpawnPlatform : MonoBehaviour
             _towerIsBuilt = true;
             gameObject.SetActive(false);
         }
-
+        
         if (!_towerIsBuilt && Pl.CurrentBalance < _TowerPrice)
         {
             Sounds.PlayClose();
