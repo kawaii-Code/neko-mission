@@ -54,7 +54,9 @@ public class TowerBuilder : MonoBehaviour
             }
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hitInfo, float.MaxValue, TowerSpawnerLayer))
+            bool build = Physics.Raycast(ray, out RaycastHit hitInfo, float.MaxValue, TowerSpawnerLayer);
+            bool upgrade = Physics.Raycast(ray, out RaycastHit hitInfo2, float.MaxValue, TowerLayer);
+            if (build && !(upgrade && hitInfo2.distance < hitInfo.distance))
             {
                 if (hitInfo.distance > BuildDistance)
                 {
@@ -67,7 +69,7 @@ public class TowerBuilder : MonoBehaviour
                 return;
             }
 
-            if (Physics.Raycast(ray, out RaycastHit hitInfo2, float.MaxValue, TowerLayer)) {
+            if (upgrade) {
 
                 if (hitInfo2.distance > BuildDistance) 
                 {
