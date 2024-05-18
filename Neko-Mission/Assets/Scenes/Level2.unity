@@ -191,6 +191,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (9)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -255,6 +259,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 94f9fabe34429a543b21a3a70b1490df, type: 3}
       propertyPath: m_Name
       value: snow_tile_wideTransition(+)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 94f9fabe34429a543b21a3a70b1490df, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 94f9fabe34429a543b21a3a70b1490df, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -327,6 +335,10 @@ PrefabInstance:
       value: tile_riverBridge (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3e9d1d99dc46dbb49a8c7836d70ba9b5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3e9d1d99dc46dbb49a8c7836d70ba9b5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -359,6 +371,10 @@ PrefabInstance:
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_Name
       value: SpawnPoint (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -634,6 +650,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (24)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -710,6 +730,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_Name
       value: detail_dirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -900,6 +924,10 @@ PrefabInstance:
       value: snow_tile_straight(+) (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1061,7 +1089,7 @@ GameObject:
   m_Name: ground_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 119
   m_IsActive: 1
 --- !u!4 &237945060
@@ -1208,6 +1236,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree (5)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1407,6 +1439,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree_2 (15)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1566,9 +1602,9 @@ MonoBehaviour:
   WaveInfoWidget: {fileID: 970438721}
   Hud: {fileID: 970438722}
   Waves:
-  - {fileID: 11400000, guid: ece417c7105d3c2d2b82c5f79ffc5253, type: 2}
-  - {fileID: 11400000, guid: 8e3e1cde3422df704a2047e9b0650cd4, type: 2}
-  - {fileID: 11400000, guid: 6c8d55fc56e9eea49bdbf526d34add89, type: 2}
+  - {fileID: 11400000, guid: de13e2f95c9d9874fb54ba16d9a552be, type: 2}
+  - {fileID: 11400000, guid: 4e4edb723816adf488206fd2a7f2b890, type: 2}
+  - {fileID: 11400000, guid: 3b7e37205def3694a880bc3fa1743020, type: 2}
 --- !u!1 &296436594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +1751,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree_2 (3)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6555,7 +6595,7 @@ GameObject:
   m_Name: ground_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 3
   m_StaticEditorFlags: 119
   m_IsActive: 1
 --- !u!4 &336032429
@@ -6738,6 +6778,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree_2 (5)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6748,6 +6792,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
   m_PrefabInstance: {fileID: 345624188}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &346619507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 346619508}
+  - component: {fileID: 346619511}
+  - component: {fileID: 346619510}
+  - component: {fileID: 346619509}
+  m_Layer: 0
+  m_Name: Cube (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 40
+  m_IsActive: 1
+--- !u!4 &346619508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346619507}
+  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: 7.52, y: -0.3409, z: -1.27}
+  m_LocalScale: {x: 2.5895936, y: 1, z: 5.191185}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1824830773}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &346619509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346619507}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &346619510
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346619507}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &346619511
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346619507}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &355351099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6814,6 +6955,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree (17)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6885,7 +7030,7 @@ GameObject:
   m_Name: ground_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 119
   m_IsActive: 1
 --- !u!4 &379590593
@@ -7131,6 +7276,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree_2 (17)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7209,6 +7358,10 @@ PrefabInstance:
       value: detail_dirt (9)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7284,6 +7437,10 @@ PrefabInstance:
       value: snow_tile_wideStraight(+) (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69b9bda8bcf202d4d9a5b2f4a6b0c798, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 69b9bda8bcf202d4d9a5b2f4a6b0c798, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7333,6 +7490,14 @@ PrefabInstance:
       propertyPath: PlayerCamera
       value: 
       objectReference: {fileID: 1065455455}
+    - target: {fileID: 7105758165485409739, guid: 35392adbc3cc99044853853fd2901776, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7105758165485409739, guid: 35392adbc3cc99044853853fd2901776, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7105758165621909682, guid: 35392adbc3cc99044853853fd2901776, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -7413,10 +7578,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7105758165621909688, guid: 35392adbc3cc99044853853fd2901776, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7105758165621909688, guid: 35392adbc3cc99044853853fd2901776, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7105758165621909692, guid: 35392adbc3cc99044853853fd2901776, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6584e141fc54b9745b0c90ebede19d61, type: 2}
+    - target: {fileID: 7105758165852130034, guid: 35392adbc3cc99044853853fd2901776, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7105758165852130034, guid: 35392adbc3cc99044853853fd2901776, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7284009559643238125, guid: 35392adbc3cc99044853853fd2901776, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.12499975
@@ -7440,6 +7621,22 @@ PrefabInstance:
     - target: {fileID: 7284009560266117169, guid: 35392adbc3cc99044853853fd2901776, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.21650645
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952742000290559063, guid: 35392adbc3cc99044853853fd2901776, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952742000290559063, guid: 35392adbc3cc99044853853fd2901776, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952742000707914379, guid: 35392adbc3cc99044853853fd2901776, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952742000707914379, guid: 35392adbc3cc99044853853fd2901776, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35392adbc3cc99044853853fd2901776, type: 3}
@@ -7481,6 +7678,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda9ba0bea1375c4aa73b4ce32545eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &445083756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 445083757}
+  - component: {fileID: 445083760}
+  - component: {fileID: 445083759}
+  - component: {fileID: 445083758}
+  m_Layer: 0
+  m_Name: Cube (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 40
+  m_IsActive: 1
+--- !u!4 &445083757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445083756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.225713, y: -0.3409, z: -9.342857}
+  m_LocalScale: {x: 3.56857, y: 1, z: 11.8004}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1824830773}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &445083758
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445083756}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &445083759
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445083756}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &445083760
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445083756}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &453889934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7610,6 +7904,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (21)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7679,6 +7977,10 @@ PrefabInstance:
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_Name
       value: SpawnPoint (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7819,6 +8121,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (32)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7893,6 +8199,10 @@ PrefabInstance:
       value: snow_tile_wideCorner(+) (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 865c946135e51c943889a1dc367dad45, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 865c946135e51c943889a1dc367dad45, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7957,6 +8267,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
       propertyPath: m_Name
       value: snow_tile_straight(+) (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8035,6 +8349,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_Name
       value: detail_rocksLarge (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8142,6 +8460,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 893729473}
     m_Modifications:
     - target: {fileID: -8848437439432763094, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8848437439432763094, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -8202,8 +8524,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2287223201522926096, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2287223201522926096, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1499549837338632917, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1499549837338632917, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8216,6 +8546,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053023591900777244, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9053023591900777244, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8294,6 +8628,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_Name
       value: detail_rocksLarge (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8454,6 +8792,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_Name
       value: detail_dirt (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8624,7 +8966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 127
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
@@ -8699,6 +9041,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree_2 (12)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8777,6 +9123,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree (14)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8961,6 +9311,10 @@ PrefabInstance:
       value: snow_tile_wideCorner(+) (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 865c946135e51c943889a1dc367dad45, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 865c946135e51c943889a1dc367dad45, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9037,6 +9391,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree (6)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9322,6 +9680,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (12)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9389,6 +9751,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 865c946135e51c943889a1dc367dad45, type: 3}
       propertyPath: m_Name
       value: snow_tile_wideCorner(+) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 865c946135e51c943889a1dc367dad45, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 865c946135e51c943889a1dc367dad45, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9469,6 +9835,10 @@ PrefabInstance:
       value: detail_dirtLarge (7)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a27ae49070af6fb49a84bf6a0b3ef3e2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a27ae49070af6fb49a84bf6a0b3ef3e2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9545,6 +9915,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
       propertyPath: m_Name
       value: detail_rocks
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9738,12 +10112,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8576861957749155816, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8576861957749155816, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: -7794039922126334118, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7794039922126334118, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -6866935494488511408, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6866935494488511408, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9754,6 +10140,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 8f93ff3fc10f0f147b62cd318b658d23, type: 2}
     - target: {fileID: -5382712751060171918, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5382712751060171918, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9761,6 +10151,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8f93ff3fc10f0f147b62cd318b658d23, type: 2}
+    - target: {fileID: -4096213544191502509, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4096213544191502509, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -9770,8 +10164,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 8f93ff3fc10f0f147b62cd318b658d23, type: 2}
     - target: {fileID: -2825299206089314729, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2825299206089314729, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -2706193524870720111, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2706193524870720111, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9781,6 +10183,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8f93ff3fc10f0f147b62cd318b658d23, type: 2}
+    - target: {fileID: -1944775928213948974, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -1944775928213948974, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -9798,6 +10204,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1556785133965238248, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556785133965238248, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9805,6 +10215,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8f93ff3fc10f0f147b62cd318b658d23, type: 2}
+    - target: {fileID: 2221053481012165266, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2221053481012165266, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -9826,8 +10240,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 8f93ff3fc10f0f147b62cd318b658d23, type: 2}
     - target: {fileID: 6635679742742614989, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635679742742614989, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727008517323696973, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8727008517323696973, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9837,6 +10259,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8f93ff3fc10f0f147b62cd318b658d23, type: 2}
+    - target: {fileID: 9020863246274065721, guid: e241431185cc87f48a1383b34b40973e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9020863246274065721, guid: e241431185cc87f48a1383b34b40973e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -9920,6 +10346,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree_2 (9)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9996,6 +10426,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree_2 (2)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10165,6 +10599,10 @@ PrefabInstance:
       value: detail_rocksLarge (6)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -10231,6 +10669,10 @@ PrefabInstance:
       value: snow_tile_straight(+) (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -10241,6 +10683,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
   m_PrefabInstance: {fileID: 816927562}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &817982464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 817982465}
+  - component: {fileID: 817982468}
+  - component: {fileID: 817982467}
+  - component: {fileID: 817982466}
+  m_Layer: 0
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 40
+  m_IsActive: 1
+--- !u!4 &817982465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817982464}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.17, y: -0.3409, z: -9.2}
+  m_LocalScale: {x: 3.56857, y: 1, z: 11.8004}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1824830773}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &817982466
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817982464}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &817982467
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817982464}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &817982468
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817982464}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &850933686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10307,6 +10846,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree (19)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10396,6 +10939,10 @@ PrefabInstance:
       value: detail_rocks (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -10472,6 +11019,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10661,6 +11212,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (20)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -10737,6 +11292,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree (28)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10817,6 +11376,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (15)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -10893,6 +11456,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_Name
       value: detail_rocksLarge
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11334,6 +11901,10 @@ PrefabInstance:
       value: detail_dirt (7)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -11351,6 +11922,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 893729473}
     m_Modifications:
+    - target: {fileID: -8848437439432763094, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8848437439432763094, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -11412,8 +11987,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2287223201522926096, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2287223201522926096, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1499549837338632917, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1499549837338632917, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11426,6 +12009,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053023591900777244, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9053023591900777244, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11452,6 +12039,10 @@ PrefabInstance:
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_Name
       value: SpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11681,6 +12272,10 @@ PrefabInstance:
       value: snow_tile_wideStraight(+) (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69b9bda8bcf202d4d9a5b2f4a6b0c798, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 69b9bda8bcf202d4d9a5b2f4a6b0c798, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -11895,6 +12490,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree_2 (14)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -12025,6 +12624,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: deca32c77d6338a4ca2f41a927e50d0d, type: 3}
       propertyPath: m_Name
       value: snow_tile_transition(+)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: deca32c77d6338a4ca2f41a927e50d0d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: deca32c77d6338a4ca2f41a927e50d0d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12195,6 +12798,103 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1765521900944378753, guid: f3f30152cd82bcf4298a7c20523f57b1, type: 3}
   m_PrefabInstance: {fileID: 1118203149}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1128737938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1128737939}
+  - component: {fileID: 1128737942}
+  - component: {fileID: 1128737941}
+  - component: {fileID: 1128737940}
+  m_Layer: 0
+  m_Name: Cube (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 40
+  m_IsActive: 1
+--- !u!4 &1128737939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128737938}
+  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: 13.83, y: -0.3409, z: -1.78}
+  m_LocalScale: {x: 1.6870058, y: 1, z: 2.672282}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1824830773}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1128737940
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128737938}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1128737941
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128737938}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1128737942
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128737938}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1140114698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12345,6 +13045,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree_2"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -12421,6 +13125,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree (16)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12532,6 +13240,10 @@ PrefabInstance:
       value: snow_tile_wideTransition(+) (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 94f9fabe34429a543b21a3a70b1490df, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 94f9fabe34429a543b21a3a70b1490df, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -12598,6 +13310,10 @@ PrefabInstance:
       value: detail_rocks (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -12622,6 +13338,10 @@ PrefabInstance:
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_Name
       value: SpawnPoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12762,6 +13482,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (10)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -12866,8 +13590,16 @@ PrefabInstance:
       value: towerRound_topB
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0315a1ed22334d6459eb4bc99a2422b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0315a1ed22334d6459eb4bc99a2422b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607668393258877731, guid: 0315a1ed22334d6459eb4bc99a2422b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4607668393258877731, guid: 0315a1ed22334d6459eb4bc99a2422b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12880,6 +13612,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0315a1ed22334d6459eb4bc99a2422b6, type: 3}
   m_PrefabInstance: {fileID: 1198923880}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1215955703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1215955704}
+  - component: {fileID: 1215955707}
+  - component: {fileID: 1215955706}
+  - component: {fileID: 1215955705}
+  m_Layer: 0
+  m_Name: Cube (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 40
+  m_IsActive: 1
+--- !u!4 &1215955704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215955703}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.64, y: -0.3409, z: -4.4142857}
+  m_LocalScale: {x: 1.6870058, y: 1, z: 11.8004}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1824830773}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1215955705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215955703}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1215955706
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215955703}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1215955707
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215955703}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1221860637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
@@ -13107,6 +13936,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (23)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -13183,6 +14016,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree (26)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13263,6 +14100,10 @@ PrefabInstance:
       value: detail_rocks (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -13341,6 +14182,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (29)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -13417,6 +14262,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree (30)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13584,6 +14433,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (4)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -13657,6 +14510,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (2)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -13720,6 +14577,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
       propertyPath: m_Name
       value: snow_tile_straight(+) (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13798,6 +14659,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree_2 (6)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13882,6 +14747,10 @@ PrefabInstance:
       value: detail_rocksLarge (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -13958,6 +14827,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_Name
       value: detail_rocksLarge (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14067,6 +14940,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310561723}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1317516669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1317516670}
+  - component: {fileID: 1317516673}
+  - component: {fileID: 1317516672}
+  - component: {fileID: 1317516671}
+  m_Layer: 0
+  m_Name: Cube (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 40
+  m_IsActive: 1
+--- !u!4 &1317516670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317516669}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15, y: -0.3409, z: -4.7}
+  m_LocalScale: {x: 3.56857, y: 1, z: 11.8004}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1824830773}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1317516671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317516669}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1317516672
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317516669}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1317516673
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317516669}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1324521124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14121,6 +15091,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a27ae49070af6fb49a84bf6a0b3ef3e2, type: 3}
       propertyPath: m_Name
       value: detail_dirtLarge (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a27ae49070af6fb49a84bf6a0b3ef3e2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a27ae49070af6fb49a84bf6a0b3ef3e2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14206,6 +15180,10 @@ PrefabInstance:
       value: detail_rocksLarge (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -14270,6 +15248,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_Name
       value: detail_dirt (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14367,6 +15349,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_Name
       value: detail_dirt (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14544,6 +15530,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree_2 (4)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -14608,6 +15598,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
       propertyPath: m_Name
       value: snow_tile_straight(+) (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14692,8 +15686,16 @@ PrefabInstance:
       value: towerRound_middleB
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8d0a7850a97dd45418f209d6d2f0b0d6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d0a7850a97dd45418f209d6d2f0b0d6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607668393258877731, guid: 8d0a7850a97dd45418f209d6d2f0b0d6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4607668393258877731, guid: 8d0a7850a97dd45418f209d6d2f0b0d6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14774,6 +15776,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (8)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -14847,8 +15853,16 @@ PrefabInstance:
       value: towerRound_base
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4a1a2e575d5d9e24ba7664c01ad0e0d0, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4a1a2e575d5d9e24ba7664c01ad0e0d0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607668393258877731, guid: 4a1a2e575d5d9e24ba7664c01ad0e0d0, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4607668393258877731, guid: 4a1a2e575d5d9e24ba7664c01ad0e0d0, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14915,6 +15929,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: deaf4ce318c2f574fa96ef4188cb70bc, type: 3}
       propertyPath: m_Name
       value: snow_tile_straightHill(+) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: deaf4ce318c2f574fa96ef4188cb70bc, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: deaf4ce318c2f574fa96ef4188cb70bc, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14987,6 +16005,10 @@ PrefabInstance:
       value: snow_tile_wideStraight(+)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69b9bda8bcf202d4d9a5b2f4a6b0c798, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 69b9bda8bcf202d4d9a5b2f4a6b0c798, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -15051,6 +16073,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_Name
       value: detail_dirt (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15121,6 +16147,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 69b9bda8bcf202d4d9a5b2f4a6b0c798, type: 3}
       propertyPath: m_Name
       value: snow_tile_wideStraight(+)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 69b9bda8bcf202d4d9a5b2f4a6b0c798, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69b9bda8bcf202d4d9a5b2f4a6b0c798, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15269,6 +16299,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_Name
       value: detail_dirt (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15504,6 +16538,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
   m_PrefabInstance: {fileID: 1436521003}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1441930798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1441930799}
+  - component: {fileID: 1441930802}
+  - component: {fileID: 1441930801}
+  - component: {fileID: 1441930800}
+  m_Layer: 0
+  m_Name: Cube (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 40
+  m_IsActive: 1
+--- !u!4 &1441930799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441930798}
+  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.7071079}
+  m_LocalPosition: {x: -1.5, y: -0.3409, z: -13.27}
+  m_LocalScale: {x: 3.56857, y: 1, z: 6.8757687}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1824830773}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1441930800
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441930798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1441930801
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441930798}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1441930802
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441930798}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1451213810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15570,6 +16701,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree (3)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15645,6 +16780,10 @@ PrefabInstance:
       value: detail_rocksLarge (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -15662,6 +16801,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 893729473}
     m_Modifications:
+    - target: {fileID: -8848437439432763094, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8848437439432763094, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -15723,8 +16866,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2287223201522926096, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2287223201522926096, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1499549837338632917, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1499549837338632917, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15737,6 +16888,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053023591900777244, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9053023591900777244, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15811,6 +16966,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 865c946135e51c943889a1dc367dad45, type: 3}
       propertyPath: m_Name
       value: snow_tile_wideCorner(+)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 865c946135e51c943889a1dc367dad45, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 865c946135e51c943889a1dc367dad45, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15889,6 +17048,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree (18)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16005,6 +17168,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (27)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -16069,6 +17236,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
       propertyPath: m_Name
       value: detail_rocks (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16149,6 +17320,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (31)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -16225,6 +17400,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree_2 (8)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16314,6 +17493,103 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
+--- !u!1 &1586820754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1586820755}
+  - component: {fileID: 1586820758}
+  - component: {fileID: 1586820757}
+  - component: {fileID: 1586820756}
+  m_Layer: 0
+  m_Name: Cube (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 40
+  m_IsActive: 1
+--- !u!4 &1586820755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586820754}
+  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: -5.07, y: -0.3409, z: -0.28}
+  m_LocalScale: {x: 3.56857, y: 1, z: 11.8004}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1824830773}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1586820756
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586820754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1586820757
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586820754}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1586820758
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586820754}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1601606460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16368,6 +17644,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: deaf4ce318c2f574fa96ef4188cb70bc, type: 3}
       propertyPath: m_Name
       value: snow_tile_straightHill(+)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: deaf4ce318c2f574fa96ef4188cb70bc, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: deaf4ce318c2f574fa96ef4188cb70bc, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16448,11 +17728,112 @@ PrefabInstance:
       value: "\u0441hristmas_tree"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+--- !u!1 &1640006680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1640006681}
+  - component: {fileID: 1640006684}
+  - component: {fileID: 1640006683}
+  - component: {fileID: 1640006682}
+  m_Layer: 0
+  m_Name: Cube (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 40
+  m_IsActive: 1
+--- !u!4 &1640006681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640006680}
+  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.7071079}
+  m_LocalPosition: {x: 6.06, y: -0.3409, z: -13.15}
+  m_LocalScale: {x: 3.56857, y: 1, z: 3.951364}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1824830773}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1640006682
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640006680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1640006683
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640006680}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1640006684
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640006680}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1663457330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16519,6 +17900,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_Name
       value: detail_rocksLarge (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a796d7a6aaeb40244ba72a99221d8c95, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16750,6 +18135,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
       propertyPath: m_Name
       value: snow_tile_straight(+) (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17025,6 +18414,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree_2 (16)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -17131,6 +18524,10 @@ PrefabInstance:
       value: tile_riverBridge (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3e9d1d99dc46dbb49a8c7836d70ba9b5, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3e9d1d99dc46dbb49a8c7836d70ba9b5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -17232,6 +18629,10 @@ PrefabInstance:
       value: snow_tile_cornerRound(+)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5521b7d12f270f74890e07225fe30ef2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5521b7d12f270f74890e07225fe30ef2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -17254,6 +18655,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 893729473}
     m_Modifications:
+    - target: {fileID: -8848437439432763094, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8848437439432763094, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -17315,8 +18720,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2287223201522926096, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2287223201522926096, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1499549837338632917, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1499549837338632917, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17329,6 +18742,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053023591900777244, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9053023591900777244, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17355,6 +18772,10 @@ PrefabInstance:
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_Name
       value: SpawnPoint (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17441,6 +18862,10 @@ PrefabInstance:
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_Name
       value: SpawnPoint (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17581,6 +19006,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (7)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -17620,6 +19049,16 @@ Transform:
   - {fileID: 1430361462}
   - {fileID: 1717726423}
   - {fileID: 893729473}
+  - {fileID: 1984501184}
+  - {fileID: 817982465}
+  - {fileID: 1215955704}
+  - {fileID: 1640006681}
+  - {fileID: 1317516670}
+  - {fileID: 1441930799}
+  - {fileID: 445083757}
+  - {fileID: 346619508}
+  - {fileID: 1586820755}
+  - {fileID: 1128737939}
   m_Father: {fileID: 774689821}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17681,6 +19120,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: deca32c77d6338a4ca2f41a927e50d0d, type: 3}
       propertyPath: m_Name
       value: snow_tile_transition(+) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: deca32c77d6338a4ca2f41a927e50d0d, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: deca32c77d6338a4ca2f41a927e50d0d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17761,6 +19204,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (13)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -17820,6 +19267,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5521b7d12f270f74890e07225fe30ef2, type: 3}
       propertyPath: m_Name
       value: snow_tile_cornerRound(+) (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5521b7d12f270f74890e07225fe30ef2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5521b7d12f270f74890e07225fe30ef2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17962,6 +19413,10 @@ PrefabInstance:
       value: snow_tile_straight(+) (11)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a1b478d4ceafc247907b7b96f34eb72, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -18040,6 +19495,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (11)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -18111,6 +19570,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree_2 (13)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -18245,6 +19708,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 4257553351582024428, guid: 6a05fc91384362446944bd84276432c2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257553351582024428, guid: 6a05fc91384362446944bd84276432c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257553351713022338, guid: 6a05fc91384362446944bd84276432c2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257553351713022338, guid: 6a05fc91384362446944bd84276432c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4257553351983272580, guid: 6a05fc91384362446944bd84276432c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -18260,6 +19739,14 @@ PrefabInstance:
     - target: {fileID: 4257553351983272580, guid: 6a05fc91384362446944bd84276432c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257553351983272587, guid: 6a05fc91384362446944bd84276432c2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257553351983272587, guid: 6a05fc91384362446944bd84276432c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4257553352010643510, guid: 6a05fc91384362446944bd84276432c2, type: 3}
       propertyPath: m_Pivot.x
@@ -18360,6 +19847,14 @@ PrefabInstance:
     - target: {fileID: 4257553352454060024, guid: 6a05fc91384362446944bd84276432c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ActivateUpgradeMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257553352454060030, guid: 6a05fc91384362446944bd84276432c2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257553352454060030, guid: 6a05fc91384362446944bd84276432c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a05fc91384362446944bd84276432c2, type: 3}
@@ -18532,6 +20027,10 @@ PrefabInstance:
       value: snow_tile_wideStraight(+) (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69b9bda8bcf202d4d9a5b2f4a6b0c798, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 69b9bda8bcf202d4d9a5b2f4a6b0c798, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -18613,6 +20112,10 @@ PrefabInstance:
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_Name
       value: SpawnPoint (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1544506469096584279, guid: a0fb8720dee69ad43baf85e5b2fe39f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -18767,6 +20270,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
   m_PrefabInstance: {fileID: 1951442456}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1984501183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1984501184}
+  - component: {fileID: 1984501187}
+  - component: {fileID: 1984501186}
+  - component: {fileID: 1984501185}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 40
+  m_IsActive: 1
+--- !u!4 &1984501184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984501183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.76, y: -0.3409, z: -9.2}
+  m_LocalScale: {x: 3.475484, y: 1, z: 11.8004}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1824830773}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1984501185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984501183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1984501186
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984501183}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1984501187
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984501183}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1986243815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18833,6 +20433,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree_2 (10)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -18913,6 +20517,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (22)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -18989,6 +20597,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree_2 (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19069,6 +20681,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree (25)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7604ebc4b63ed654685e36299cdfb3b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -19145,6 +20761,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a27ae49070af6fb49a84bf6a0b3ef3e2, type: 3}
       propertyPath: m_Name
       value: detail_dirtLarge (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a27ae49070af6fb49a84bf6a0b3ef3e2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a27ae49070af6fb49a84bf6a0b3ef3e2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19350,6 +20970,10 @@ PrefabInstance:
       value: detail_dirt (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -19428,6 +21052,10 @@ PrefabInstance:
       value: "\u0441hristmas_tree_2 (11)"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -19494,6 +21122,10 @@ PrefabInstance:
       value: detail_rocks (6)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -19542,6 +21174,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 893729473}
     m_Modifications:
+    - target: {fileID: -8848437439432763094, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8848437439432763094, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -19603,8 +21239,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2287223201522926096, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2287223201522926096, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1499549837338632917, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1499549837338632917, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19617,6 +21261,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053023591900777244, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9053023591900777244, guid: 779e6f3c0470cab4bbab88396580f737, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19685,6 +21333,10 @@ PrefabInstance:
       value: detail_rocks (9)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4887a25052f28bd41b05e5662a5740d9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -19749,6 +21401,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_Name
       value: detail_dirt (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e617a6f4d036a66499e3866404109c5b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19827,6 +21483,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_Name
       value: "\u0441hristmas_tree_2 (7)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1186d2f0b2f9eb949920eaa3b0ba94fa, type: 3}
       propertyPath: m_StaticEditorFlags

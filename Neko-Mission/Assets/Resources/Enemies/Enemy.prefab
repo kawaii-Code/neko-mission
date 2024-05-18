@@ -63,10 +63,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  MaxHealth: 5
+  MaxHealth: 7
   HealthBar: {fileID: 1703123196361475756}
   Animator: {fileID: 1194305483544711024}
   IsDead: 0
+  IsChaser: 0
+  ChaseDistance: 5
+  ReturnDistance: 10
+  ChaseSpeed: 3
 --- !u!54 &1225918891088731692
 Rigidbody:
   m_ObjectHideFlags: 0
