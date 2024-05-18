@@ -171,7 +171,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            Sounds.Play("click2");
+            Sounds.PlayAt("click2", transform.position);
         }
     }
 

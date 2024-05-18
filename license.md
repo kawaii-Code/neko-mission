@@ -22,8 +22,7 @@
 - https://www.freesoundslibrary.com/bird-singing-in-city-park/
 - https://www.freesoundslibrary.com/birds-noises/
 - https://www.freesoundslibrary.com/duck-quack/
-
-Звуки мяуканья:
+- https://soundbible.com/2108-Shoot-Arrow.html
 - https://orangefreesounds.com/cute-cat-meow-sound/
 
 ### Картинки

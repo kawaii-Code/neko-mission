@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Sounds : MonoBehaviour
 {
+    public GameObject Dummy;
     public AudioSource AudioSource;
     public AudioClip[] AudioClips;
     public Music Music;
@@ -44,6 +45,18 @@ public class Sounds : MonoBehaviour
         else
         {
             Debug.LogError($"Звук '{clipName}' не найден!");
+        }
+    }
+
+    public static void PlayAt(string clipName, Vector3 position)
+    {
+        GameObject go = Instantiate(_instance.Dummy, position, Quaternion.identity);
+        AudioSource source = go.GetComponent<AudioSource>();
+        if (_instance.Clips.TryGetValue(clipName, out AudioClip clip))
+        {
+            source.volume = Settings.SoundVolume;
+            source.PlayOneShot(clip);
+            Destroy(go, clip.length);
         }
     }
 

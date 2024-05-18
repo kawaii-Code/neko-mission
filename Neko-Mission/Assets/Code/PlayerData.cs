@@ -25,6 +25,10 @@ public class PlayerData : MonoBehaviour
         Settings.CameraSensitivity.Value = PlayerPrefs.GetFloat("CameraSensitivity");
         Settings.MusicVolume.Value = PlayerPrefs.GetFloat("MusicVolume");
         Settings.SoundVolume.Value = PlayerPrefs.GetFloat("SoundVolume");
+        
+        Settings.CameraSensitivity.Changed += x => Save();
+        Settings.MusicVolume.Changed += x => Save();
+        Settings.SoundVolume.Changed += x => Save();
     }
 
     private void Save()

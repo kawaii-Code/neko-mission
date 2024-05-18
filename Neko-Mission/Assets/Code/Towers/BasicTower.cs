@@ -40,6 +40,7 @@ public class BasicTower : Tower
 
             if (target) // без этого куча ошибок
             {
+                Sounds.PlayAt("arrow-shot", transform.position);
                 var bullet = Instantiate(BulletPrefab, _genPos, Quaternion.LookRotation(target.transform.position - transform.position));
                 var componentBullet = bullet.GetComponent<Bullet>();
 

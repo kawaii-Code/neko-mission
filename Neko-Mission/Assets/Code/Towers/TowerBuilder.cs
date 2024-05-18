@@ -80,10 +80,8 @@ public class TowerBuilder : MonoBehaviour
 
                 Tower _tower = _LastHitInfo.transform.GetComponent<Tower>();
 
-                Debug.Log(_tower.HasBonusSpeed());
                 if (_tower.HasBonusSpeed()) TowerSpeedUpText.GetComponentInChildren<TextMeshProUGUI>().text = "Снять ускорение с башни";
                 else TowerSpeedUpText.GetComponentInChildren<TextMeshProUGUI>().text = "Ускорить башню";
-                Debug.Log(TowerSpeedUpText.GetComponentInChildren<TextMeshProUGUI>().text);
 
                 EnableTowerSpeedUpMenu(_tower);
             }

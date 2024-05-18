@@ -8,6 +8,7 @@ public class ShotgunTower : Tower
     public float MaxSpreadAngel; // максимальный разброс от врага
     private float _baseFireRate;
     private float _fireRateBonus = 20; // %
+    private bool _isSpedUp;
 
     private GameObject _booster;
 
@@ -44,6 +45,7 @@ public class ShotgunTower : Tower
 
             if (target) // без этого куча ошибок
             {
+                Sounds.PlayAt("cannon-shot", transform.position);
                 Vector3 TargetPos = target.transform.position;
 
                 float Radius = (float)Math.Round(Mathf.Tan(MaxSpreadAngel * Mathf.Deg2Rad) * Mathf.Sqrt(Mathf.Pow(TargetPos.x - _genPos.x, 2) + Mathf.Pow(TargetPos.y - _genPos.y, 2) + Mathf.Pow(TargetPos.z - _genPos.z, 2)), 2);
@@ -79,7 +81,9 @@ public class ShotgunTower : Tower
         }
     }
 
-    public override void SpeedUpFireRate() {
+    public override void SpeedUpFireRate()
+    {
+        _isSpedUp = true;
         FireRate -= _baseFireRate * (_fireRateBonus / 100);
         var _speedUpGen = _genPos;
         _speedUpGen.y += 2.25f;
@@ -87,12 +91,16 @@ public class ShotgunTower : Tower
         _booster = Instantiate(SpeedUpPrefab, _speedUpGen, Quaternion.AngleAxis(90, new Vector3(0,0,0)));
     }
 
-    public override void SlowdownFireRate() {
+    public override void SlowdownFireRate()
+    {
+        _isSpedUp = false;
         FireRate += _baseFireRate * (_fireRateBonus / 100);
         Destroy(_booster); 
     }
 
-    public override bool HasBonusSpeed() {
+    public override bool HasBonusSpeed()
+    {
+        return _isSpedUp;
         return Math.Abs(_baseFireRate - FireRate) > 0.05;
     }
 }
