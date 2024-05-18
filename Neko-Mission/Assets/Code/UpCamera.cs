@@ -16,9 +16,6 @@ public class UpCamera : MonoBehaviour
             Crosshair.enabled = !Crosshair.enabled;
             MainCamera.enabled = !MainCamera.enabled;
             UpCAmera.enabled = !UpCAmera.enabled;
-            if(UpCAmera.enabled)
-                Time.timeScale = 0;
-            else Time.timeScale = 1;
         }
     }
 }
