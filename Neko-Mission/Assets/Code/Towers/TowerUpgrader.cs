@@ -133,8 +133,8 @@ public class TowerUpgrader : MonoBehaviour
         {
             Sounds.Play("click1");
             Pl.CurrentBalance -= price;
-            SelectedTower.FireRate -= 0.1f;
-            SelectedTower.IncreaseFireRatePrice += 20;
+            SelectedTower.FireRate -= 0.2f;
+            SelectedTower.IncreaseFireRatePrice += 10;
         }
         else
             Sounds.Play("error1");
