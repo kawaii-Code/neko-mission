@@ -21,7 +21,7 @@ public class PlayerBullet : MonoBehaviour
             enemy.TakeDamage(Damage);
             Destroy(gameObject);
         }
-        else if (!other.CompareTag("TowerSpawnPoint") && !other.CompareTag("Player") && !other.CompareTag("Tower"))
+        else if (!other.CompareTag("PathEnd") && !other.CompareTag("TowerSpawnPoint") && !other.CompareTag("Player") && !other.CompareTag("Tower"))
         {
             Destroy(gameObject);
         }

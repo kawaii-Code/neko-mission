@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  MaxHealth: 13
+  MaxHealth: 10
   HealthBar: {fileID: 3479934657786355603}
   Animator: {fileID: 6034442795734228301}
   IsDead: 0

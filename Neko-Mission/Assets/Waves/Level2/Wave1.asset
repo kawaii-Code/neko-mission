@@ -30,7 +30,7 @@ MonoBehaviour:
   - {fileID: 1225918891088731690, guid: e3ef8f00c7fa46447ad581eb404c5ff2, type: 3}
   DefaultEnemy: {fileID: 1225918891088731690, guid: c51ff34c790d41e43af32a18b53f59c2, type: 3}
   Cooldowns:
-  - 0
+  - 5
   - 0
   - 0.5
   - 0
@@ -46,5 +46,5 @@ MonoBehaviour:
   - 0.5
   - 0
   DefaultCooldown: 0.4
-  Duration: 90
-  RestTimeBeforeThisWave: 7.5
+  Duration: 60
+  RestTimeBeforeThisWave: 10

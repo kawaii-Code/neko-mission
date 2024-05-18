@@ -10,6 +10,7 @@ TagManager:
   - Water
   - TowerSpawnPoint
   - Tower
+  - PathEnd
   layers:
   - Default
   - TransparentFX

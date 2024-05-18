@@ -114,14 +114,17 @@ MonoBehaviour:
   FireRange: 12
   FireRate: 2
   BulletSpeed: 5
-  Damage: 5
+  Damage: 4
   Price: 15
+  IncreaseDamagePrice: 0
+  IncreaseFireRatePrice: 0
+  AddSlowdownPrice: 0
   _nearEnemy: []
   _timer: 0
   _towerSize: {x: 0, y: 0, z: 0}
   _renderer: {fileID: 0}
   _genPos: {x: 0, y: 0, z: 0}
-  BulletCount: 20
+  BulletCount: 15
   MaxSpreadAngel: 20
 --- !u!136 &8686462779047518836
 CapsuleCollider:

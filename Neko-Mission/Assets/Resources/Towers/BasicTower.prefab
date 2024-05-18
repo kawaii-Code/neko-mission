@@ -110,8 +110,11 @@ MonoBehaviour:
   FireRange: 6
   FireRate: 0.8
   BulletSpeed: 10
-  Damage: 3
+  Damage: 2
   Price: 10
+  IncreaseDamagePrice: 0
+  IncreaseFireRatePrice: 0
+  AddSlowdownPrice: 0
   _nearEnemy: []
   _timer: 0
   _towerSize: {x: 0, y: 0, z: 0}
