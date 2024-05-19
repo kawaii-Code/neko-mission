@@ -11,8 +11,8 @@ public class BasicTower : Tower
 
     private void Start()
     {
-        IncreaseDamagePrice = 10;
-        IncreaseFireRatePrice = 20;
+        IncreaseDamagePrice = 8;
+        IncreaseFireRatePrice = 12;
         _baseFireRate = FireRate;
         // Создание триггера ( коллайдера )
         gameObject.AddComponent<SphereCollider>();

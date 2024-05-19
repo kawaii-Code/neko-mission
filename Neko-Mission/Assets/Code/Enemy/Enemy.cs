@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour
     public bool IsChaser = false;
     public float ChaseDistance = 5f;
     public float ReturnDistance = 10f;
-    public float ChaseSpeed = 3f;
 
     private bool _isChasing;
     private Vector3 _playerLastPosition;

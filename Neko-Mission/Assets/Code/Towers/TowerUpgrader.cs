@@ -119,7 +119,7 @@ public class TowerUpgrader : MonoBehaviour
             Sounds.Play("click1");
             Pl.CurrentBalance -= price;
             SelectedTower.Damage += 1;
-            SelectedTower.IncreaseDamagePrice += 10;
+            SelectedTower.IncreaseDamagePrice += 8;
         }
         else
             Sounds.Play("error1");
@@ -134,7 +134,7 @@ public class TowerUpgrader : MonoBehaviour
             Sounds.Play("click1");
             Pl.CurrentBalance -= price;
             SelectedTower.FireRate -= 0.2f;
-            SelectedTower.IncreaseFireRatePrice += 10;
+            SelectedTower.IncreaseFireRatePrice += 8;
         }
         else
             Sounds.Play("error1");

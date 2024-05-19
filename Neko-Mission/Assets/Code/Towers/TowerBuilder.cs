@@ -53,6 +53,9 @@ public class TowerBuilder : MonoBehaviour
                 return;
             }
 
+            if (Camera.main == null)
+                return;
+            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             bool build = Physics.Raycast(ray, out RaycastHit hitInfo, float.MaxValue, TowerSpawnerLayer);
             bool upgrade = Physics.Raycast(ray, out RaycastHit hitInfo2, float.MaxValue, TowerLayer);

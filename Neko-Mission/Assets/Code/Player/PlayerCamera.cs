@@ -18,6 +18,7 @@ public class PlayerCamera : MonoBehaviour
 
     private void Awake()
     {
+        MainCamera.depthTextureMode |= DepthTextureMode.Depth;
         _sensitivity = Settings.CameraSensitivity;
     }
 

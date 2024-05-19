@@ -27,4 +27,4 @@ MonoBehaviour:
   - 0
   DefaultCooldown: 0.7
   Duration: 10
-  RestTimeBeforeThisWave: 5
+  RestTimeBeforeThisWave: 15

@@ -15,8 +15,8 @@ public class ShotgunTower : Tower
     private void Start()
     {
         IncreaseDamagePrice = 10;
-        IncreaseFireRatePrice = 20;
-        AddSlowdownPrice = 20;
+        IncreaseFireRatePrice = 12;
+        AddSlowdownPrice = 18;
         BulletPrefab.GetComponent<Bullet>().SlowdownIsActivated = false;
         _baseFireRate = FireRate;
         // Создание триггера ( коллайдера )
