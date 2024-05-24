@@ -2,7 +2,7 @@
 
 **NEKO : : MISSION** - игра в жанре *Tower Defense* с видом от первого лица.
 
-![demo](Resources/pre-defense-demo.gif)
+![demo](Resources/final-demo.gif)
 
 ---
 
@@ -26,13 +26,22 @@
 
 Разработать игру в жанре Tower Defense от первого лица
 
-## Текущие задачи
+## Ещё гифки
 
-- [ ] UI
-- [ ] Третья карта
-- [ ] Новый враг
-- [ ] Возможность влиять на работу башен
-- [ ] Прокачка башен
+![speeding-up](Resources/speeding-up.gif)
+![chaser](Resources/chaser.gif)
+![plot](Resources/plot.gif)
+
+
+## Таймлайн проекта
+
+#### Защита
+
+- [X] UI
+- [X] Третья карта
+- [X] Новый враг
+- [X] Возможность влиять на работу башен
+- [X] Прокачка башен
 
 #### Предзащита
 
@@ -59,4 +68,3 @@
 [unity]: https://unity.com/ru
 [cs]: https://learn.microsoft.com/ru-ru/dotnet/csharp/
 [blender]: https://www.blender.org/
-
